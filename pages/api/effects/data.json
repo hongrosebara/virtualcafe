@@ -1,0 +1,25 @@
+{
+  "effects": [
+    {
+      "id": 1,
+      "name": "rain",
+      "slug": "rain",
+      "audio": "/soundEffects/Rain.mp3",
+      "description": "Rain"
+    },
+    {
+      "id": 2,
+      "name": "storm",
+      "slug": "storm",
+      "audio": "/soundEffects/Storm.wav",
+      "description": "Storm"
+    },
+    {
+      "id": 3,
+      "name": "Thunder",
+      "slug": "thunder",
+      "audio": "/soundEffects/Thunder.mp3",
+      "description": "Thunder"
+    }
+  ]
+}

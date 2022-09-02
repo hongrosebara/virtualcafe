@@ -1,0 +1,32 @@
+{
+  "ambience": [
+    {
+      "id": 1,
+      "name": "Morning Cafe",
+      "slug": "morning-cafe",
+      "audio": "/cafes/AirportHeathrowAir.mp3",
+      "description": "Waking up"
+    },
+    {
+      "id": 2,
+      "name": "Athens Street",
+      "slug": "lunch-cafe",
+      "audio": "/cafes/Athens Street Cafe Ambience - Loop 2.mp3",
+      "description": "Hanging out"
+    },
+    {
+      "id": 3,
+      "name": "Busy Cafe",
+      "slug": "lunch-cafe",
+      "audio": "/cafes/Busy Cafe Restaurant Ambiance.mp3",
+      "description": "Hanging out"
+    },
+    {
+      "id": 4,
+      "name": "Coffee Cafe",
+      "slug": "lunch-cafe",
+      "audio": "/cafes/CoffeeEspresso.mp3",
+      "description": "Hanging out"
+    }
+  ]
+}
