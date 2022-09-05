@@ -3,38 +3,40 @@ import { BsFillPlayFill} from "react-icons/bs"
 import { BsPauseFill} from "react-icons/bs"
 import { motion } from "framer-motion"
 
-export default function Player({sound}) {
-  const [isActive, setIsActive] = useState(false);
-  const [isPlaying, setIsPlaying] = useState(false);
-  const [volume, SetVolume] = useState(1);
+export default function Player({
+  sound, isActive, isPlaying, volume, changeVolume, togglePlayPause}) {
+  // const [isPlaying, setIsPlaying] = useState(false);
+  // const [volume, SetVolume] = useState(1);
+  // const audioPlayer = useRef();
+  // const volumeBar = useRef();
   const audioPlayer = useRef();
   const volumeBar = useRef();
 
   const variants = {
     active: { 
-      background: "#C37A2E",
-      padding: 5
+      background: "#fff",
+      border: '5px solid #C37A2E'
     },
     inactive: { 
-      background: "red" 
+      background: "#C37A2E",
     },
   }
 
-  const togglePlayPause = () => {
-    const prevValue = isPlaying;
-    setIsPlaying(!prevValue);
-    setIsActive(!isActive)
-    if (prevValue) {
-      audioPlayer.current.pause();
-    } else {
-      audioPlayer.current.play();
-    }
-  }
+  // const togglePlayPause = () => {
+  //   const prevValue = isPlaying;
+  //   setIsPlaying(!prevValue);
+  //   setIsActive(!isActive)
+  //   if (prevValue) {
+  //     audioPlayer.current.pause();
+  //   } else {
+  //     audioPlayer.current.play();
+  //   }
+  // }
 
-  const changeVolume = () => {
-    SetVolume(volumeBar.current.value);
-    audioPlayer.current.volume = volumeBar.current.value;
-  }
+  // const changeVolume = () => {
+  //   SetVolume(volumeBar.current.value);
+  //   audioPlayer.current.volume = volumeBar.current.value;
+  // }
 
   return (
     // <div>
