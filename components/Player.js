@@ -1,16 +1,29 @@
 import { useState, useEffect, useRef } from "react";
 import { BsFillPlayFill} from "react-icons/bs"
 import { BsPauseFill} from "react-icons/bs"
+import { motion } from "framer-motion"
 
 export default function Player({sound}) {
+  const [isActive, setIsActive] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
   const [volume, SetVolume] = useState(1);
   const audioPlayer = useRef();
   const volumeBar = useRef();
 
+  const variants = {
+    active: { 
+      background: "#C37A2E",
+      padding: 5
+    },
+    inactive: { 
+      background: "red" 
+    },
+  }
+
   const togglePlayPause = () => {
     const prevValue = isPlaying;
     setIsPlaying(!prevValue);
+    setIsActive(!isActive)
     if (prevValue) {
       audioPlayer.current.pause();
     } else {
@@ -33,10 +46,17 @@ export default function Player({sound}) {
     //     {isPlaying ? <BsPauseFill /> : <BsFillPlayFill /> } {sound.name}
     //   </button>
     // </div>
-    <div>
+    <motion.div 
+      className="m-2 p-2 rounded-md"
+      animate={   
+        isActive ? "active" : "inactive"
+      }
+      variants={variants}
+      >
       <audio ref={audioPlayer} src={sound.audio}></audio>
       <button onClick={togglePlayPause}>
         {isPlaying ? <BsPauseFill /> : <BsFillPlayFill /> }
+        {sound.name}
       </button>
 
       <div>
@@ -49,6 +69,6 @@ export default function Player({sound}) {
           onChange={changeVolume}
         />
       </div>
-    </div>
+    </motion.div>
   )
 }

@@ -2,32 +2,40 @@ import { API_URL } from "@/config/index"
 import { useState } from "react"
 import { useRouter } from "next/router"
 import Player from "@/components/Player"
+import Cafe from "@/components/Cafe"
+import { motion } from "framer-motion"
 
 export default function HomePage({cafeSounds, effects}) {
   const router = useRouter();
   const {v} = router.query;
   return (
-    <section className="section-main grid grid-cols-12 gap-2">
+    <div>
+      <motion.h2 animate={ {fontSize: 100, color: 'red'} }>Coffee</motion.h2>
+      <section className="section-main grid grid-cols-12 gap-2">
       <div className="col-span-3 text-base">
-        {cafeSounds.map((sound) => (
-          <Player 
-            key={sound.id} 
-            sound={sound} 
-          />
-        ))}
+        <div>
+          {cafeSounds.map((sound) => (
+            <Player 
+              key={sound.id} 
+              sound={sound} 
+            />
+          ))}
+        </div>
+        
+        <div>
+          {effects.map((effect) => (
+            <Player 
+              key={effect.id} 
+              sound={effect} 
+            />
+          ))}
+        </div>
       </div>
-      <div className="col-span-6">
-        <img src="/dreamcafe.png" width={500} alt="" />
-      </div>
-      <div className="col-span-3 text-base">
-        {effects.map((effect) => (
-          <Player 
-            key={effect.id} 
-            sound={effect} 
-          />
-        ))}
+      <div className="col-span-9">
+        <Cafe />
       </div>
     </section>
+    </div>
   )
 }
 
