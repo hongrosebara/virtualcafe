@@ -45,49 +45,49 @@ export default function HomePage({cafeSounds, effects}) {
     <div>
       <motion.h2 animate={ {fontSize: 100, color: 'red'} }>Coffee</motion.h2>
       <section className="section-main grid grid-cols-9 gap-2">
-        <div className="col-span-3 text-base">
-          <div>
-            <h2>Cafes</h2>
-            <div className="grid lg:grid-cols-2 gap-2">
-              {cafeSounds.map((sound) => (
-                <Player 
-                  key={sound.id} 
-                  sound={sound} 
-                  isActive={isActive}
-                  isPlaying={isPlaying}
-                  volume={volume}
-                  togglePlayPause={togglePlayPause}
-                  changeVolume={changeVolume}
-                />
-              ))}
-            </div>
+      <div className="col-span-3 text-base">
+        <div>
+          <h2>Cafes</h2>
+          <div className="grid lg:grid-cols-2 gap-2">
+            {cafeSounds.map((sound) => (
+              <Player 
+                key={sound.id} 
+                sound={sound} 
+                isActive={isActive}
+                isPlaying={isPlaying}
+                volume={volume}
+                togglePlayPause={togglePlayPause}
+                changeVolume={changeVolume}
+              />
+            ))}
           </div>
-          
-          <div>
-            <h2>Weather</h2>
-            <div className="grid lg:grid-cols-3 gap-2">
-              {effects.map((effect) => (
-                <SoundEffectPlayer 
-                  key={effect.id} 
-                  sound={effect} 
-                />
-              ))}
-            </div>
+        </div>
+        
+        <div>
+          <h2>Weather</h2>
+          <div className="grid lg:grid-cols-3 gap-2">
+            {effects.map((effect) => (
+              <SoundEffectPlayer 
+                key={effect.id} 
+                sound={effect} 
+              />
+            ))}
           </div>
+        </div>
 
-          <div>
-            Music
-          </div>
+        <div>
+          Music
         </div>
-        <div className="col-span-6">
-          <Cafe />
-        </div>
+      </div>
+      <div className="col-span-6">
+        <Cafe />
+      </div>
       </section>
     </div>
   )
 }
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const res = await fetch(`${API_URL}/api/ambience`)
   const cafeSounds = await res.json()
 
@@ -95,6 +95,7 @@ export async function getServerSideProps() {
   const effects = await res2.json()
 
   return {
-    props: { cafeSounds, effects }, 
+    props: { cafeSounds, effects },
+    revalidate: 1 
   }
 }
