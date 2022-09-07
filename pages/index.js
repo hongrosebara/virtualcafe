@@ -1,32 +1,12 @@
 import { buildAmbiencePath, buildEffectPath, extractSound } from "./api/getsounds"
-import { API_URL } from "@/config/index"
-import { useState } from "react"
-import Player from "@/components/Player"
+import CafePlayer from "@/components/CafePlayer"
+import MusicPlayer from "@/components/MusicPlayer"
 import SoundEffectPlayer from "@/components/SoundEffectPlayer"
 import Cafe from "@/components/Cafe"
 import { motion } from "framer-motion"
 
 
 const HomePage = ({ cafes, effects }) => {
-  const [isActive, setIsActive] = useState(false);
-  const [isPlaying, setIsPlaying] = useState(false);
-  const [volume, SetVolume] = useState(1);
-
-  const togglePlayPause = () => {
-    const prevValue = isPlaying;
-    setIsPlaying(!prevValue);
-    setIsActive(!isActive)
-    if (prevValue) {
-      audioPlayer.current.pause();
-    } else {
-      audioPlayer.current.play();
-    }
-  }
-
-  const changeVolume = () => {
-    SetVolume(volumeBar.current.value);
-    audioPlayer.current.volume = volumeBar.current.value;
-  }
 
   return (
     <div>
@@ -37,14 +17,9 @@ const HomePage = ({ cafes, effects }) => {
             <h2>Cafes</h2>
             <div className="grid lg:grid-cols-2 gap-2">
               {cafes.map((sound) => (
-                <Player 
+                <CafePlayer 
                   key={sound.id} 
                   sound={sound} 
-                  isActive={isActive}
-                  isPlaying={isPlaying}
-                  volume={volume}
-                  togglePlayPause={togglePlayPause}
-                  changeVolume={changeVolume}
                 />
               ))}
             </div>
@@ -63,11 +38,11 @@ const HomePage = ({ cafes, effects }) => {
           </div>
 
           <div>
-            Music
+            <MusicPlayer />
           </div>
         </div>
         <div className="col-span-6">
-          <Cafe />
+          {/* <Cafe /> */}
         </div>
       </section>
     </div>

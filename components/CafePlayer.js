@@ -3,12 +3,10 @@ import { BsFillPlayFill} from "react-icons/bs"
 import { BsPauseFill} from "react-icons/bs"
 import { motion } from "framer-motion"
 
-export default function Player({
-  sound, isActive, isPlaying, volume, changeVolume, togglePlayPause}) {
-  // const [isPlaying, setIsPlaying] = useState(false);
-  // const [volume, SetVolume] = useState(1);
-  // const audioPlayer = useRef();
-  // const volumeBar = useRef();
+export default function CafePlayer({sound}) {
+  const [isActive, setIsActive] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [volume, SetVolume] = useState(1);
   const audioPlayer = useRef();
   const volumeBar = useRef();
 
@@ -22,32 +20,23 @@ export default function Player({
     },
   }
 
-  // const togglePlayPause = () => {
-  //   const prevValue = isPlaying;
-  //   setIsPlaying(!prevValue);
-  //   setIsActive(!isActive)
-  //   if (prevValue) {
-  //     audioPlayer.current.pause();
-  //   } else {
-  //     audioPlayer.current.play();
-  //   }
-  // }
+  const togglePlayPause = () => {
+    const prevValue = isPlaying;
+    setIsPlaying(!prevValue);
+    setIsActive(!isActive)
+    if (prevValue) {
+      audioPlayer.current.pause();
+    } else {
+      audioPlayer.current.play();
+    }
+  }
 
-  // const changeVolume = () => {
-  //   SetVolume(volumeBar.current.value);
-  //   audioPlayer.current.volume = volumeBar.current.value;
-  // }
+  const changeVolume = () => {
+    SetVolume(volumeBar.current.value);
+    audioPlayer.current.volume = volumeBar.current.value;
+  }
 
   return (
-    // <div>
-    //   <button
-    //     className="btn bg-primary-100 px-10 py-5 text-center rounded-md" 
-    //     key={sound.id}
-    //     onClick={playPause}
-    //   >
-    //     {isPlaying ? <BsPauseFill /> : <BsFillPlayFill /> } {sound.name}
-    //   </button>
-    // </div>
     <motion.div 
       className="m-2 p-2 rounded-md"
       animate={   

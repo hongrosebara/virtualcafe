@@ -1,0 +1,18 @@
+{
+  "sounds": [
+    {
+      "id": 1,
+      "name": "Jazz Cafe",
+      "slug": "jazz-cafe",
+      "audio": "/music/Jazz Cafe 2.mp3",
+      "description": "Waking up"
+    },
+    {
+      "id": 2,
+      "name": "Jazz Cafe 2",
+      "slug": "jazz-cafe-2",
+      "audio": "/music/Jazz Cafe.mp3",
+      "description": "Hanging out"
+    }
+  ]
+}
