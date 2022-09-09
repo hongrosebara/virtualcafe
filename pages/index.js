@@ -1,10 +1,9 @@
 import { buildAmbiencePath, buildEffectPath, extractSound } from "./api/getsounds"
-import CafePlayer from "@/components/CafePlayer"
-import MusicPlayer from "@/components/MusicPlayer"
-import SoundEffectPlayer from "@/components/SoundEffectPlayer"
-import Cafe from "@/components/Cafe"
-import { motion } from "framer-motion"
-
+import CafePlayer from "@/components/players/CafePlayer";
+import MusicPlayer from "@/components/players/MusicPlayer";
+import SoundEffectPlayer from "@/components/players/SoundEffectPlayer";
+import Cafe from "@/components/Cafe";
+import { motion } from "framer-motion";
 
 const HomePage = ({ cafes, effects }) => {
 
@@ -42,7 +41,7 @@ const HomePage = ({ cafes, effects }) => {
           </div>
         </div>
         <div className="col-span-6">
-          {/* <Cafe /> */}
+          <Cafe />
         </div>
       </section>
     </div>
