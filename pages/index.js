@@ -13,7 +13,6 @@ const HomePage = ({ cafes, effects, music }) => {
       <section className="section-main grid grid-cols-9 gap-2">
         <div className="col-span-2 text-base">
           <div>
-            <h2>Cafes</h2>
             <div className="m-3">
               {cafes.map((sound) => (
                 <CafePlayer 
@@ -25,7 +24,6 @@ const HomePage = ({ cafes, effects, music }) => {
           </div>
           
           <div>
-            <h2>Weather</h2>
             <div className="m-3">
               {effects.map((sound) => (
                 <SoundEffectPlayer 
@@ -37,7 +35,6 @@ const HomePage = ({ cafes, effects, music }) => {
           </div>
 
           <div className="m-3">
-            <h2>Music Player</h2>
             <MusicPlayer music={music} />
           </div>
         </div>

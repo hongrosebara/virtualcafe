@@ -24,7 +24,7 @@ export default function CafePlayer({sound}) {
   return (
     <section>
       <div
-        className="flex m-3 rounded-sm items-center justify-between bg-primary-50">
+        className="flex m-3 rounded-sm items-center justify-between bg-secondary-400">
           <audio ref={audioPlayer} src={sound.audio}></audio>
           <div className="flex flex-start items-center">
             <button
@@ -35,7 +35,7 @@ export default function CafePlayer({sound}) {
             <h3 className="text-tiny text-left">{sound.name}</h3>
           </div>
         <div className="flex m-3 items-center">
-        <BsFillVolumeUpFill className="ml-5"/>
+        <BsFillVolumeUpFill className="ml-5 text-primary-700"/>
         <input
           className="volume-bar"
           type="range"

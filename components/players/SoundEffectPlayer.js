@@ -15,7 +15,7 @@ export default function Player({sound}) {
   return (
     <section>
       <div
-        className="flex m-3 rounded-sm items-center justify-between bg-primary-100">
+        className="flex m-3 rounded-sm items-center justify-between bg-secondary-400">
           <audio ref={audioPlayer} src={sound.audio}></audio>
           <div className="flex flex-start items-center">
             <button
@@ -28,7 +28,7 @@ export default function Player({sound}) {
         <div className="flex m-3 items-center">
         <BsFillVolumeUpFill className="ml-5"/>
         <input
-          className="volume-bar"
+          className="volume-bar__others"
           type="range"
           ref={volumeBar}
           value={volume}

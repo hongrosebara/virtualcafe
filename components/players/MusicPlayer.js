@@ -42,22 +42,21 @@ const MusicPlayer = ( music ) => {
   }, [audioPlayer?.current?.loadedmetadata, audioPlayer?.current?.readyState])
 
   return (
-    <section className="section-music-player bg-primary-50 p-3 rounded-lg">
-      <h3 className="font-bold">{songs[currentSongIndex].name}</h3>
+    <section className="section-music-player m-3 p-6 bg-secondary-900 rounded-lg text-white">
+      <h3 className="font-bold text-secondary-500">{songs[currentSongIndex].name}</h3>
       <audio ref={audioPlayer} src={songs[currentSongIndex].audio}></audio>
-      <div>
-        {/* progess bar */}
-        <div>
-          <input 
-            className="progress-bar" 
-            type="range" 
-            defaultValue="0" 
-            ref={progressBar} 
-            onChange={changeRange}/>
-        </div>
+      
+      {/* progess bar */}
+      <div className="-m-1">
+        <input 
+          className="progress-bar" 
+          type="range" 
+          defaultValue="0" 
+          ref={progressBar} 
+          onChange={changeRange}/>
       </div>
 
-      <div className="flex justify-between text-sm">
+      <div className="flex justify-between text-xs">
         {/* current time */}
         <div>
           {calculateTime(currentTime)}
@@ -68,25 +67,25 @@ const MusicPlayer = ( music ) => {
       </div>
 
       <div className="flex justify-between">
-        <div className="flex items-center justify-center">
+        <div className="flex items-center justify-center text-secondary-500">
           <button 
-            className="flex items-center cursor-pointer text-3xl hover:text-primary-400"
+            className="flex items-center cursor-pointer text-3xl"
             onClick={() => skipSong(false, songs)}>
             <BiSkipPrevious />
           </button>
           <button
-            className="text-5xl text-primary-600 text-center px-2"
+            className="text-5xl shadow-sm text-center px-2"
             onClick={togglePlayPause}>
-            { isPlaying ? <BsPauseCircleFill /> : <BsFillPlayCircleFill />}
+            { isPlaying ? <BsPauseCircleFill className="text-primary-200" /> : <BsFillPlayCircleFill />}
           </button>
           <button 
-            className="flex items-center cursor-pointer text-3xl hover:text-primary-400"
+            className="flex items-center cursor-pointer text-3xl"
             onClick={() => skipSong(true, songs)}>
             <BiSkipNext />
           </button>
         </div>
 
-        <div className="flex items-center text-small space-x-2">
+        <div className="flex items-center text-base space-x-2">
           <BsFillVolumeDownFill />
           <input
             className="volume-bar"
