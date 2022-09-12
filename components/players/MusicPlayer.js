@@ -1,22 +1,38 @@
-import { useEffect } from "react";
-import { BsFillPlayCircleFill, BsPauseCircleFill, BsArrowLeftShort, BsArrowRightShort } from "react-icons/bs";
+import { useEffect, useState,  useRef } from "react";
+import { BsFillPlayCircleFill, BsPauseCircleFill, BsFillVolumeDownFill, BsFillVolumeUpFill } from "react-icons/bs";
+import { BiSkipPrevious, BiSkipNext } from "react-icons/bi";
 import { useAudio } from "../hooks/AudioHook";
 
-const MusicPlayer = () => {
+const MusicPlayer = ( music ) => {
+  const [songs] = useState(music.music);
+
   const {
-    isPlaying,
-    duration,
-    currentTime,
     audioPlayer,
-    progressBar,
-    calculateTime,
+    isPlaying,
+    currentTime,
+    volume,
+    volumeBar,
     togglePlayPause,
-    whilePlaying,
+    calculateTime,
+    progressBar,
     changeRange,
-    forwardThirty,
-    backThirty,
-    setDuration
+    duration,
+    skipSong,
+    whilePlaying,
+    setDuration,
+    changeVolume,
+    currentSongIndex,
+    timeTravel
   } = useAudio();
+
+
+  useEffect(() => {
+    if (!isPlaying) {
+      audioPlayer.current.pause();
+    } else {
+      audioPlayer.current.play();
+    }
+  }, [currentSongIndex])
 
   // grabbing metadata //
   useEffect(() => {
@@ -26,30 +42,10 @@ const MusicPlayer = () => {
   }, [audioPlayer?.current?.loadedmetadata, audioPlayer?.current?.readyState])
 
   return (
-    <div className="music-player flex items-center">
-      <audio ref={audioPlayer} src="/music/Jazz Cafe.mp3"></audio>
-      <button 
-        onClick={backThirty}
-        className="flex items-center cursor-pointer text-xs hover:text-primary-400">
-        <BsArrowLeftShort /> 30
-      </button>
-      <button
-        className="text-3xl text-primary-600 text-center px-2"
-        onClick={togglePlayPause}>
-        { isPlaying ? <BsPauseCircleFill /> : <BsFillPlayCircleFill />}
-      </button>
-      <button 
-        onClick={forwardThirty}
-        className="flex items-center cursor-pointer text-xs hover:text-primary-400">
-        30 <BsArrowRightShort />
-      </button>
-
-      <div className="flex items-center">
-        {/* current time */}
-        <div className="text-xs ml-6">
-          {calculateTime(currentTime)}
-        </div>
-
+    <section className="section-music-player bg-primary-50 p-3 rounded-lg">
+      <h3 className="font-bold">{songs[currentSongIndex].name}</h3>
+      <audio ref={audioPlayer} src={songs[currentSongIndex].audio}></audio>
+      <div>
         {/* progess bar */}
         <div>
           <input 
@@ -59,11 +55,52 @@ const MusicPlayer = () => {
             ref={progressBar} 
             onChange={changeRange}/>
         </div>
+      </div>
+
+      <div className="flex justify-between text-sm">
+        {/* current time */}
+        <div>
+          {calculateTime(currentTime)}
+        </div>
 
         {/* duration time */}
-        <div className="text-sm">{(duration && !isNaN(duration)) && calculateTime(duration)}</div>
+         <div>{(duration && !isNaN(duration)) && calculateTime(duration)}</div>
       </div>
-    </div>
+
+      <div className="flex justify-between">
+        <div className="flex items-center justify-center">
+          <button 
+            className="flex items-center cursor-pointer text-3xl hover:text-primary-400"
+            onClick={() => skipSong(false, songs)}>
+            <BiSkipPrevious />
+          </button>
+          <button
+            className="text-5xl text-primary-600 text-center px-2"
+            onClick={togglePlayPause}>
+            { isPlaying ? <BsPauseCircleFill /> : <BsFillPlayCircleFill />}
+          </button>
+          <button 
+            className="flex items-center cursor-pointer text-3xl hover:text-primary-400"
+            onClick={() => skipSong(true, songs)}>
+            <BiSkipNext />
+          </button>
+        </div>
+
+        <div className="flex items-center text-small space-x-2">
+          <BsFillVolumeDownFill />
+          <input
+            className="volume-bar"
+            type="range"
+            ref={volumeBar}
+            value={volume}
+            min={0.1} max={1}
+            step={0.01}
+            onChange={changeVolume}
+          />
+          <BsFillVolumeUpFill />
+        </div>
+      </div>
+    </section>
   )
 }
-export default MusicPlayer
+export default MusicPlayer;

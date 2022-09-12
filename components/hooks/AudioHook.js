@@ -13,6 +13,7 @@ const useAudio = () => {
   const [volume, SetVolume] = useState(1);
   const [duration, setDuration] = useState(0);
   const [currentTime, setCurrentTime] = useState(0);
+  const [currentSongIndex, setCurrentSongIndex] = useState(0);
 
   const calculateTime = (secs) => {
     const minutes = Math.floor(secs/60);
@@ -35,6 +36,7 @@ const useAudio = () => {
       audioPlayer.current.pause();
     } else {
       audioPlayer.current.play();
+      audioPlayer.current.loop = true;
     }
   }
 
@@ -43,10 +45,36 @@ const useAudio = () => {
     setIsPlaying(!prevValue);
     if (!prevValue) {
       audioPlayer.current.play();
+      audioPlayer.current.loop = true;
       animationRef.current = requestAnimationFrame(whilePlaying);
     } else {
       audioPlayer.current.pause();
       cancelAnimationFrame(animationRef.current)
+    }
+  }
+
+  const skipSong = (forward = true, songs) => {
+    if (forward)  {
+      setCurrentSongIndex(() => {
+        let temp = currentSongIndex;
+        temp++;
+
+        if (temp > songs.length - 1) {
+          temp = 0;
+        }
+        return temp;
+      })
+    } else {
+      setCurrentSongIndex(() => {
+        let temp = currentSongIndex;
+        temp--;
+
+        if (temp < 0) {
+          temp = songs.length - 1;
+        }
+
+        return temp;
+      })
     }
   }
 
@@ -88,6 +116,7 @@ const useAudio = () => {
     audioPlayer,
     progressBar,
     volumeBar,
+    currentSongIndex,
     calculateTime,
     changeVolume,
     togglePlayer,
@@ -96,7 +125,9 @@ const useAudio = () => {
     changeRange,
     forwardThirty,
     backThirty,
-    setDuration
+    setDuration,
+    skipSong,
+    timeTravel
   }
 }
 export { useAudio };

@@ -15,6 +15,7 @@ module.exports = {
       '2xl': '2.5rem',
       '3xl': '2.75rem',
       '4xl': '3rem',
+      '5xl': '5rem'
     },
     colors: {
       transparent: 'transparent',
