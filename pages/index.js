@@ -1,21 +1,17 @@
 import { buildAmbiencePath, buildEffectPath, buildMusicPath, extractSound } from "./api/getsounds"
-import CafePlayer from "@/components/players/CafePlayer";
+import Player from "@/components/players/Player";
 import MusicPlayer from "@/components/players/MusicPlayer";
-import SoundEffectPlayer from "@/components/players/SoundEffectPlayer";
 import Cafe from "@/components/Cafe";
-import { motion } from "framer-motion";
 
 const HomePage = ({ cafes, effects, music }) => {
-
   return (
     <div>
-      <motion.h2 animate={ {fontSize: 100, color: 'red'} }>Coffee</motion.h2>
-      <section className="section-main grid grid-cols-9 gap-2">
-        <div className="col-span-2 text-base">
+      <section className="section-main grid lg:grid-cols-9 gap-2">
+        <div className="lg:col-span-2 text-base">
           <div>
             <div className="m-3">
               {cafes.map((sound) => (
-                <CafePlayer 
+                <Player 
                   key={sound.id} 
                   sound={sound} 
                 />
@@ -26,7 +22,7 @@ const HomePage = ({ cafes, effects, music }) => {
           <div>
             <div className="m-3">
               {effects.map((sound) => (
-                <SoundEffectPlayer 
+                <Player 
                   key={sound.id} 
                   sound={sound} 
                 />
@@ -38,7 +34,7 @@ const HomePage = ({ cafes, effects, music }) => {
             <MusicPlayer music={music} />
           </div>
         </div>
-        <div className="col-span-7">
+        <div className="lg:col-span-7">
           <Cafe />
         </div>
       </section>

@@ -8,20 +8,60 @@ $bp-large: 62.5em;   // 1000px
 $bp-medium: 50em;    // 800px;
 $bp-small: 37.5em;    // 600px;
 
-// COLOR VARIABLES
-$bg-primary-50: '#EFD5BA';
-$bg-primary-100: '#EBCBA9';
-$bg-primary-200: '#E3B788';
-$bg-primary-300: '#DBA267';
-$bg-primary-400: '#D38E46';
-$bg-primary-500: '#C37A2E';
-$bg-primary-600: '#965E23';
-$bg-primary-700: '#684119';
-$bg-primary-800: '#3B250E';
-$bg-primary-900: '#0D0803';
+
+:root {
+  // COLOR VARIABLES
+  --bg-primary-50: #EFD5BA;
+  --bg-primary-100: #EBCBA9;
+  --bg-primary-200: #E3B788;
+  --bg-primary-300: #DBA267;
+  --bg-primary-400: #D38E46;
+  --bg-primary-500: #C37A2E;
+  --bg-primary-600: #965E23;
+  --bg-primary-700: #684119;
+  --bg-primary-800: #3B250E;
+  --bg-primary-900: #0D0803;
+  --bg-secondary-50: '#FFFFFF';
+  --bg-secondary-100: '#FFFFFF';
+  --bg-secondary-200: '#FFFFFF';
+  --bg-secondary-300: '#FFFFFF';
+  --bg-secondary-400: '#F6F4EE';
+  --bg-secondary-500: '#E8E4D3';
+  --bg-secondary-600: '#D5CDAE';
+  --bg-secondary-700: '#C1B789';
+  --bg-secondary-800: '#AEA064';
+  --bg-secondary-900: '#90834B';
+  --knobby: #684119;
+  --progress-bar: #E8E4D3;
+  --seek-before-width: 0px;
+  --seek-before-color: #D5CDAE;
+  --volume-others: #D5CDAE;
+  --volume-music: #D5CDAE;
+}
 
 
-body {
+[data-theme='dark'] {
+  // COLOR VARIABLES
+  --bg-primary-50: #EFD5BA;
+  --bg-primary-100: #EBCBA9;
+  --bg-primary-200: #E3B788;
+  --bg-primary-300: #DBA267;
+  --bg-primary-400: #D38E46;
+  --bg-primary-500: #C37A2E;
+  --bg-primary-600: #965E23;
+  --bg-primary-700: #684119;
+  --bg-primary-800: #3B250E;
+  --bg-primary-900: #0D0803;
+  --bg-secondary-50: '#FFFFFF';
+  --bg-secondary-100: '#FFFFFF';
+  --bg-secondary-200: '#FFFFFF';
+  --bg-secondary-300: '#FFFFFF';
+  --bg-secondary-400: '#F6F4EE';
+  --bg-secondary-500: '#E8E4D3';
+  --bg-secondary-600: '#D5CDAE';
+  --bg-secondary-700: '#C1B789';
+  --bg-secondary-800: '#AEA064';
+  --bg-secondary-900: '#90834B';
   --knobby: #684119;
   --progress-bar: #E8E4D3;
   --seek-before-width: 0px;
