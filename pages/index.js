@@ -6,8 +6,8 @@ import Cafe from "@/components/Cafe";
 const HomePage = ({ cafes, effects, music }) => {
   return (
     <div>
-      <section className="section-main grid lg:grid-cols-9 gap-2">
-        <div className="lg:col-span-2 text-base">
+      <section className="section-main grid lg:grid-cols-10 gap-2">
+        <div className="col-span-5 lg:col-span-3 text-base">
           <div>
             <div className="m-3">
               {cafes.map((sound) => (
