@@ -29,8 +29,8 @@ export default function Header({}) {
 
   return (
     <header className='text-base'>
-      <div className='grid grid-cols-9 gap-2 m-3'>
-        <div className='col-span-7 lg:col-span-3 flex items-center'>
+      <div className='grid grid-cols-4 lg:grid-cols-9 m-3'>
+        <div className='col-span-3 lg:col-span-3 flex items-center'>
           <motion.svg 
             className='text-3xl m-3'
             variants={svgVariants}
@@ -45,7 +45,7 @@ export default function Header({}) {
           <div>We Dream Of Coffee</div>
         </div>
 
-        <nav className='col-span-2 lg:col-span-6 sm:col-span-2'>
+        <nav className='col-span-1 lg:col-span-6'>
           <ul className='flex justify-end items-center space-x-4'>
             <li>Home</li>
             <li>About</li>
