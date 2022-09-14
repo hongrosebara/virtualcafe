@@ -42,7 +42,7 @@ const MusicPlayer = ( music ) => {
   }, [audioPlayer?.current?.loadedmetadata, audioPlayer?.current?.readyState])
 
   return (
-    <section className="section-music-player m-3 p-6 bg-secondary-900 rounded-lg text-secondary-500">
+    <div className="section-music-player p-6 bg-secondary-900 rounded-lg text-secondary-500">
       <h3 className="font-bold text-secondary-500">{songs[currentSongIndex].name}</h3>
       <audio ref={audioPlayer} src={songs[currentSongIndex].audio}></audio>
       
@@ -99,7 +99,7 @@ const MusicPlayer = ( music ) => {
           <BsFillVolumeUpFill />
         </div>
       </div>
-    </section>
+    </div>
   )
 }
 export default MusicPlayer;

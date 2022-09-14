@@ -13,9 +13,9 @@ export default function Player({sound}) {
 
   return (
     <div
-      className=" flex m-3 rounded-sm items-center justify-between bg-secondary-500 dark:bg-secondary-400">
+      className="m-3 col-span-2 lg:col-span-4 flex rounded-sm items-center justify-between bg-secondary-500 dark:bg-secondary-400">
         <audio ref={audioPlayer} src={sound.audio}></audio>
-        <div className="flex flex-start items-center">
+        <div className="my-2 flex flex-start items-center">
           <button
             className="text-2xl text-secondary-900 text-center px-2"
             onClick={togglePlayer}>

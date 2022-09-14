@@ -5,36 +5,34 @@ import Cafe from "@/components/Cafe";
 
 const HomePage = ({ cafes, effects, music }) => {
   return (
-    <div>
-      <section className="section-main grid grid-cols-1 lg:grid-cols-10">
-        <div className="col-span-1 lg:col-span-3 text-base">
-          <div className="grid grid-cols-4">
-          <div className="m-3 col-span-2 lg:col-span-4">
-            {cafes.map((sound) => (
-              <Player 
-                key={sound.id} 
-                sound={sound} 
-              />
-            ))}
+    <section className="section-main grid grid-cols-1 lg:grid-cols-10">
+      <div className="col-span-1 lg:col-span-3 text-base">
+        <div className="m-3 grid grid-cols-4">
 
-            {effects.map((sound) => (
-              <Player 
-                key={sound.id} 
-                sound={sound} 
-              />
-            ))}
-          </div>
+          {cafes.map((sound) => (
+            <Player 
+              key={sound.name} 
+              sound={sound} 
+            />
+          ))}
 
-          <div className="m-3 col-span-2 lg:col-span-4">
+          {effects.map((sound) => (
+            <Player 
+              key={sound.name} 
+              sound={sound} 
+            />
+          ))}
+
+
+          <div className="m-3 col-span-4">
             <MusicPlayer music={music} />
           </div>
-          </div>
         </div>
-        <div className="col-span-1 lg:col-span-7">
-          <Cafe />
-        </div>
-      </section>
-    </div>
+      </div>
+      <div className="col-span-1 lg:col-span-7">
+        <Cafe />
+      </div>
+    </section>
   )
 }
 

@@ -2,14 +2,14 @@
   "sounds": [
     {
       "id": 1,
-      "name": "rain",
+      "name": "Rain",
       "slug": "rain",
       "audio": "/soundEffects/Rain.mp3",
       "description": "Rain"
     },
     {
       "id": 2,
-      "name": "storm",
+      "name": "Storm",
       "slug": "storm",
       "audio": "/soundEffects/Storm.wav",
       "description": "Storm"
@@ -20,6 +20,13 @@
       "slug": "thunder",
       "audio": "/soundEffects/Thunder.mp3",
       "description": "Thunder"
+    },
+    {
+      "id": 3,
+      "name": "Bird",
+      "slug": "bird",
+      "audio": "/soundEffects/Thunder.mp3",
+      "description": "bird"
     }
   ]
 }

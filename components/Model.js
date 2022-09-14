@@ -3,11 +3,11 @@ import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import * as THREE from "three";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 
-function loadGLTFModel(scene, glbPath, options) {
-  const { receiveShadow, castShadow } = options;
-  return new Promise((resolve, reject) => {
-    const loader = new GLTFLoader();
-    loader.load(
+  function loadGLTFModel(scene, glbPath, options) {
+    const { receiveShadow, castShadow } = options;
+    return new Promise((resolve, reject) => {
+      const loader = new GLTFLoader();
+      loader.load(
       glbPath,
       (gltf) => {
         const obj = gltf.scene;
@@ -54,6 +54,7 @@ const Model = () => {
         antialias: true,
         alpha: true
       });
+      console.log(scW, scH)
       renderer.setPixelRatio(window.devicePixelRatio);
       renderer.setSize(scW, scH);
       renderer.outputEncoding = THREE.sRGBEncoding;
@@ -82,7 +83,7 @@ const Model = () => {
       controls.autoRotate = false;
       controls.target = target;
 
-      loadGLTFModel(scene, "/dog.glb", {
+      loadGLTFModel(scene, "/cafe.glb", {
         receiveShadow: false,
         castShadow: false
       }).then(() => {
