@@ -1,0 +1,11 @@
+Model Information:
+* title:	COFFEE Bot [XYZ - Coursework]
+* source:	https://sketchfab.com/3d-models/coffee-bot-xyz-coursework-fe13040b4d5a45baa64326e6766b774b
+* author:	EestiChameleon (https://sketchfab.com/EestiChameleon)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "COFFEE Bot [XYZ - Coursework]" (https://sketchfab.com/3d-models/coffee-bot-xyz-coursework-fe13040b4d5a45baa64326e6766b774b) by EestiChameleon (https://sketchfab.com/EestiChameleon) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
