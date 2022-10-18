@@ -32,12 +32,7 @@ const HomePage = ({ cafes, effects, music }) => {
       </div>
 
       <div className="col-span-1 lg:col-span-7">
-        <Image
-          src="/background.png"
-          alt="remote worker home office"
-          width={700}
-          height={500}
-        />
+        <iframe src="https://embed.lottiefiles.com/animation/96321"></iframe>
       </div>
     </section>
   )
