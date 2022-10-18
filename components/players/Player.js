@@ -2,6 +2,7 @@ import { BsFillPlayCircleFill, BsPauseCircleFill, BsFillVolumeDownFill, BsFillVo
 import { useAudio } from "../hooks/AudioHook";
 
 export default function Player({sound}) {
+
   const {
     isPlaying,
     audioPlayer,

@@ -34,7 +34,9 @@ const useAudio = () => {
     setIsActive(!isActive)
     if (prevValue) {
       audioPlayer.current.pause();
+      alert('stop particle')
     } else {
+      alert('play particle')
       audioPlayer.current.play();
       audioPlayer.current.loop = true;
     }
