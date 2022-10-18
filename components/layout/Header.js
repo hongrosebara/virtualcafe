@@ -4,7 +4,7 @@ export default function Header({}) {
 
   return (
     <header className='text-base'>
-      <div className='grid grid-cols-4 lg:grid-cols-9 m-3'>
+      <div className='grid grid-cols-4 items-center lg:grid-cols-9 m-3'>
         <div className='col-span-3 lg:col-span-3 flex items-center'>
           <svg 
             className='text-3xl m-3'

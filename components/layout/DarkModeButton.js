@@ -7,10 +7,8 @@ export default function DarkModeButton() {
   useEffect(() => setMounted(true), []);
 
   return (
-    <button
-      aria-label="Toggle Dark Mode"
-      type="button"
-      className="bg-primary-200 dark:bg-secondary-800 transition-all rounded flex items-center justify-center h-7 w-7"
+    <div
+      className="btn--toggle bg-primary-200 dark:bg-secondary-800 transition-all rounded flex items-center justify-center"
       onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
     >
       {mounted && (
@@ -31,6 +29,6 @@ export default function DarkModeButton() {
           )}
         </svg>
       )}
-    </button>
+    </div>
   );
 }
