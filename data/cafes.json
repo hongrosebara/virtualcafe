@@ -2,31 +2,38 @@
   "sounds": [
     {
       "id": 1,
-      "name": "Morning Cafe",
-      "slug": "morning-cafe",
-      "audio": "/cafes/AirportHeathrowAir.mp3",
-      "description": "Waking up"
+      "name": "Outdoor Cafe",
+      "slug": "outdoor-cafe",
+      "audio": "https://res.cloudinary.com/dck6413ua/video/upload/v1666275573/ES_Outdoor_Cafe_-_SFX_Producer_h7we2z.mp3",
+      "description": "Outdoor"
     },
     {
       "id": 2,
-      "name": "Athens Street",
-      "slug": "lunch-cafe",
-      "audio": "/cafes/Athens Street Cafe Ambience - Loop 2.mp3",
-      "description": "Hanging out"
+      "name": "English Cafe",
+      "slug": "english-cafe",
+      "audio": "https://res.cloudinary.com/dck6413ua/video/upload/v1666275573/ES_Cafe_Ambience_With_English_Voices_-_SFX_Producer_olqyjq.mp3",
+      "description": "Cafe with English chats"
     },
     {
       "id": 3,
-      "name": "Busy Cafe",
-      "slug": "lunch-cafe",
-      "audio": "/cafes/Busy Cafe Restaurant Ambiance.mp3",
+      "name": "Evening Cafe",
+      "slug": "evening-cafe",
+      "audio": "https://res.cloudinary.com/dck6413ua/video/upload/v1666275574/ES_Evening_Outdoor_Resturant_Ambience_With_Swedish_Voices_-_SFX_Producer_losupo.mp3",
       "description": "Hanging out"
     },
     {
       "id": 4,
-      "name": "Coffee Cafe",
-      "slug": "lunch-cafe",
-      "audio": "/cafes/CoffeeEspresso.mp3",
-      "description": "Hanging out"
+      "name": "Coffee Grinder",
+      "slug": "coffee-grinder",
+      "audio": "https://res.cloudinary.com/dck6413ua/video/upload/v1666276915/ES_Coffee_Bean_Grind_1_-_SFX_Producer_d2wtf2.mp3",
+      "description": "Coffee bean grinder"
+    },
+    {
+      "id": 5,
+      "name": "Espresso Steamer",
+      "slug": "espresso-steamer",
+      "audio": "https://res.cloudinary.com/dck6413ua/video/upload/v1666276915/ES_Espresso_Steam_2_-_SFX_Producer_tarhjq.mp3",
+      "description": "Espresso Steamer"
     }
   ]
 }

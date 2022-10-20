@@ -4,29 +4,43 @@
       "id": 1,
       "name": "Rain",
       "slug": "rain",
-      "audio": "/soundEffects/Rain.mp3",
+      "audio": "https://res.cloudinary.com/dck6413ua/video/upload/v1666275570/ES_Rain_Downpour_2_-_SFX_Producer_ejc2ou.mp3",
       "description": "Rain"
     },
     {
       "id": 2,
-      "name": "Storm",
-      "slug": "storm",
-      "audio": "/soundEffects/Storm.wav",
-      "description": "Storm"
+      "name": "Thunderstorm",
+      "slug": "thunderstorm",
+      "audio": "https://res.cloudinary.com/dck6413ua/video/upload/v1666275571/ES_Thunderstorm_Heavy_1_-_SFX_Producer_r8ajrp.mp3",
+      "description": "Thunderstorm"
     },
     {
       "id": 3,
-      "name": "Thunder",
-      "slug": "thunder",
-      "audio": "/soundEffects/Thunder.mp3",
-      "description": "Thunder"
+      "name": "Fireplace",
+      "slug": "fireplace",
+      "audio": "https://res.cloudinary.com/dck6413ua/video/upload/v1666275574/ES_Fireplace_-_SFX_Producer_pi9b2h.mp3",
+      "description": "Fireplace"
     },
     {
-      "id": 3,
+      "id": 4,
+      "name": "Wind chime",
+      "slug": "wind-chime",
+      "audio": "https://res.cloudinary.com/dck6413ua/video/upload/v1666275575/ES_Wind_Chimes_1_-_SFX_Producer_qbxxgg.mp3",
+      "description": "Wind chime"
+    },
+    {
+      "id": 5,
       "name": "Bird",
       "slug": "bird",
-      "audio": "/soundEffects/Thunder.mp3",
+      "audio": "https://res.cloudinary.com/dck6413ua/video/upload/v1666275582/ES_Sunny_Field_With_Birds_-_Organic_Nature_Sounds_daylct.mp3",
       "description": "bird"
+    },
+    {
+      "id": 6,
+      "name": "Ocean Waves",
+      "slug": "ocean",
+      "audio": "https://res.cloudinary.com/dck6413ua/video/upload/v1666277184/ES_Ocean_Waves_2_-_SFX_Producer_w7rgyf.mp3",
+      "description": "Waves"
     }
   ]
 }

@@ -32,9 +32,7 @@ const HomePage = ({ cafes, effects, music }) => {
       </div>
 
       <div className="col-span-1 lg:col-span-7 flex justify-center">
-        <video autoPlay loop>
-          <source src="/cat home office.mp4" />
-        </video> 
+        <iframe src="https://embed.lottiefiles.com/animation/113349"></iframe>
       </div>
     </section>
   )
