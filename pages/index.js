@@ -1,9 +1,16 @@
 import { buildAmbiencePath, buildEffectPath, buildMusicPath, extractSound } from "./api/getsounds"
-import Player from "@/components/players/Player";
-import MusicPlayer from "@/components/players/MusicPlayer";
-import Image from 'next/image'
+import Player from "@/components/players/Player"
+import MusicPlayer from "@/components/players/MusicPlayer"
+import SpotifyPlayer from "react-spotify-player"
 
 const HomePage = ({ cafes, effects, music }) => {
+  // size may also be a plain string using the presets 'large' or 'compact'
+  const size = {
+    width: '100%',
+    height: 300,
+  };
+  const view = 'list'; // or 'coverart'
+  const theme = 'black'; // or 'white'
   
   return (
     <section className="section-main grid grid-cols-1 lg:grid-cols-10">
@@ -27,6 +34,15 @@ const HomePage = ({ cafes, effects, music }) => {
 
           <div className="m-3 col-span-4">
             <MusicPlayer music={music} />
+          </div>
+          
+          <div className="m-3 col-span-4">
+            <SpotifyPlayer
+              uri="spotify:artist:2Kx7MNY7cI1ENniW7vT30N"
+              size={size}
+              view={view}
+              theme={theme}
+            />
           </div>
         </div>
       </div>
