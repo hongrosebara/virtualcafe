@@ -16,7 +16,7 @@ const HomePage = ({ cafes, effects, music }) => {
   return (
     <section className="section-main grid grid-cols-1 lg:grid-cols-10">
       <div className="col-span-1 lg:col-span-3 text-base">
-        <div className="m-3 grid grid-cols-4">
+        <div className="m-3 flex flex-col h-screen">
 
           {cafes.map((sound) => (
             <Player 
@@ -31,18 +31,17 @@ const HomePage = ({ cafes, effects, music }) => {
               sound={sound} 
             />
           ))}
-
-
-          <div className="m-3 col-span-4">
+          
+          <div className="flex flex-grow m-3 col-span-4">
             <MusicPlayer music={music} />
           </div>
         </div>
       </div>
 
       <div className="col-span-1 lg:col-span-7 m-3">
-        <div className="section-right__image-box m-3">
+        <div className="section-right__image-box my-3">
           <Image
-            src="/cozy-home-office.jpeg"
+            src="/home-office.svg"
             layout="fill" objectFit="cover"
           />
         </div>

@@ -42,8 +42,8 @@ const MusicPlayer = ( music ) => {
   }, [audioPlayer?.current?.loadedmetadata, audioPlayer?.current?.readyState])
 
   return (
-    <div className="section-music-player p-6 bg-secondary-900 rounded-lg text-secondary-500">
-      <h3 className="font-bold text-secondary-500">{songs[currentSongIndex].name}</h3>
+    <div className="section-music-player p-6 bg-primary-500 dark:bg-dark rounded-lg text-beige dark:text-secondary-900">
+      <h3 className="font-bol">{songs[currentSongIndex].name}</h3>
       <audio ref={audioPlayer} src={songs[currentSongIndex].audio}></audio>
       
       {/* progess bar */}
@@ -67,7 +67,7 @@ const MusicPlayer = ( music ) => {
       </div>
 
       <div className="flex justify-between">
-        <div className="flex items-center justify-center text-secondary-500">
+        <div className="flex items-center justify-center text-beige dark:text-secondary-900">
           <button 
             className="flex items-center cursor-pointer text-3xl"
             onClick={() => skipSong(false, songs)}>
@@ -76,7 +76,7 @@ const MusicPlayer = ( music ) => {
           <button
             className="text-5xl shadow-sm text-center px-2"
             onClick={togglePlayPause}>
-            { isPlaying ? <BsPauseCircleFill color="white"/> : <BsFillPlayCircleFill/>}
+            { isPlaying ? <BsPauseCircleFill /> : <BsFillPlayCircleFill/>}
           </button>
           <button 
             className="flex items-center cursor-pointer text-3xl"
@@ -85,7 +85,7 @@ const MusicPlayer = ( music ) => {
           </button>
         </div>
 
-        <div className="flex items-center text-lg space-x-2 text-secondary-500">
+        <div className="flex items-center text-lg space-x-2">
           <BsFillVolumeDownFill />
           <input
             className="volume-bar"

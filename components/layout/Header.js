@@ -18,6 +18,9 @@ export default function Header({}) {
 
         <nav className='col-span-1 lg:col-span-6'>
           <ul className='flex justify-end items-center space-x-4'>
+            <li>
+              <button className='text-dark dark:text-beige cursor-pointer'>Open Spotify</button>
+            </li>
             <DarkModeButton />
           </ul>
         </nav>
