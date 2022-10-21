@@ -2,12 +2,13 @@ import { buildAmbiencePath, buildEffectPath, buildMusicPath, extractSound } from
 import Player from "@/components/players/Player"
 import MusicPlayer from "@/components/players/MusicPlayer"
 import SpotifyPlayer from "react-spotify-player"
+import Image from 'next/image'
 
 const HomePage = ({ cafes, effects, music }) => {
   // size may also be a plain string using the presets 'large' or 'compact'
   const size = {
     width: '100%',
-    height: 300,
+    height: 200,
   };
   const view = 'list'; // or 'coverart'
   const theme = 'black'; // or 'white'
@@ -35,20 +36,24 @@ const HomePage = ({ cafes, effects, music }) => {
           <div className="m-3 col-span-4">
             <MusicPlayer music={music} />
           </div>
-          
-          <div className="m-3 col-span-4">
-            <SpotifyPlayer
-              uri="spotify:artist:2Kx7MNY7cI1ENniW7vT30N"
-              size={size}
-              view={view}
-              theme={theme}
-            />
-          </div>
         </div>
       </div>
 
-      <div className="col-span-1 lg:col-span-7 flex justify-center">
-        <iframe src="https://embed.lottiefiles.com/animation/113349"></iframe>
+      <div className="col-span-1 lg:col-span-7 m-3">
+        <div className="section-right__image-box m-3">
+          <Image
+            src="/cozy-home-office.jpeg"
+            layout="fill" objectFit="cover"
+          />
+        </div>
+        <div className="section-right__spotify-player">
+          <SpotifyPlayer
+            uri="spotify:artist:2Kx7MNY7cI1ENniW7vT30N"
+            size={size}
+            view={view}
+            theme={theme}
+          />
+        </div>
       </div>
     </section>
   )

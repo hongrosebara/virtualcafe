@@ -3,7 +3,7 @@ import DarkModeButton from './DarkModeButton';
 export default function Header({}) {
 
   return (
-    <header className='text-base'>
+    <header className='section-header text-base'>
       <div className='grid grid-cols-4 items-center lg:grid-cols-9 m-3'>
         <div className='col-span-3 lg:col-span-3 flex items-center'>
           <svg 
@@ -18,9 +18,6 @@ export default function Header({}) {
 
         <nav className='col-span-1 lg:col-span-6'>
           <ul className='flex justify-end items-center space-x-4'>
-            <li>Home</li>
-            <li>About</li>
-            <li>Contact</li>
             <DarkModeButton />
           </ul>
         </nav>

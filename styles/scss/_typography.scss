@@ -1,7 +1,23 @@
+.section-header {
+  margin: 0 3rem;
+}
+
 .section-main {
   margin: 0 3rem;
 }
 
+.section-right {
+  &__image-box {
+    position: relative;
+    height: 100vh;
+  }
+
+  &__spotify-player {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+  }
+}
 .btn--toggle {
   padding: 10px;
 }
