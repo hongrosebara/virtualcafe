@@ -8,7 +8,7 @@ const HomePage = ({ cafes, effects, music }) => {
   // size may also be a plain string using the presets 'large' or 'compact'
   const size = {
     width: '100%',
-    height: 200,
+    height: 150,
   };
   const view = 'coverart'; // or 'coverart'
   const theme = 'white'; // or 'white'
@@ -16,7 +16,7 @@ const HomePage = ({ cafes, effects, music }) => {
   return (
     <section className="section-main grid grid-cols-1 lg:grid-cols-10">
       <div className="col-span-1 lg:col-span-3 text-base">
-        <div className="m-3 flex flex-col h-screen">
+        <div className="m-3">
 
           {cafes.map((sound) => (
             <Player 
@@ -32,9 +32,19 @@ const HomePage = ({ cafes, effects, music }) => {
             />
           ))}
           
-          <div className="flex flex-grow m-3 col-span-4">
+          <div className="m-3 col-span-4">
             <MusicPlayer music={music} />
           </div>
+
+          <div className="m-3 rounded-sm">
+            <SpotifyPlayer
+              className="rounded-sm"
+              uri="spotify:artist:2Kx7MNY7cI1ENniW7vT30N"
+              size={size}
+              view={view}
+              theme={theme}
+            />
+        </div>
         </div>
       </div>
 
@@ -43,14 +53,6 @@ const HomePage = ({ cafes, effects, music }) => {
           <Image
             src="/home-office.svg"
             layout="fill" objectFit="cover"
-          />
-        </div>
-        <div className="section-right__spotify-player">
-          <SpotifyPlayer
-            uri="spotify:artist:2Kx7MNY7cI1ENniW7vT30N"
-            size={size}
-            view={view}
-            theme={theme}
           />
         </div>
       </div>
