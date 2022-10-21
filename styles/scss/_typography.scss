@@ -3,15 +3,17 @@
 }
 
 .section-right {
+  position: relative;
+
   &__image-box {
     position: relative;
     height: 100vh;
   }
 
   &__spotify-player {
-    position: fixed;
-    bottom: 0;
+    position: absolute;
     right: 0;
+    bottom: 0%;
   }
 }
 

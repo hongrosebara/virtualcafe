@@ -1,10 +1,11 @@
-import DarkModeButton from './DarkModeButton';
+import DarkModeButton from './DarkModeButton'
+import { slide as Menu } from 'react-burger-menu'
 
 export default function Header({}) {
 
   return (
-    <header className='section-header text-base'>
-      <div className='grid grid-cols-4 items-center lg:grid-cols-9 m-3'>
+    <header className='section-header text-base p-3'>
+      <div className='grid grid-cols-4 items-center lg:grid-cols-9'>
         <div className='col-span-3 lg:col-span-3 flex items-center'>
           <svg 
             className='text-3xl m-3'
@@ -18,9 +19,6 @@ export default function Header({}) {
 
         <nav className='col-span-1 lg:col-span-6'>
           <ul className='flex justify-end items-center space-x-4'>
-            <li>
-              <button className='text-dark dark:text-beige cursor-pointer'>Open Spotify</button>
-            </li>
             <DarkModeButton />
           </ul>
         </nav>
