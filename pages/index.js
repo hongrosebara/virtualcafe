@@ -8,10 +8,10 @@ const HomePage = ({ cafes, effects, music }) => {
   // size may also be a plain string using the presets 'large' or 'compact'
   const size = {
     width: '100%',
-    height: 150,
+    height: 200,
   };
   const view = 'coverart'; // or 'coverart'
-  const theme = 'white'; // or 'white'
+  const theme = 'dark'; // or 'white'
   
   return (
     <section className="section-main grid grid-cols-1 lg:grid-cols-10">
@@ -31,10 +31,6 @@ const HomePage = ({ cafes, effects, music }) => {
               sound={sound} 
             />
           ))}
-          
-          <div className="m-3 col-span-4">
-            <MusicPlayer music={music} />
-          </div>
 
           <div className="m-3 rounded-sm">
             <SpotifyPlayer
@@ -44,14 +40,18 @@ const HomePage = ({ cafes, effects, music }) => {
               view={view}
               theme={theme}
             />
-        </div>
+          </div>
+          
+          <div className="m-3 col-span-4">
+            <MusicPlayer music={music} />
+          </div>
         </div>
       </div>
 
       <div className="section-right col-span-1 lg:col-span-7 m-3">
         <div className="section-right__image-box my-3">
           <Image
-            src="/home-office.svg"
+            src="/office.svg"
             layout="fill" objectFit="cover"
           />
         </div>
