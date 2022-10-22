@@ -6,7 +6,7 @@ export default function Header({}) {
   return (
     <header className='section-header text-base p-3'>
       <div className='grid grid-cols-4 items-center lg:grid-cols-9'>
-        <div className='col-span-3 lg:col-span-3 flex items-center'>
+        <div className='col-span-3 lg:col-span-3 flex items-center text-primary-700 dark:text-white'>
           <svg 
             className='text-3xl m-3'
             stroke="currentColor" fill="currentColor" strokeWidth="0" role="img" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><title></title>

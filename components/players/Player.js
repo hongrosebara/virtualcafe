@@ -18,14 +18,14 @@ export default function Player({sound}) {
         <audio ref={audioPlayer} src={sound.audio}></audio>
         <div className="my-2 flex flex-start items-center">
           <button
-            className="text-2xl text-secondary-900 text-center px-2"
+            className="text-2xl text-primary-700 dark:text-secondary-900 text-center px-2"
             onClick={togglePlayer}>
             { isPlaying ? <BsPauseCircleFill color="var(--bg-primary-600)" /> : <BsFillPlayCircleFill />}
           </button>
-          <h3 className="text-tiny text-left text-secondary-900 dark:text-beige">{sound.name}</h3>
+          <h3 className="text-tiny text-left text-primary-700 dark:text-beige">{sound.name}</h3>
         </div>
       <div className="flex m-3 items-center">
-        <BsFillVolumeUpFill className="ml-5 text-secondary-500"/>
+        <BsFillVolumeUpFill className="ml-5 text-primary-700"/>
         <input
           className="volume-bar__others"
           type="range"
