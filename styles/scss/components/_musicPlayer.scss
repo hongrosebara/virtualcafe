@@ -28,7 +28,7 @@
 
   /* firefox */ 
   &::-moz-range-progress {
-    background-color: var(--color-bg-primary-medium);
+    background-color: var(--color-bg-other);
     border-top-left-radius: 10%;
     border-bottom-left-radius: 10px;
     height: 2px;
@@ -42,12 +42,13 @@
     border-radius: 50%;
     background: none;
     border-radius: 8px;
+    background-color: var(--color-bg-other);
   }
 
   /* knobby while dragging - chrome & safari */
   &:active::-webkit-slider-thumb {
     transform: scale(1.2);
-    background-color: var(--color-bg-primary-medium);
+    background-color: var(--color-bg-other);
   }
 
   /* knobby - firef ox */
@@ -59,7 +60,7 @@
     border: transparent;
     -webkit-appearance: none;
             appearance: none;
-    background: var(--color-bg-primary-light);
+    background: var(--color-bg-other);
     border-radius: 8px;
     z-index: 10;
   }
@@ -68,7 +69,7 @@
 
   &:active::-moz-range-thumb {
     transform: scale(1.2);
-    background-color: var(--selectedKnobby);
+    background-color: var(--color-bg-other);
   }
 }
 

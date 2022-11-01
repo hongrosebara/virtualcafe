@@ -51,7 +51,7 @@ const HomePage = ({ cafes, effects, music }) => {
       <div className="section-right col-span-1 lg:col-span-7 m-3">
         <div className="section-right__image-box my-3">
           <Image
-            src="/home-office.svg"
+            src="/coffeeshop.svg"
             layout="fill" objectFit="cover"
           />
         
