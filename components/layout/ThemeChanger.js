@@ -14,11 +14,11 @@ const ThemeChanger = () => {
 
   return (
     <div className="flex justify-between items-center">
-      <div>
+      <button>
         <select
           name="theme"
           id="theme-select"
-          className="py-1 px-3"
+          className="py-1 px-3 outline-none border-none focus:ring-0 text-tiny"
           onChange={(e) => setTheme(e.currentTarget.value)}
           value={theme}
         >
@@ -28,7 +28,7 @@ const ThemeChanger = () => {
             </option>
           ))}
         </select>
-      </div>
+      </button>
     </div>
   );
 };

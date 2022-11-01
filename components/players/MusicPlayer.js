@@ -42,12 +42,12 @@ const MusicPlayer = ( music ) => {
   }, [audioPlayer?.current?.loadedmetadata, audioPlayer?.current?.readyState])
 
   return (
-    <div className="section-music-player p-6 rounded-lg bg-primary-medium text-beige">
+    <div className="section-music-player p-6 rounded-lg bg-secondary text-beige">
       <h3>{songs[currentSongIndex].name}</h3>
       <audio ref={audioPlayer} src={songs[currentSongIndex].audio}></audio>
       
       {/* progess bar */}
-      <div className="-m-1">
+      <div>
         <input 
           className="progress-bar" 
           type="range" 
@@ -67,7 +67,7 @@ const MusicPlayer = ( music ) => {
       </div>
 
       <div className="flex justify-between">
-        <div className="flex items-center justify-center text-beige">
+        <div className="flex items-center justify-center">
           <button 
             className="flex items-center cursor-pointer text-3xl"
             onClick={() => skipSong(false, songs)}>

@@ -20,12 +20,12 @@ export default function Player({sound}) {
           <button
             className="text-2xl text-center px-2"
             onClick={togglePlayer}>
-            { isPlaying ? <BsPauseCircleFill color="var(--color-bg-primary-light)" /> : <BsFillPlayCircleFill />}
+            { isPlaying ? <BsPauseCircleFill color="var(--color-bg-other)" /> : <BsFillPlayCircleFill />}
           </button>
           <h3 className="text-tiny text-left">{sound.name}</h3>
         </div>
       <div className="flex m-3 items-center">
-        <BsFillVolumeUpFill className="ml-5"/>
+        <BsFillVolumeUpFill className="ml-5" />
         <input
           className="volume-bar__others"
           type="range"
