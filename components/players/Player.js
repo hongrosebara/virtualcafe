@@ -14,18 +14,18 @@ export default function Player({sound}) {
 
   return (
     <div
-      className="m-3 col-span-2 lg:col-span-4 flex rounded-sm items-center justify-between bg-beige dark:bg-dark">
+      className="m-3 col-span-2 lg:col-span-4 flex rounded-sm items-center justify-between text-sx text-primary">
         <audio ref={audioPlayer} src={sound.audio}></audio>
         <div className="my-2 flex flex-start items-center">
           <button
-            className="text-2xl text-primary-700 dark:text-secondary-900 text-center px-2"
+            className="text-2xl text-center px-2"
             onClick={togglePlayer}>
-            { isPlaying ? <BsPauseCircleFill color="var(--bg-primary-600)" /> : <BsFillPlayCircleFill />}
+            { isPlaying ? <BsPauseCircleFill color="var(--color-bg-primary-light)" /> : <BsFillPlayCircleFill />}
           </button>
-          <h3 className="text-tiny text-left text-primary-700 dark:text-beige">{sound.name}</h3>
+          <h3 className="text-tiny text-left">{sound.name}</h3>
         </div>
       <div className="flex m-3 items-center">
-        <BsFillVolumeUpFill className="ml-5 text-primary-700"/>
+        <BsFillVolumeUpFill className="ml-5"/>
         <input
           className="volume-bar__others"
           type="range"

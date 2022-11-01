@@ -11,7 +11,7 @@ const HomePage = ({ cafes, effects, music }) => {
     height: 200,
   };
   const view = 'coverart'; // or 'coverart'
-  const theme = 'dark'; // or 'white'
+  const theme = 'white'; // or 'white'
   
   return (
     <section className="section-main grid grid-cols-1 lg:grid-cols-10">
@@ -47,13 +47,14 @@ const HomePage = ({ cafes, effects, music }) => {
           </div>
         </div>
       </div>
-
+      
       <div className="section-right col-span-1 lg:col-span-7 m-3">
         <div className="section-right__image-box my-3">
           <Image
-            src="/office.svg"
+            src="/background.png"
             layout="fill" objectFit="cover"
           />
+        
         </div>
       </div>
     </section>

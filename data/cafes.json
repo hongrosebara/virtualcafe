@@ -9,17 +9,17 @@
     },
     {
       "id": 2,
-      "name": "English Cafe",
-      "slug": "english-cafe",
-      "audio": "https://res.cloudinary.com/dck6413ua/video/upload/v1666275573/ES_Cafe_Ambience_With_English_Voices_-_SFX_Producer_olqyjq.mp3",
-      "description": "Cafe with English chats"
+      "name": "Coffee Brew",
+      "slug": "coffee-brew",
+      "audio": "https://res.cloudinary.com/dck6413ua/video/upload/v1666959887/ES_Coffee_Brew_1_-_SFX_Producer_amp1wn.mp3",
+      "description": "Coffee brew"
     },
     {
       "id": 3,
-      "name": "Evening Cafe",
-      "slug": "evening-cafe",
-      "audio": "https://res.cloudinary.com/dck6413ua/video/upload/v1666275574/ES_Evening_Outdoor_Resturant_Ambience_With_Swedish_Voices_-_SFX_Producer_losupo.mp3",
-      "description": "Hanging out"
+      "name": "Coffee Pour",
+      "slug": "coffee-pour",
+      "audio": "https://res.cloudinary.com/dck6413ua/video/upload/v1666959885/ES_Coffee_Pour_-_SFX_Producer_e0cuug.mp3",
+      "description": "Coffee pour"
     },
     {
       "id": 4,
