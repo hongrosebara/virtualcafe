@@ -3,6 +3,7 @@ import Player from "@/components/players/Player"
 import MusicPlayer from "@/components/players/MusicPlayer"
 import SpotifyPlayer from "react-spotify-player"
 import Image from 'next/image'
+import { NextSeo } from 'next-seo'
 
 const HomePage = ({ cafes, effects, music }) => {
   // size may also be a plain string using the presets 'large' or 'compact'
@@ -14,50 +15,87 @@ const HomePage = ({ cafes, effects, music }) => {
   const theme = 'white'; // or 'white'
   
   return (
-    <section className="section-main grid grid-cols-1 lg:grid-cols-10">
-      <div className="col-span-1 lg:col-span-3 text-base">
-        <div className="m-3">
+    <>
+      <NextSeo
+        title="We Dream Of Coffee"
+        description="Boost your productivity and creativity for work and school with ambience sounds at this virtual cafe."
+        canonical="https://www.wedreamofcoffee.com/"
+        openGraph={{
+          url: 'https://www.facebook.com/wedreamofcoffee',
+          title: 'We Dream Of Coffee',
+          description: 'Boost your productivity and creativity for work and school with ambience sounds at this virtual cafe.',
+          images: [
+            {
+              url: 'https://www.wedreamofcoffee.com/seo/Open Graph.png',
+              width: 1200,
+              height: 627,
+              alt: 'facebook opengraph',
+              type: 'image/png',
+            },
+            {
+              url: 'https://www.wedreamofcoffee.com/seo/Twitter Card.png',
+              width: 800,
+              height: 418,
+              alt: 'twitter card',
+              type: 'image/png',
+            },
+            { url: 'https://www.wedreamofcoffee.com/logo.png' },
+            { url: 'https://www.wedreamofcoffee.com/coffeeshop.svg' },
+          ],
+          siteName: 'We Dream Of Coffee',
+        }}
+        twitter={{
+          handle: '@wedreamofcoffee',
+          site: '@wedreamofcoffee',
+          cardType: 'summary_large_image',
+        }}
+      />
 
-          {cafes.map((sound) => (
-            <Player 
-              key={sound.name} 
-              sound={sound} 
-            />
-          ))}
+      <section className="section-main grid grid-cols-1 lg:grid-cols-10">
+        <div className="col-span-1 lg:col-span-3 text-base">
+          <div className="m-3">
 
-          {effects.map((sound) => (
-            <Player 
-              key={sound.name} 
-              sound={sound} 
-            />
-          ))}
+            {cafes.map((sound) => (
+              <Player 
+                key={sound.name} 
+                sound={sound} 
+              />
+            ))}
 
-          <div className="m-3 rounded-sm">
-            <SpotifyPlayer
-              className="rounded-sm"
-              uri="spotify:artist:2Kx7MNY7cI1ENniW7vT30N"
-              size={size}
-              view={view}
-              theme={theme}
-            />
-          </div>
-          
-          <div className="m-3 col-span-4">
-            <MusicPlayer music={music} />
+            {effects.map((sound) => (
+              <Player 
+                key={sound.name} 
+                sound={sound} 
+              />
+            ))}
+
+            <div className="m-3 rounded-sm">
+              <SpotifyPlayer
+                className="rounded-sm"
+                uri="spotify:artist:2Kx7MNY7cI1ENniW7vT30N"
+                size={size}
+                view={view}
+                theme={theme}
+              />
+            </div>
+            
+            <div className="m-3 col-span-4">
+              <MusicPlayer music={music} />
+            </div>
           </div>
         </div>
-      </div>
-      
-      <div className="section-right col-span-1 lg:col-span-7 m-3">
-        <div className="section-right__image-box my-3">
-          <Image
-            src="/coffeeshop.svg"
-            layout="fill" objectFit="cover"
-          />
         
+        <div className="section-right col-span-1 lg:col-span-7 m-3">
+          <div className="section-right__image-box my-3">
+            <Image
+              src="/coffeeshop.svg"
+              layout="fill" objectFit="cover"
+            />
+          
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   )
 }
 
