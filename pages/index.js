@@ -3,7 +3,7 @@ import Player from "@/components/players/Player"
 import MusicPlayer from "@/components/players/MusicPlayer"
 import SpotifyPlayer from "react-spotify-player"
 import Image from 'next/image'
-import { NextSeo } from 'next-seo'
+import { NextSeo, ArticleJsonLd } from 'next-seo'
 
 const HomePage = ({ cafes, effects, music }) => {
   // size may also be a plain string using the presets 'large' or 'compact'
@@ -46,9 +46,30 @@ const HomePage = ({ cafes, effects, music }) => {
         }}
         twitter={{
           handle: '@wedreamofcoffee',
-          site: '@wedreamofcoffee',
+          site: '@wedreamofcoffee ',
           cardType: 'summary_large_image',
         }}
+      />
+
+      <ArticleJsonLd
+        url="https://www.wedreamofcoffee.com"
+        title="Virtual Cafe Progressive Web App"
+        images={[
+          'https://www.wedreamofcoffee.com/logo.png',
+          'https://www.wedreamofcoffee.com/coffeeshop.svg',
+        ]}
+        datePublished="2022-02-05T08:00:00+08:00"
+        dateModified="2022-10-05T09:00:00+08:00"
+        authorName={[
+          {
+            name: 'Olivia Gilliand',
+            url: 'https://www.wedreamofcoffee.com/#oliviagilliand',
+          },
+        ]}
+        publisherName="We Dream Of Coffee"
+        publisherLogo="https://www.wedreamofcoffee.com/logo.png"
+        description="Boost your productivity and creativity for work and school with ambience sounds at this virtual cafe."
+        isAccessibleForFree={true}
       />
 
       <section className="section-main grid grid-cols-1 lg:grid-cols-10">
