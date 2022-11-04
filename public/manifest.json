@@ -1,7 +1,7 @@
 {
-    "theme_color": "#c37a2e",
-    "background_color": "#c37a2e",
-    "display": "standalone",
+    "theme_color": "#3e6a00",
+    "background_color": "#fef7c6",
+    "display": "browser",
     "scope": "/",
     "start_url": "/",
     "name": "We Dream Of Coffee",
