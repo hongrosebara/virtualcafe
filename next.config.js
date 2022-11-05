@@ -5,19 +5,6 @@ const withPWA = require('next-pwa')({
   // scope: '/app',
   // sw: 'service-worker.js',
   //...
-})
-
-module.exports = withPWA({
-  // next.js config
-  webpack5: true,
-  webpack: (config) => {
-    config.resolve.fallback = { fs: false };
-
-    return config;
-  }
-})
-
-module.exports = {
   async redirects() {
     return [
       {
@@ -77,4 +64,14 @@ module.exports = {
       },
     ]
   },
-}
+})
+
+module.exports = withPWA({
+  // next.js config
+  webpack5: true,
+  webpack: (config) => {
+    config.resolve.fallback = { fs: false };
+
+    return config;
+  }
+})
