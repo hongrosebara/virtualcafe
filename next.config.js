@@ -30,10 +30,60 @@ module.exports = withPWA({
   redirects: async () => {
     return [
       {
-        source: '/about',
+        source: '/how-long-do-coffee-beans-last/',
         destination: '/',
-        permanent: true
-      }
+        permanent: true,
+      },
+      {
+        source: '/aeropress-vs-french-press-difference/',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/difference-between-french-and-italian-roast/',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/best-espresso-beans-reviews/',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/how-to-make-a-spanish-latte/',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/how-to-make-vietnamese-coffee/',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/espresso-beans-vs-coffee-beans/',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/what-everybody-ought-to-know-about-coffees-effect-on-the-body/',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/7-wonders-of-coffee/',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/best-espresso-machine-under-1000-reviews/',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/how-to-make-americano-coffee/',
+        destination: '/',
+        permanent: true,
+      },
     ]
   }
 })
