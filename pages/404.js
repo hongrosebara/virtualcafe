@@ -1,14 +1,19 @@
 import Image from 'next/image'
 
+const myLoader = ({ src, width, quality }) => {
+  return `https://wedreamofcoffee.com/${src}?w=${width}&q=${quality || 75}`
+}
+
+
 export default function NotFoundPage() {
   return (
-    <div className="section-main m-6">
+    <div className="container flex justify-center m-6">
       <Image
-        src="/404.svg"
-        layout='fill'
-        sizes="(max-width: 768px) 100vw,
-                (max-width: 1200px) 50vw,
-                33vw"
+        loader={myLoader}
+        src="404.svg"
+        alt="404"
+        width={500}
+        height={500}
       />
     </div>
   )
