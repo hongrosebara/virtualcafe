@@ -30,7 +30,7 @@ module.exports = withPWA({
   redirects: async () => {
     return [
       {
-        source: '/about',
+        source: '/what-everybody-ought-to-know-about-coffees-effect-on-the-body',
         destination: '/',
         permanent: true
       }
