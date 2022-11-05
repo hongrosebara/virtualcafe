@@ -65,11 +65,6 @@ module.exports = withPWA({
         permanent: true,
       },
       {
-        source: '/what-everybody-ought-to-know-about-coffees-effect-on-the-body',
-        destination: '/',
-        permanent: true,
-      },
-      {
         source: '/7-wonders-of-coffee',
         destination: '/',
         permanent: true,
@@ -81,6 +76,56 @@ module.exports = withPWA({
       },
       {
         source: '/how-to-make-americano-coffee',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/how-long-does-ground-coffee-last',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/how-long-do-roasted-coffee-beans-last',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/how-long-do-green-coffee-beans-last',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/how-long-does-coffee-last',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/how-to-pick-coffee-beans',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/pros-and-cons-of-french-press',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/best-commercial-espresso-machine-reviews',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/best-latte-machine-reviews',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/best-stovetop-espresso-maker-reviews',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/wp-content/uploads/2017/04/saaw.png?x56718',
         destination: '/',
         permanent: true,
       },
