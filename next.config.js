@@ -30,10 +30,10 @@ module.exports = withPWA({
   redirects: async () => {
     return [
       {
-        source: '/how-long-do-coffee-beans-last/',
+        source: '/about',
         destination: '/',
-        permanent: true,
-      },
+        permanent: true
+      }
     ]
   }
 })
