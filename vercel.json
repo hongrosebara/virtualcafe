@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    { 
+      "source": "/how-long-do-coffee-beans-last/",
+      "destination": "/", 
+      "permanent": true
+    }
+  ]
+}
