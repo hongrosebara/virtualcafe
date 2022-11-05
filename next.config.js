@@ -11,7 +11,7 @@ const redirects = {
   async redirects() {
     return [
       {
-        source: '/about',
+        source: '/what-everybody-ought-to-know-about-coffees-effect-on-the-body/',
         destination: '/',
         permanent: true,
       },
