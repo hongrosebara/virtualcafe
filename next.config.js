@@ -35,52 +35,52 @@ module.exports = withPWA({
         permanent: true
       },
       {
-        source: '/aeropress-vs-french-press-difference/',
+        source: '/aeropress-vs-french-press-difference',
         destination: '/',
         permanent: true,
       },
       {
-        source: '/difference-between-french-and-italian-roast/',
+        source: '/difference-between-french-and-italian-roast',
         destination: '/',
         permanent: true,
       },
       {
-        source: '/best-espresso-beans-reviews/',
+        source: '/best-espresso-beans-reviews',
         destination: '/',
         permanent: true,
       },
       {
-        source: '/how-to-make-a-spanish-latte/',
+        source: '/how-to-make-a-spanish-latte',
         destination: '/',
         permanent: true
       },
       {
-        source: '/how-to-make-vietnamese-coffee/',
+        source: '/how-to-make-vietnamese-coffee',
         destination: '/',
         permanent: true,
       },
       {
-        source: '/espresso-beans-vs-coffee-beans/',
+        source: '/espresso-beans-vs-coffee-beans',
         destination: '/',
         permanent: true,
       },
       {
-        source: '/what-everybody-ought-to-know-about-coffees-effect-on-the-body/',
+        source: '/what-everybody-ought-to-know-about-coffees-effect-on-the-body',
         destination: '/',
         permanent: true,
       },
       {
-        source: '/7-wonders-of-coffee/',
+        source: '/7-wonders-of-coffee',
         destination: '/',
         permanent: true,
       },
       {
-        source: '/best-espresso-machine-under-1000-reviews/',
+        source: '/best-espresso-machine-under-1000-reviews',
         destination: '/',
         permanent: true,
       },
       {
-        source: '/how-to-make-americano-coffee/',
+        source: '/how-to-make-americano-coffee',
         destination: '/',
         permanent: true,
       },
