@@ -27,6 +27,14 @@ module.exports = withPWA({
 
     return config;
   },
+  async rewrites() {
+    return [
+      {
+        source: '/sitemap.xml',
+        destination: '/api/sitemap',
+      },
+    ]
+  },
   redirects: async () => {
     return [
       {
@@ -124,11 +132,11 @@ module.exports = withPWA({
         destination: '/',
         permanent: true,
       },
-      {
-        source: '/wp-content/uploads/2017/04/saaw.png?x56718',
-        destination: '/',
-        permanent: true,
-      },
+      // {
+      //   source: '/wp-content/uploads/2017/04/saaw.png?x56718',
+      //   destination: '/',
+      //   permanent: true,
+      // },
     ]
   }
 })
