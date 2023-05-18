@@ -19,7 +19,7 @@ const getListOfCoffeeShopPhotos = async () => {
 };
 
 export const fetchCoffeeShops = async (
-  latLong = "21.03071626412335,105.85652326094828",
+  latLong = "21.02847926747364,105.85091984004878",
   limit = 6
 ) => {
   const photos = await getListOfCoffeeShopPhotos();
