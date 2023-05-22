@@ -1,7 +1,7 @@
 import { useEffect, useState,  useRef } from "react";
 import { BsFillPlayCircleFill, BsPauseCircleFill, BsFillVolumeDownFill, BsFillVolumeUpFill } from "react-icons/bs";
 import { BiSkipPrevious, BiSkipNext } from "react-icons/bi";
-import { useAudio } from "../hooks/AudioHook";
+import { useAudio } from "../../hooks/AudioHook";
 
 const MusicPlayer = ( music ) => {
   const [songs] = useState(music.music);
@@ -42,7 +42,7 @@ const MusicPlayer = ( music ) => {
   }, [audioPlayer?.current?.loadedmetadata, audioPlayer?.current?.readyState])
 
   return (
-    <div className="section-music-player p-6 rounded-lg bg-secondary text-beige">
+    <div className="section-music-player my-3 p-3 rounded-lg bg-secondary text-beige">
       <h3>{songs[currentSongIndex].name}</h3>
       <audio ref={audioPlayer} src={songs[currentSongIndex].audio}></audio>
       

@@ -85,7 +85,7 @@ const Roaster = (initialProps) => {
       // SSG
       handleCreateCoffeeStore(initialProps.roaster);
     }
-  }, [id, initialProps, initialProps.roaster, roasters]);
+  }, [id, initialProps, initialProps.roaster]);
 
   if (router.isFallback) {
     return <div>Loading...</div>;

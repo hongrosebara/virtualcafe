@@ -17,7 +17,7 @@ const ThemeChanger = () => {
       <div
         name="theme"
         id="theme-select"
-        className="p-3 bg-inverse text-inverse rounded-sm outline-none border-none focus:ring-0 text-tiny"
+        className="p-2 bg-inverse text-inverse rounded-sm outline-none border-none focus:ring-0 text-tiny"
         onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
         value={theme}
       >
@@ -26,7 +26,7 @@ const ThemeChanger = () => {
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 20 20"
             fill="currentColor"
-            className="h-4 w-4 text-gray-800 dark:text-gray-200"
+            className="h-4 w-4 text-inverse dark:text-gray-200"
           >
             {theme === 'dark' ? (
               <path

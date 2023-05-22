@@ -3,11 +3,15 @@ import { fetchRoasters } from "lib/coffee-roaster";
 import { UseTrackLocation } from "@/components/hooks/UseTrackLocation";
 import { useEffect, useContext } from "react";
 import { ACTION_TYPES, RoasterContext } from "context/Roaster";
-import roasterData from "@/data/roasters/coffee.json";
+import famousRoasters from "@/data/roasters/famous.json";
 
 export async function getStaticProps() {
+  const roasters = await fetchRoasters();
   return {
-    props: { roasters: roasterData },
+    props: {
+      roasters: roasters,
+      famousRoasters: famousRoasters,
+    },
   };
 }
 
@@ -45,7 +49,7 @@ const CoffeeRoasterDirectory = (props) => {
   };
 
   return (
-    <>
+    <section className="wrapper">
       <h1>Coffee Roaster Directory</h1>
       <button className="bg-primary-light" onClick={handleGeolocation}>
         {isFindingLocation ? "Locating ..." : "View roasters nearby"}
@@ -55,17 +59,25 @@ const CoffeeRoasterDirectory = (props) => {
       <div className="flex items-center justify-between space-x-4">
         {roasters.length > 0 &&
           roasters.map((roaster) => (
-            <Roaster key={roaster.id} roaster={roaster} />
+            <Roaster
+              directory="coffee-roaster-directory"
+              key={roaster.id}
+              roaster={roaster}
+            />
           ))}
       </div>
-      <p>Famous roasters</p>
+      <p>Discover famous roasters</p>
       <div className="flex items-center justify-between space-x-4">
-        {props.roasters.length > 0 &&
-          props.roasters.map((roaster) => (
-            <Roaster key={roaster.id} roaster={roaster} />
+        {props.famousRoasters &&
+          props.famousRoasters.map((roaster) => (
+            <Roaster
+              directory="coffee-roaster-directory/famous"
+              key={roaster.id}
+              roaster={roaster}
+            />
           ))}
       </div>
-    </>
+    </section>
   );
 };
 

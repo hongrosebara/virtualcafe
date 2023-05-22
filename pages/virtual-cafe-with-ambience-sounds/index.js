@@ -3,12 +3,13 @@ import {
   buildEffectPath,
   buildMusicPath,
   extractSound,
-} from "./api/getsounds";
-import Player from "@/components/players/Player";
-import MusicPlayer from "@/components/players/MusicPlayer";
+} from "../api/getsounds";
+import Player from "@/components/virtualCafe/Player/Player";
+import MusicPlayer from "@/components/virtualCafe/MusicPlayer/MusicPlayer";
 import SpotifyPlayer from "react-spotify-player";
 import Image from "next/image";
 import { NextSeo, ArticleJsonLd } from "next-seo";
+import { Layout } from "@/components/virtualCafe";
 
 const VirtualCafe = ({ cafes, effects, music }) => {
   // size may also be a plain string using the presets 'large' or 'compact'
@@ -79,7 +80,7 @@ const VirtualCafe = ({ cafes, effects, music }) => {
       />
 
       <section className="section-main grid grid-cols-1 lg:grid-cols-10">
-        <div className="col-span-1 lg:col-span-3 text-base">
+        <div className="col-span-1 lg:col-span-3 text-xs">
           <div className="m-3">
             {cafes.map((sound) => (
               <Player key={sound.name} sound={sound} />
@@ -89,7 +90,11 @@ const VirtualCafe = ({ cafes, effects, music }) => {
               <Player key={sound.name} sound={sound} />
             ))}
 
-            <div className="m-3 rounded-sm">
+            <div className="mx-3 col-span-4">
+              <MusicPlayer music={music} />
+            </div>
+
+            <div className="mx-3 mt-3 rounded-sm">
               <SpotifyPlayer
                 className="rounded-sm"
                 uri="spotify:artist:2Kx7MNY7cI1ENniW7vT30N"
@@ -97,10 +102,6 @@ const VirtualCafe = ({ cafes, effects, music }) => {
                 view={view}
                 theme={theme}
               />
-            </div>
-
-            <div className="m-3 col-span-4">
-              <MusicPlayer music={music} />
             </div>
           </div>
         </div>
@@ -128,3 +129,5 @@ export async function getStaticProps() {
 }
 
 export default VirtualCafe;
+
+VirtualCafe.Layout = Layout;

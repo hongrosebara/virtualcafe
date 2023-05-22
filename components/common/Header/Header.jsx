@@ -1,4 +1,4 @@
-import ThemeChanger from './ThemeChanger';
+import ThemeChanger from '../ThemeChanger';
 import Link from 'next/link'
 
 export default function Header({}) {
@@ -6,7 +6,7 @@ export default function Header({}) {
   return (
     <header className='section-header text-base p-3'>
       <div className='grid grid-cols-4 items-center lg:grid-cols-9'>
-        <div className='col-span-3 lg:col-span-3 flex items-center'>
+        <div className='col-span-3 lg:col-span-3 flex items-center cursor-pointer'>
           <Link href="/">
             <svg 
               className='text-3xl m-3'

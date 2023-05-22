@@ -1,5 +1,5 @@
 // FONT VARIABLES
-$font-heading: 'Lora', sans-serif;
+$font-heading: 'Fraunces', sans-serif;
 $font-body: 'Oswald', sans-serif;
 
 // RESPONSIVE BREAKPOINTS
@@ -32,16 +32,75 @@ $color-quinary: #2e3940;
   --color-text-secondary: #e55837;
   --color-text-theme: #2a9d90;
   --color-text-default-soft: #6a6a6a;
-  --color-text-inverse: #fef7c6;
+  --color-text-inverse: var(--color-bg-primary);
   --color-text-inverse-soft: rgba(255, 255, 255, 0.7);
 	--color-text-white: #fdfdfd;
+  
   --knobby: #c68240;
   --knobby-others: #965E23;
-  --progress-bar: #fef7c6;
+  --progress-bar: var(--color-bg-primary);
   --seek-before-width: 0px;
   --seek-before-color: #EBCBA9;
   --volume-others: #3e6a00;
-  --volume-music: #fef7c6;
+  --volume-music: var(--color-bg-primary);
+
+
+  --base-font-size: 16px;
+  --base-line-height: 1.6;
+
+  // SPACING
+
+  --base-spacing-unit        : 40px/--base-font-size * 1rem;
+  --unit                     : --base-spacing-unit;
+  --base-border-radius       : 5px;
+  --grid-gutter              : 40px/--base-font-size * 1rem;
+  --container-pad            : --unit; 
+  --container-max            : 1520px;
+  --container-small-max      : 820px;
+  --container-tiny-max       : 376px;
+
+  /* Major Third Typescale */
+  --fs-50: 0.8rem;
+  --fs-100: 1rem;
+  --fs-200: 1.25rem;
+  --fs-300: 1.563rem;
+  --fs-400: 1.953rem;
+  --fs-500: 2.441rem;
+
+  /* Paddings */
+  --pd-container: calc(12px + 1.5625vw);
+  --pd-wrapper: 2rem 1.5rem;
+  --gap-unit: calc(8px + 1.5625vw);
+  --gap-unit-50: 2rem;
+  --gap-unit-100: 4rem;
+  --gap-unit-150: 5.5rem;
+  --gap-unit-200: 7rem;
+
+  @include respond(sm) {
+    --gap-unit-150: 7.5rem;
+    --pd-wrapper: 4rem 4rem;
+    --fs-quote: 1.25rem;
+    --fs-time: 10rem;
+  }
+
+  @include respond(md) {
+    /* Padding */
+    --pd-container: 4rem 10rem;
+    --pd-wrapper: 3rem 10rem;
+    --gap-unit-100: 10rem;
+    --gap-unit-150: 10rem;
+  }
+
+  @include respond(lg) {
+    --base-font-size: 18px;
+    --fs-time: 12.5rem;
+  } 
+  
+  /* font-families */
+  --ff-heading: "Fraunces", sans-serif;
+  --ff-subheading: "Lora", sans-serif;
+  --ff-serif: "Oswald", sans-serif;
+  --ff-body: "Oswald", sans-serif;
 }
 
 

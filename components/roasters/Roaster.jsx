@@ -1,10 +1,10 @@
-import Image from "next/image"
-import Link from "next/link"
+import Image from "next/image";
+import Link from "next/link";
 
-const Store = ({ roaster }) => {
+const Roaster = ({ roaster, directory }) => {
   return (
     <div className="flex flex-col justify-start cursor-pointer">
-      <Link href={`coffee-roaster-directory/${roaster.id}`}>
+      <Link href={`${directory}/${roaster.id}`}>
         <div>
           <Image
             src={
@@ -18,6 +18,6 @@ const Store = ({ roaster }) => {
         </div>
       </Link>
     </div>
-  )
-}
-export default Store
+  );
+};
+export default Roaster;

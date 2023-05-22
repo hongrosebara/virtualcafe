@@ -1,9 +1,11 @@
 import "@/styles/scss/globals.scss";
-import Layout from "@/components/layout/Layout";
 import { ThemeProvider } from "next-themes";
 import RoasterProvider from "context/Roaster";
 
+const Noop = ({ children }) => <>{children}</>
+
 function MyApp({ Component, pageProps }) {
+  const Layout = Component.Layout ?? Noop
   return (
     <ThemeProvider>
       <Layout>

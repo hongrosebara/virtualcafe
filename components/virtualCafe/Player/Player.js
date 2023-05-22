@@ -1,5 +1,5 @@
 import { BsFillPlayCircleFill, BsPauseCircleFill, BsFillVolumeDownFill, BsFillVolumeUpFill } from "react-icons/bs";
-import { useAudio } from "../hooks/AudioHook";
+import { useAudio } from "../../hooks/AudioHook";
 
 export default function Player({sound}) {
 
@@ -14,9 +14,9 @@ export default function Player({sound}) {
 
   return (
     <div
-      className="m-3 col-span-2 lg:col-span-4 flex rounded-sm items-center justify-between text-sx text-primary">
+      className="m-1 col-span-2 lg:col-span-4 flex rounded-sm items-center justify-between text-sx text-primary">
         <audio ref={audioPlayer} src={sound.audio}></audio>
-        <div className="my-2 flex flex-start items-center">
+        <div className="flex flex-start items-center">
           <button
             className="text-2xl text-center px-2"
             onClick={togglePlayer}>
