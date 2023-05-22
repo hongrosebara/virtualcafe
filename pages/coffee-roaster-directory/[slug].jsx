@@ -45,9 +45,6 @@ const Roaster = (initialProps) => {
   console.log("roasters", roasters);
 
   const router = useRouter();
-  if (router.isFallback) {
-    return <div>Loading...</div>;
-  }
   const id = router.query.slug;
 
   const handleCreateRoaster = async (roaster) => {
@@ -81,17 +78,18 @@ const Roaster = (initialProps) => {
         const roasterFromContext = roasters.find((roaster) => {
           return roaster.id.toString() === id;
         });
-
-        if (roasterFromContext) {
-          setRoaster(roasterFromContext);
-          handleCreateRoaster(roasterFromContext);
-        }
+        setRoaster(roasterFromContext);
+        handleCreateRoaster(roasterFromContext);
       }
     } else {
       // SSG
-      handleCreateRoaster(initialProps.roaster);
+      handleCreateCoffeeStore(initialProps.roaster);
     }
-  }, [id, initialProps, initialProps.roaster]);
+  }, [id, initialProps, initialProps.roaster, roasters]);
+
+  if (router.isFallback) {
+    return <div>Loading...</div>;
+  }
 
   const { address, region, name, imgUrl } = roaster;
 
