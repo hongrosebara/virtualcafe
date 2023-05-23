@@ -4,6 +4,7 @@ import { UseTrackLocation } from "@/components/hooks/UseTrackLocation";
 import { useEffect, useContext } from "react";
 import { ACTION_TYPES, RoasterContext } from "context/Roaster";
 import famousRoasters from "@/data/roasters/famous.json";
+import { Layout } from "@/components/common";
 
 export async function getStaticProps() {
   const roasters = await fetchRoasters();
@@ -82,3 +83,5 @@ const CoffeeRoasterDirectory = (props) => {
 };
 
 export default CoffeeRoasterDirectory;
+
+CoffeeRoasterDirectory.Layout = Layout;

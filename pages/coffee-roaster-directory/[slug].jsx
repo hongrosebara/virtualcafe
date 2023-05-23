@@ -5,6 +5,7 @@ import { useState, useContext, useEffect } from "react";
 import { RoasterContext } from "context/Roaster";
 import { isEmpty } from "@/components/utils";
 import Link from "next/link";
+import { Layout } from "@/components/common";
 
 export async function getStaticProps({ params }) {
   const roasters = await fetchRoasters();
@@ -42,8 +43,6 @@ const Roaster = (initialProps) => {
     state: { roasters },
   } = useContext(RoasterContext);
 
-  console.log("roasters", roasters);
-
   const router = useRouter();
   const id = router.query.slug;
 
@@ -66,7 +65,7 @@ const Roaster = (initialProps) => {
       });
 
       const dbRoaster = response.json();
-      console.log("dbRoaster", dbRoaster);
+    
     } catch (error) {
       console.error("Error Creating Roaster", error);
     }
@@ -112,4 +111,7 @@ const Roaster = (initialProps) => {
     </>
   );
 };
+
 export default Roaster;
+
+Roaster.Layout = Layout;

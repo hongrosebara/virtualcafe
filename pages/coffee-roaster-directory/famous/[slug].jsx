@@ -1,21 +1,26 @@
-import famousRoasters from "@/data/roasters/famous.json";
 import Link from "next/link";
 import Image from "next/image";
+import { Layout } from "@/components/common";
+import { fetchFamousRoasters } from "@/lib/famous-roaster";
+import { useEffect } from "react";
 
 export async function getStaticProps({ params }) {
-  const roaster = famousRoasters.find((roaster) => {
-    return roaster.id.toString() === params.slug;
-  });
+  const roasters = await fetchFamousRoasters();
 
   return {
     props: {
-      roaster: roaster ? roaster : {}, //dynamic Id
+      roaster: roasters.find((roaster) => {
+        return roaster.id.toString() === params.slug;
+      }),
+      revalidate: 1
     },
   };
 }
 
 export async function getStaticPaths() {
-  const paths = famousRoasters.map((roaster) => {
+  const roasters = await fetchFamousRoasters();
+  
+  const paths = roasters.map((roaster) => {
     return {
       params: {
         slug: roaster.id.toString(),
@@ -29,12 +34,16 @@ export async function getStaticPaths() {
   };
 }
 
-const FamousRoaster = ({roaster}) => {
-  const {id, name, address, region, voting, imgUrl} = roaster;
+const FamousRoaster = (initialProps) => {
+  const { name, address, neighbourhood, websiteUrl, imgUrl } =
+    initialProps.roaster;
+
   return (
-    <>
+    <section className="wrapper">
       <div className="flex flex-col justify-start items-start">
-        <Link href="/coffee-roaster-directory/famous/">Go back</Link>
+        <Link href="/coffee-roaster-directory/famous/" className="mb-5">
+          Go back
+        </Link>
         <Image
           src={
             imgUrl ||
@@ -43,11 +52,17 @@ const FamousRoaster = ({roaster}) => {
           height={300}
           width={300}
         />
-        <h1>{name}</h1>
-        <div>{region && <p>{region}</p>}</div>
+        <h1>{name && name}</h1>
+        <div>{neighbourhood && <p>{neighbourhood}</p>}</div>
         <div>{address && <p>{address}</p>}</div>
+        <button className="px-5 py-3 rounded-sm bg-secondary">
+          <Link href={websiteUrl}>Check it out</Link>
+        </button>
       </div>
-    </>
+    </section>
   );
 };
+
 export default FamousRoaster;
+
+FamousRoaster.Layout = Layout;

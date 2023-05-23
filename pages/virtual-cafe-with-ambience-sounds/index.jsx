@@ -1,15 +1,25 @@
 import {
-  buildAmbiencePath,
-  buildEffectPath,
-  buildMusicPath,
+  buildPaths,
   extractSound,
-} from "../api/getsounds";
+} from "@/components/utils/getSounds";
 import Player from "@/components/virtualCafe/Player/Player";
 import MusicPlayer from "@/components/virtualCafe/MusicPlayer/MusicPlayer";
 import SpotifyPlayer from "react-spotify-player";
 import Image from "next/image";
 import { NextSeo, ArticleJsonLd } from "next-seo";
 import { Layout } from "@/components/virtualCafe";
+
+export async function getStaticProps() {
+  const cafePath = buildPaths('cafes.json');
+  const effectPath = buildPaths('effects.json');
+  const musicPath = buildPaths('music.json');
+  const cafes = extractSound(cafePath).sounds;
+  const effects = extractSound(effectPath).sounds;
+  const music = extractSound(musicPath).sounds;
+  return {
+    props: { cafes, effects, music },
+  };
+}
 
 const VirtualCafe = ({ cafes, effects, music }) => {
   // size may also be a plain string using the presets 'large' or 'compact'
@@ -115,18 +125,6 @@ const VirtualCafe = ({ cafes, effects, music }) => {
     </>
   );
 };
-
-export async function getStaticProps() {
-  const cafePath = buildAmbiencePath();
-  const effectPath = buildEffectPath();
-  const musicPath = buildMusicPath();
-  const cafes = extractSound(cafePath).sounds;
-  const effects = extractSound(effectPath).sounds;
-  const music = extractSound(musicPath).sounds;
-  return {
-    props: { cafes, effects, music },
-  };
-}
 
 export default VirtualCafe;
 
