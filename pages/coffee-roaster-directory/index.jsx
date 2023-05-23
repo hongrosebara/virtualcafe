@@ -3,7 +3,6 @@ import { fetchRoasters } from "lib/coffee-roaster";
 import { UseTrackLocation } from "@/components/hooks/UseTrackLocation";
 import { useEffect, useContext } from "react";
 import { ACTION_TYPES, RoasterContext } from "context/Roaster";
-import famousRoasters from "@/data/roasters/famous.json";
 import { Layout } from "@/components/common";
 
 export async function getStaticProps() {
@@ -62,17 +61,6 @@ const CoffeeRoasterDirectory = (props) => {
           roasters.map((roaster) => (
             <Roaster
               directory="coffee-roaster-directory"
-              key={roaster.id}
-              roaster={roaster}
-            />
-          ))}
-      </div>
-      <p>Discover famous roasters</p>
-      <div className="flex items-center justify-between space-x-4">
-        {props.famousRoasters &&
-          props.famousRoasters.map((roaster) => (
-            <Roaster
-              directory="coffee-roaster-directory/famous"
               key={roaster.id}
               roaster={roaster}
             />
