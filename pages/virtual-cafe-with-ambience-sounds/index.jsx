@@ -1,6 +1,6 @@
 import {
   buildPaths,
-  extractSound,
+  extractFile,
 } from "@/components/utils/getData";
 import Player from "@/components/virtualCafe/Player/Player";
 import MusicPlayer from "@/components/virtualCafe/MusicPlayer/MusicPlayer";

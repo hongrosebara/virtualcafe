@@ -10,7 +10,7 @@ export async function getStaticProps() {
   return {
     props: {
       roasters: roasters,
-      famousRoasters: famousRoasters,
+      revalidate: 1,
     },
   };
 }
