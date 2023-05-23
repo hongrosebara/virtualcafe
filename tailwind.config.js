@@ -41,16 +41,17 @@ module.exports = {
         heart: "var(--color-bg-secondary)",
         white: "#fdfdfd",
         beige: "#fef7c6",
-        grey: "777",
+        gray: "var(--color-gray)",
         slate: "rgb(156 163 175)",
       },
       fontSize: {
-        sm: "var(--fs-50)", // 0.8rem
-        base: "var(--fs-100)", // 1rem
-        xl: "var(--fs-200)", // 1.25rem
-        "2xl": "var(--fs-300)",
-        "3xl": "var(--fs-400)",
-        "4xl": "var(--fs-500)",
+        xxs: "var(--fs-50)", // 0.8rem
+        xs: "var(--fs-100)", // 1rem
+        sm: "var(--fs-200)", // 1.25rem
+        base: "var(--fs-300)",
+        "lg": "var(--fs-400)",
+        "1xl": "var(--fs-500)",
+        "2xl": "var(--fs-600)",
       },
       fontFamily: {
         heading: ["Fraunces"],

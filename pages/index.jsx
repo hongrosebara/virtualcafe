@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { NextSeo, ArticleJsonLd } from "next-seo";
 import { Layout } from "@/components/common";
+import { Hero } from "@/components/ui";
 
 const HomePage = () => {
   return (
@@ -62,7 +63,21 @@ const HomePage = () => {
         isAccessibleForFree={true}
       />
 
-      <section>Home</section>
+      <section>
+        <Hero />
+      </section>
+
+      <section className="section-wrapper">
+        <h1>Coffee Festival Events</h1>
+      </section>
+
+      <section className="mx-auto bg-primary-dark text-white">
+        <h1>Famous Coffee Roasters</h1>
+      </section>
+
+      <section className="section-wrapper">
+        <h1>Coffee Subscriptions</h1>
+      </section>
     </>
   );
 };

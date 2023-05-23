@@ -3323,10 +3323,10 @@
   dependencies:
     "safe-buffer" "^5.1.0"
 
-"react-burger-menu@^3.0.8":
-  "integrity" "sha512-pkPHOUKKd5ClLg5OERIZLXtnYCO2Vxvti+BBIIVLNiD2xjCdgfkSt4TZ2IPUQBkYUY/id7Mq56YDgQ16p4kZog=="
-  "resolved" "https://registry.npmjs.org/react-burger-menu/-/react-burger-menu-3.0.8.tgz"
-  "version" "3.0.8"
+"react-burger-menu@^3.0.9":
+  "integrity" "sha512-Qy15hkCxwxNEKfqdAv43F+8ZSl+/c6KkqrBwGP0CesFYJ02onHtiUFUbuhSWCMtBH8/n0HhfekFlp/NyCdKYzQ=="
+  "resolved" "https://registry.npmjs.org/react-burger-menu/-/react-burger-menu-3.0.9.tgz"
+  "version" "3.0.9"
   dependencies:
     "browserify-optional" "^1.0.0"
     "classnames" "^2.2.6"

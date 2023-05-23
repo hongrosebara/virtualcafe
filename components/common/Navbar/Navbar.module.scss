@@ -1,0 +1,7 @@
+.main-nav {
+  @apply hidden md:block uppercase text-sm;
+
+  & ul li a {
+    @apply hover:text-gray;
+  }
+}

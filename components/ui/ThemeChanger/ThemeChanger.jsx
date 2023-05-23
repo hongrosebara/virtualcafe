@@ -17,7 +17,7 @@ const ThemeChanger = () => {
       <div
         name="theme"
         id="theme-select"
-        className="p-2 bg-inverse text-inverse rounded-sm outline-none border-none focus:ring-0 text-tiny"
+        className="p-4 bg-inverse text-inverse rounded-sm outline-none border-none focus:ring-0 text-xl"
         onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
         value={theme}
       >

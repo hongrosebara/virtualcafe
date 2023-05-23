@@ -14,7 +14,7 @@ export default function Player({sound}) {
 
   return (
     <div
-      className="m-1 col-span-2 lg:col-span-4 flex rounded-sm items-center justify-between text-sx text-primary">
+      className="m-2 py-2 col-span-2 lg:col-span-4 flex rounded-sm items-center justify-between text-base text-primary">
         <audio ref={audioPlayer} src={sound.audio}></audio>
         <div className="flex flex-start items-center">
           <button
@@ -22,7 +22,7 @@ export default function Player({sound}) {
             onClick={togglePlayer}>
             { isPlaying ? <BsPauseCircleFill color="var(--color-bg-other)" /> : <BsFillPlayCircleFill />}
           </button>
-          <h3 className="text-tiny text-left">{sound.name}</h3>
+          <h3 className="text-base text-left">{sound.name}</h3>
         </div>
       <div className="flex m-3 items-center">
         <BsFillVolumeUpFill className="ml-5" />

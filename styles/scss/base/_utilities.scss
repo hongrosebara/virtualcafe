@@ -7,3 +7,74 @@
   max-width: 1440px;
   padding: var(--pd-wrapper);
 }
+
+.section-wrapper {
+  margin: 0 auto;
+  max-width: 1440px;
+  padding: var(--pd-section);
+}
+
+.footer-wrapper {
+  margin: 0 auto;
+  max-width: 1440px;
+  padding: var(--pd-footer);
+}
+
+/* Burger Menu */
+.bm-burger-button {
+  @apply w-8 h-8;
+}
+
+.bm-burger-bars {
+  background: #373a47;
+}  
+
+.bm-burger-bars-hover {
+  background: #a90000;
+
+}
+
+.bm-cross-button {
+  height: 24px;
+  width: 24px;
+}
+
+.bm-cross {
+  background: #bdc3c7;
+}
+
+.bm-menu-wrap {
+  position: fixed;
+  height: 100%;
+}
+
+.bm-menu {
+  background: var(--color-bg-primary-light);
+  padding: 0.3rem 0.3rem 0;
+  font-size: 1.15em;
+}
+
+.bm-morph-shape {
+  fill: var(--color-bg-secondary);
+}
+
+.bm-item-list {
+  color: var(--color-text-primary);
+  padding: 0.8em;
+}
+
+.bm-item {
+  display: inline-block;
+}
+
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
+  width: 100vw !important;
+  top: 0;
+  left: 0;
+}
+/* styling next link component so that will be a column list of links*/
+.bm-item-list a {
+  display: flex;
+  flex-direction: column;
+}

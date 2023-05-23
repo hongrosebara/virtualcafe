@@ -17,7 +17,7 @@ $color-quinary: #2e3940;
 
 :root {
   // COLOR VARIABLES
-  --color-bg-primary: #fef7c6;
+  --color-bg-primary: #f2f2f2;
 	--color-bg-primary-light: #c68240;
   --color-bg-primary-medium: #3e6a00;
   --color-bg-primary-dark: #0D0803;
@@ -26,7 +26,8 @@ $color-quinary: #2e3940;
   --color-bg-other: #c68240;
   --color-bg-inverse: #3e6a00;
 
-	--color-surface: #fdfdfd;	
+	--color-surface: #fdfdfd;
+  --color-gray: #83888F;
 
   --color-text-primary: #3e6a00;
   --color-text-secondary: #e55837;
@@ -63,13 +64,15 @@ $color-quinary: #2e3940;
   --fs-50: 0.8rem;
   --fs-100: 1rem;
   --fs-200: 1.25rem;
-  --fs-300: 1.563rem;
+  --fs-300: 1.6rem;
   --fs-400: 1.953rem;
   --fs-500: 2.441rem;
+  --fs-600: 3.052rem;
 
   /* Paddings */
   --pd-container: calc(12px + 1.5625vw);
   --pd-wrapper: 2rem 1.5rem;
+  --pd-section: 2rem 1.5rem;
   --gap-unit: calc(8px + 1.5625vw);
   --gap-unit-50: 2rem;
   --gap-unit-100: 4rem;
@@ -78,7 +81,8 @@ $color-quinary: #2e3940;
 
   @include respond(sm) {
     --gap-unit-150: 7.5rem;
-    --pd-wrapper: 4rem 4rem;
+    --pd-wrapper: 15rem 5rem;
+    --pd-section: 2rem 2.5rem;
     --fs-quote: 1.25rem;
     --fs-time: 10rem;
   }
@@ -86,12 +90,15 @@ $color-quinary: #2e3940;
   @include respond(md) {
     /* Padding */
     --pd-container: 4rem 10rem;
-    --pd-wrapper: 3rem 10rem;
+    --pd-section: 15rem 5rem;
+    --pd-wrapper: 0 8rem;
     --gap-unit-100: 10rem;
     --gap-unit-150: 10rem;
   }
 
   @include respond(lg) {
+    --pd-section: 14rem 8rem;
+    --pd-footer: 5rem 8rem;
     --base-font-size: 18px;
     --fs-time: 12.5rem;
   } 
@@ -115,7 +122,8 @@ $color-quinary: #2e3940;
   --color-bg-other: #c68240;
   --color-bg-inverse: #fef7c6;
 
-	--color-surface: #1D2B2A;	
+	--color-surface: #1D2B2A;
+  --color-gray: #83888F;
 
   --color-text-primary: #fef7c6;
   --color-text-secondary: #ffa07e;

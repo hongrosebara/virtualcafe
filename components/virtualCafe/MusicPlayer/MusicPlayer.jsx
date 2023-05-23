@@ -42,7 +42,7 @@ const MusicPlayer = ( music ) => {
   }, [audioPlayer?.current?.loadedmetadata, audioPlayer?.current?.readyState])
 
   return (
-    <div className="section-music-player my-3 p-3 rounded-lg bg-secondary text-beige">
+    <div className="section-music-player my-6 p-6 rounded-lg bg-secondary text-beige text-base">
       <h3>{songs[currentSongIndex].name}</h3>
       <audio ref={audioPlayer} src={songs[currentSongIndex].audio}></audio>
       
@@ -67,19 +67,19 @@ const MusicPlayer = ( music ) => {
       </div>
 
       <div className="flex justify-between">
-        <div className="flex items-center justify-center">
+        <div className="flex items-center justify-between -ml-3">
           <button 
-            className="flex items-center cursor-pointer text-3xl"
+            className="flex items-center cursor-pointer text-2xl"
             onClick={() => skipSong(false, songs)}>
             <BiSkipPrevious />
           </button>
           <button
-            className="text-5xl shadow-sm text-center px-2"
+            className="text-2xl shadow-sm text-center px-2"
             onClick={togglePlayPause}>
             { isPlaying ? <BsPauseCircleFill /> : <BsFillPlayCircleFill/>}
           </button>
           <button 
-            className="flex items-center cursor-pointer text-3xl"
+            className="flex items-center cursor-pointer text-2xl"
             onClick={() => skipSong(true, songs)}>
             <BiSkipNext />
           </button>
