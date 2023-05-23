@@ -1,7 +1,7 @@
 import {
   buildPaths,
   extractSound,
-} from "@/components/utils/getSounds";
+} from "@/components/utils/getData";
 import Player from "@/components/virtualCafe/Player/Player";
 import MusicPlayer from "@/components/virtualCafe/MusicPlayer/MusicPlayer";
 import SpotifyPlayer from "react-spotify-player";
@@ -13,9 +13,9 @@ export async function getStaticProps() {
   const cafePath = buildPaths('cafes.json');
   const effectPath = buildPaths('effects.json');
   const musicPath = buildPaths('music.json');
-  const cafes = extractSound(cafePath).sounds;
-  const effects = extractSound(effectPath).sounds;
-  const music = extractSound(musicPath).sounds;
+  const cafes = extractFile(cafePath).data;
+  const effects = extractFile(effectPath).data;
+  const music = extractFile(musicPath).data;
   return {
     props: { cafes, effects, music },
   };

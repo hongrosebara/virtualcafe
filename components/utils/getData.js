@@ -5,7 +5,7 @@ export const buildPaths = (jsonFile) => {
   return path.join(process.cwd(), "data", jsonFile);
 };
 
-export function extractSound(filepath) {
+export function extractFile(filepath) {
   const fileData = fs.readFileSync(filepath);
   const data = JSON.parse(fileData);
   return data;

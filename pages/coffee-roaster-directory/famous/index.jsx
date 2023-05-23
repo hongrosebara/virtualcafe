@@ -1,9 +1,10 @@
 import Roaster from "@/components/roasters/Roaster";
 import { Layout } from "@/components/common";
-import { fetchFamousRoasters } from "@/lib/famous-roaster";
+import { buildPaths, extractFile } from "@/components/utils/getData";
 
 export async function getStaticProps() {
-  const roasters = await fetchFamousRoasters();
+  const roasterPath = buildPaths('roasters.json');
+  const roasters = extractFile(roasterPath).data;
 
   return {
     props: {

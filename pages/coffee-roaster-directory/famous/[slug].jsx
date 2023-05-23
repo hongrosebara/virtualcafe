@@ -1,12 +1,12 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Layout } from "@/components/common";
-import { fetchFamousRoasters } from "@/lib/famous-roaster";
-import { useEffect } from "react";
+import { buildPaths, extractFile } from "@/components/utils/getData";
 
 export async function getStaticProps({ params }) {
-  const roasters = await fetchFamousRoasters();
-
+  const roasterPath = buildPaths('roasters.json');
+  const roasters = extractFile(roasterPath).data;
+  console.log(roasterPath)
   return {
     props: {
       roaster: roasters.find((roaster) => {
@@ -18,7 +18,8 @@ export async function getStaticProps({ params }) {
 }
 
 export async function getStaticPaths() {
-  const roasters = await fetchFamousRoasters();
+  const roasterPath = buildPaths('roasters.json');
+  const roasters = extractFile(roasterPath).data;
   
   const paths = roasters.map((roaster) => {
     return {
