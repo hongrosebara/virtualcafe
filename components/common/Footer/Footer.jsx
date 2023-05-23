@@ -1,4 +1,4 @@
-import { Logo, Navbar } from "@/components/common"
+import { Logo, Navbar, SocialNav } from "@/components/common"
 
 export default function Footer() {
   return (
@@ -6,6 +6,7 @@ export default function Footer() {
       <div className="p flex items-center justify-between">
         <Logo />
         <Navbar />
+        <SocialNav />
       </div>
     </footer>
   );
