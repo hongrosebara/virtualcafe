@@ -4,12 +4,17 @@ import { UseTrackLocation } from "@/components/hooks/UseTrackLocation";
 import { useEffect, useContext } from "react";
 import { ACTION_TYPES, RoasterContext } from "context/Roaster";
 import { Layout } from "@/components/common";
+import { buildPaths, extractFile } from "@/components/utils/getData";
 
 export async function getStaticProps() {
   const roasters = await fetchRoasters();
+  const roasterPath = buildPaths('roasters.json');
+  const famousRoasters = extractFile(roasterPath).data;
+
   return {
     props: {
       roasters: roasters,
+      famousRoasters: famousRoasters,
       revalidate: 1,
     },
   };
@@ -61,6 +66,16 @@ const CoffeeRoasterDirectory = (props) => {
           roasters.map((roaster) => (
             <Roaster
               directory="coffee-roaster-directory"
+              key={roaster.id}
+              roaster={roaster}
+            />
+          ))}
+      </div>
+      <div className="flex items-center justify-between space-x-4">
+        {props.famousRoasters.length > 0 &&
+          props.famousRoasters.map((roaster) => (
+            <Roaster
+              directory="coffee-roaster-directory/famous"
               key={roaster.id}
               roaster={roaster}
             />
