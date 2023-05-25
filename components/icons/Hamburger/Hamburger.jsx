@@ -3,7 +3,7 @@ const HamburgerIcon = ({ ...props }) => {
   return (
     <div className="p-1/2">
       <svg
-         fill={`${fillColor}`}
+        fill={`${fillColor}`}
         className="w-8 h-8 text-gray-500"
         strokeLinecap="round"
         strokeLinejoin="round"

@@ -1,0 +1,29 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "name": "Home",
+      "slug": "/"
+    },
+    {
+      "id": 2,
+      "name": "Coffee Festivals",
+      "slug": "/coffee-festivals"
+    },
+    {
+      "id": 3,
+      "name": "Coffee Roasters",
+      "slug": "/coffee-roaster-directory"
+    },
+    {
+      "id": 4,
+      "name": "Coffee Subscriptions",
+      "slug": "/coffee-subscriptions"
+    },
+    {
+      "id": 5,
+      "name": "Virtual Cafe",
+      "slug": "/virtual-cafe-with-ambience-sounds"
+    }
+  ]
+}
