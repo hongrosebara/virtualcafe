@@ -1,0 +1,5 @@
+.footer-nav {
+  & ul li {
+    @apply hover:text-gray;
+  }
+}
