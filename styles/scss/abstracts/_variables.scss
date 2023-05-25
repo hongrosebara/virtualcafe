@@ -144,16 +144,16 @@ $color-quinary: #2e3940;
   --color-1: 54, 52%;
   --1: 85%;
   --color-primary: hsl(var(--color-1), var(--1));
-  --color-primary-lt: hsl(var(--color-1), calc(var(--l) + 10%));
-  --color-primary-dk: hsl(var(--color-1), calc(var(--l) - 10%));
+  --color-primary-lt: hsl(var(--color-1), calc(var(--1) + 10%));
+  --color-primary-dk: hsl(var(--color-1), calc(var(--1) - 10%));
   --color-primary-inverse: var(--color-secondary);
 
   // Secondary color - tonal 200 - #cb9a7b 23°, 43%, 64%
   --color-2: 23, 43%;
   --2: 64%;
-  --color-secondary: hsl(var(--color-2), var(--1));
-  --color-secondary-lt: hsl(var(--color-2), calc(var(--l) + 10%));
-  --color-secondary-dk: hsl(var(--color-2), calc(var(--l) - 10%));
+  --color-secondary: hsl(var(--color-2), var(--2));
+  --color-secondary-lt: hsl(var(--color-2), calc(var(--2) + 10%));
+  --color-secondary-dk: hsl(var(--color-2), calc(var(--2) - 10%));
   --color-secondary-inverse: var(--color-primary);
 
   // Accent color - tonal 300 - #dda35d
@@ -165,8 +165,8 @@ $color-quinary: #2e3940;
 
   // Other colors
   --color-surface: #1d1a00;
-  --color-on-lt: #FEFCF7;
-  --color-on-dk: #000000;
+  --color-on-lt: #000000;
+  --color-on-dk: #FEFCF7;
   // --color-bg-primary: #121212;
   // --color-bg-primary-light: #fef7c6;
   // --color-bg-primary-medium: #3e6a00;
