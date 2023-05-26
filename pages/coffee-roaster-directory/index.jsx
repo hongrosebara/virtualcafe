@@ -1,4 +1,4 @@
-import Roaster from "@/components/roasters/Roaster";
+import { Roaster } from "@/components/coffee";
 import { fetchRoasters } from "lib/coffee-roaster";
 import { UseTrackLocation } from "@/components/hooks/UseTrackLocation";
 import { useEffect, useContext } from "react";

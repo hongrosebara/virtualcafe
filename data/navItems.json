@@ -7,23 +7,28 @@
     },
     {
       "id": 2,
-      "name": "Coffee Festivals",
-      "slug": "/coffee-festivals"
+      "name": "About",
+      "slug": "/about/"
     },
     {
       "id": 3,
-      "name": "Coffee Roasters",
-      "slug": "/coffee-roaster-directory"
-    },
-    {
-      "id": 4,
-      "name": "Coffee Subscriptions",
-      "slug": "/coffee-subscriptions"
+      "name": "Coffee Chat Bot",
+      "slug": "/chat-bot-ask-anything-about-coffee/"
     },
     {
       "id": 5,
+      "name": "Coffee Roasters",
+      "slug": "/coffee-roaster-directory/"
+    },
+    {
+      "id": 6,
+      "name": "Coffee Subscriptions",
+      "slug": "/coffee-subscriptions-boxes/"
+    },
+    {
+      "id": 7,
       "name": "Virtual Cafe",
-      "slug": "/virtual-cafe-with-ambience-sounds"
+      "slug": "/virtual-cafe-with-ambience-sounds/"
     }
   ]
 }

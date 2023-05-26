@@ -1,0 +1,11 @@
+.main-content {
+  @apply my-16 block mx-auto w-full md:w-1/2;
+
+  & h1 {
+    @apply my-5 font-heading font-bold text-lg;
+  }
+
+  & p {
+    @apply font-light;
+  }
+}

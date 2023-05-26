@@ -4,7 +4,7 @@ import { Logo, Navbar, MobileNav } from "@/components/common";
 
 export default function Header({}) {
   return (
-    <header className="section-header text-base py-8">
+    <header className="w-full text-base py-8 shadow-sm">
       <div className="flex items-center justify-between">
         <Link href="/">
           <Logo />

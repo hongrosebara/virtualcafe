@@ -1,4 +1,4 @@
-import Roaster from "@/components/roasters/Roaster";
+import { Roaster } from "@/components/coffee";
 import { Layout } from "@/components/common";
 import { buildPaths, extractFile } from "@/components/utils/getData";
 

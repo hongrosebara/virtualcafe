@@ -1,9 +1,7 @@
 /* ------------------- */
 /* Typography               */
 /* ------------------- */
-@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Oswald:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700&family=Fraunces:wght@300;400;500;600;700&family=Oswald:wght@300;400;500;600;700&display=swap');
 
 html {
   scroll-behavior: smooth;
@@ -11,11 +9,17 @@ html {
 }
 
 body {
+  position: relative;
+  margin: 0 auto;
+  max-width: 1440px;
+  padding: var(--pd-wrapper);
+  min-height: 80vh;
   font-family: var(--ff-body);
-  font-weight: normal;
+  font-weight: 700;
   background-color: var(--color-bg-primary);
   line-height: var(--base-line-height);
   font-size: 1.6rem;
+  color: var(--color-on-primary);
 }
 
 .section-layout {

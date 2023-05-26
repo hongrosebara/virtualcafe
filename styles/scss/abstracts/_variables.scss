@@ -42,6 +42,7 @@ $color-quinary: #2e3940;
 
   // Other colors
   --color-surface: #fafafa;
+  --color-on-primary: #121212;
   --color-on-lt: #ffffff;
   --color-on-dk: #000000;
   // --color-bg-primary: #f2f2f2;
@@ -133,9 +134,8 @@ $color-quinary: #2e3940;
 
   /* font-families */
   --ff-heading: "Fraunces", sans-serif;
-  --ff-subheading: "Lora", sans-serif;
-  --ff-serif: "Oswald", sans-serif;
-  --ff-body: "Oswald", sans-serif;
+  --ff-subheading: "Oswald", sans-serif;
+  --ff-body: "Barlow", sans-serif;
 }
 
 [data-theme="dark"] {
@@ -165,6 +165,7 @@ $color-quinary: #2e3940;
 
   // Other colors
   --color-surface: #1d1a00;
+  --color-on-primary: #fafafa;
   --color-on-lt: #000000;
   --color-on-dk: #FEFCF7;
   // --color-bg-primary: #121212;
