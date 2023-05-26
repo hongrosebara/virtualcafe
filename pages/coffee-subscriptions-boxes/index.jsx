@@ -46,6 +46,7 @@ const CoffeeSubscriptionBoxes = ({ posts }) => {
         {posts &&
           posts.map((post) => (
             <Box
+              key={post.title}
               imgUrl={post.imgUrl}
               box={post.frontmatter} />
           ))}

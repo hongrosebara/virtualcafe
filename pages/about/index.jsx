@@ -11,7 +11,7 @@ const About = () => {
               <h1 className="font-heading font-bold text-2xl">About us</h1>
               <p className="my-3 font-serif font-light">
                 At Wedreamofcoffee, we believe that coffee is more than just a
-                beverage—it's a source of inspiration, connection, and endless
+                beverage—it&apos;s a source of inspiration, connection, and endless
                 possibilities. Our philosophy revolves around celebrating the
                 essence of coffee and sharing its captivating journey with the
                 world.
