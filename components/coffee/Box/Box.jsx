@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 
-const Box = ({ box, imgUrl }) => {
-  console.log(imgUrl)
+const Box = ({ box, imgUrl, index }) => {
+  
   return (
     <div className="grid grid-cols-1 md:grid-cols-3 justify-start cursor-pointer">
       <div className="md:col-span-1 rounded-md">
@@ -18,7 +18,8 @@ const Box = ({ box, imgUrl }) => {
         />
       </div>
       <div className="md:col-span-2 p-6">
-        <h2 className="font-bold text-lg">{box.title}</h2>
+        <h2 className="font-bold text-lg">
+          {index}. {box.title}</h2>
         <p>{box.excerpt}</p>
         <Link href={box.link} target="_blank" rel="nofollow">
           <button className="mt-10 rounded-sm uppercase text-sm bg-primary-dk text-on-lt hover:bg-primary px-7 py-3">Check it out</button>

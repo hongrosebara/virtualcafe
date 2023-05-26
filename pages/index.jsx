@@ -6,7 +6,7 @@ import { Hero } from "@/components/ui";
 const HomePage = () => {
   return (
     <>
-      <NextSeo
+      {/* <NextSeo
         title="We Dream Of Coffee"
         description="Boost your productivity and creativity for work and school with ambience sounds at this virtual cafe."
         canonical="https://www.wedreamofcoffee.com/"
@@ -61,7 +61,7 @@ const HomePage = () => {
         publisherLogo="https://www.wedreamofcoffee.com/logo.png"
         description="Boost your productivity and creativity for work and school with ambience sounds at this virtual cafe."
         isAccessibleForFree={true}
-      />
+      /> */}
 
       <section>
         <Hero />
