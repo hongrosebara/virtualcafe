@@ -40,6 +40,7 @@ const CoffeeSubscriptionBoxes = ({ posts }) => {
   const meta = {
     title: "Top 10 Best Coffee Subscription Boxes You Have To Try",
     headline: "10 Best Coffee Subscription Boxes You Must Try",
+    siteUrl: "www.wedreamofcoffee.com",
     canonicalURL: "www.wedreamofcoffee.com" + asPath,
     keywords: ["coffee subscription boxes"],
     description:
@@ -64,16 +65,16 @@ const CoffeeSubscriptionBoxes = ({ posts }) => {
               "@graph":
               [{
                   "@type": "Organization",
-                  "@id": "https://www.wedreamofcoffee.com" + "/#organization",
+                  "@id": "${meta.siteUrl}" + "/#organization",
                   "name": "We Dream Of Coffee",
-                  "url": "https://www.wedreamofcoffee.com",
+                  "url": "${meta.siteUrl}",
                   "sameAs":[
                     'https://www.facebook.com/WeDreamOfCoffeeshop/',
                     'https://twitter.com/realWeDreamOfCoffee',
                     'https://www.pinterest.com/WeDreamOfCoffee/'],
                   "logo": {
                     "@type": "ImageObject",
-                    "@id": "https://www.wedreamofcoffee.com" + "/#logo",
+                    "@id": "${meta.siteUrl}" + "/#logo",
                     "inLanguage": "en-US",
                     "url": this.logo,
                     "contentUrl": this.logo,
@@ -81,12 +82,12 @@ const CoffeeSubscriptionBoxes = ({ posts }) => {
                     "height": 500,
                     "caption": "WeDreamOfCoffee"
                     },
-                  "image": {"@id": "https://www.wedreamofcoffee.com" + "/#logo"},
+                  "image": {"@id": "${meta.siteUrl}" + "/#logo"},
                   "founder": {
                     "@type": "Person",
                     "name": "Hong Le",
-                    "url": "https://www.wedreamofcoffee.com" + "#about-us",
-                    "sameAs": "https://www.wedreamofcoffee.com" + "/about-us"},
+                    "url": "${meta.siteUrl}" + "#about-us",
+                    "sameAs": "${meta.siteUrl}" + "/about-us"},
                   "foundingDate": "2018-05-02",
                   "numberOfEmployees": 5,
                   "slogan": "Unveiling the Essence of Coffee: Roasters, Festivals, Subscriptions, and More!",
@@ -101,24 +102,24 @@ const CoffeeSubscriptionBoxes = ({ posts }) => {
                 },
                 {
                   "@type": "WebSite",
-                  "@id": "https://www.wedreamofcoffee.com" + "/#website",
-                  "url": "https://www.wedreamofcoffee.com",
+                  "@id": "${meta.siteUrl}" + "/#website",
+                  "url": "${meta.siteUrl}",
                   "name": "WeDreamOfCoffee",
                   "description": "Unveiling the Essence of Coffee: Roasters, Festivals, Subscriptions, and More!",
                   "publisher":{
-                    "@id": "https://www.wedreamofcoffee.com" + "/#organization"},
+                    "@id": "${meta.siteUrl}" + "/#organization"},
                     "potentialAction":[{
                       "@type":"SearchAction",
                       "target":{
                         "@type": "EntryPoint",
-                        "urlTemplate": "https://www.wedreamofcoffee.com" + "/?s={search_term_string}"},
+                        "urlTemplate": "${meta.siteUrl}" + "/?s={search_term_string}"},
                       "query-input": "required name=search_term_string"}],
                     "inLanguage": "en-US",
-                    "copyrightHolder": {"@id": "https://www.wedreamofcoffee.com" + "/#organization"}
+                    "copyrightHolder": {"@id": "${meta.siteUrl}" + "/#organization"}
                 },
                 {
                   "@type": "ImageObject",
-                  "@id": "https://www.wedreamofcoffee.com" + ${meta.canonicalURL} + "#primaryimage",
+                  "@id": "${meta.siteUrl}" + ${meta.canonicalURL} + "#primaryimage",
                   "inLanguage": "en-US",
                   "url": ${meta.socialImageURL}
                   "contentUrl": ${meta.socialImageURL}
@@ -127,64 +128,64 @@ const CoffeeSubscriptionBoxes = ({ posts }) => {
                 },
                 {
                   "@type": "WebPage",
-                  "@id": "https://www.wedreamofcoffee.com" + ${meta.canonicalURL} + "#webpage",
-                  "url": "https://www.wedreamofcoffee.com" + ${meta.canonicalURL},
+                  "@id": "${meta.siteUrl}" + ${meta.canonicalURL} + "#webpage",
+                  "url": "${meta.siteUrl}" + ${meta.canonicalURL},
                   "name": ${meta.title},
-                  "isPartOf": {"@id": "https://www.wedreamofcoffee.com" + "/#website"},
-                  "primaryImageOfPage": {"@id": "https://www.wedreamofcoffee.com" + ${meta.canonicalURL} + "#primaryimage"},
+                  "isPartOf": {"@id": "${meta.siteUrl}" + "/#website"},
+                  "primaryImageOfPage": {"@id": "${meta.siteUrl}" + ${meta.canonicalURL} + "#primaryimage"},
                   "datePublished": "2017-08-19T12:00:37+00:00",
                   "dateModified": ${new Date().toLocaleString()},
                   "description": ${meta.description},
-                  "breadcrumb": {"@id": "https://www.wedreamofcoffee.com" + ${meta.canonicalURL} + "#breadcrumb"},
+                  "breadcrumb": {"@id": "${meta.siteUrl}" + ${meta.canonicalURL} + "#breadcrumb"},
                   "inLanguage": "en-US",
                   "potentialAction":[{
                     "@type": "ReadAction",
-                    "target": ["https://www.wedreamofcoffee.com" + ${meta.canonicalURL}]}]
+                    "target": ["${meta.siteUrl}" + ${meta.canonicalURL}]}]
                 },
                 {
                   "@type": "BreadcrumbList",
-                  "@id": "https://www.wedreamofcoffee.com" + ${meta.canonicalURL} + "#breadcrumb",
+                  "@id": "${meta.siteUrl}" + ${meta.canonicalURL} + "#breadcrumb",
                   "itemListElement": [{
                     "@type": "ListItem",
                     "position": 1,
                     "name": "Home",
-                    "item": "https://www.wedreamofcoffee.com"
+                    "item": "${meta.siteUrl}"
                   },
                   {
                     "@type": "ListItem",
                     "position": 2,
                     "name": "Coffee Subscription Boxes",
-                    "item": "https://www.wedreamofcoffee.com" + ${meta.canonicalURL}
+                    "item": "${meta.siteUrl}" + ${meta.canonicalURL}
                   },]
                 },
                 {
                   "@type": "Article",
-                  "@id": "https://www.wedreamofcoffee.com" + ${meta.canonicalURL} + "#article",
-                  "isPartOf": {"@id": "https://www.wedreamofcoffee.com" + ${meta.canonicalURL} + "#webpage"}, 
-                  "author": {"@id": "https://www.wedreamofcoffee.com" + "/#/schema/person/1"},
+                  "@id": "${meta.siteUrl}" + ${meta.canonicalURL} + "#article",
+                  "isPartOf": {"@id": "${meta.siteUrl}" + ${meta.canonicalURL} + "#webpage"}, 
+                  "author": {"@id": "${meta.siteUrl}" + "/#/schema/person/1"},
                   "headline": ${meta.headline},
                   "datePublished": "2020-08-19T12:00:37+00:00",
                   "dateModified": new Date().toLocaleString(),
-                  "mainEntityOfPage": {"@id": "https://www.wedreamofcoffee.com" + ${meta.canonicalURL} + "#webpage"},
+                  "mainEntityOfPage": {"@id": "${meta.siteUrl}" + ${meta.canonicalURL} + "#webpage"},
                   "wordCount": 3999,
                   "commentCount": 6,
-                  "publisher": {"@id": "https://www.wedreamofcoffee.com" + "#organization"},
-                  "image": {"@id": "https://www.wedreamofcoffee.com" + ${meta.canonicalURL} + "#primaryimage"},
+                  "publisher": {"@id": "${meta.siteUrl}" + "#organization"},
+                  "image": {"@id": "${meta.siteUrl}" + ${meta.canonicalURL} + "#primaryimage"},
                   "thumbnailUrl": ${meta.socialImageURL}
                   "keywords": this.keywords,
                   "inLanguage": "en-US",
                   "potentialAction": [{
                     "@type": "CommentAction",
                     "name": "Comment",
-                    "target": ["https://www.wedreamofcoffee.com" + ${meta.canonicalURL} + "#respond"]}],
+                    "target": ["${meta.siteUrl}" + ${meta.canonicalURL} + "#respond"]}],
                   "copyrightYear": "2020",
-                  "copyrightHolder": {"@id": "https://www.wedreamofcoffee.com" + "#organization"}
+                  "copyrightHolder": {"@id": "${meta.siteUrl}" + "#organization"}
                 },
                 {
                   "@type": "FAQPage",
-                  "@id": "https://www.wedreamofcoffee.com" + ${meta.canonicalURL} + "#faq-block",
-                  "isPartOf": {"@id": "https://www.wedreamofcoffee.com" + ${meta.canonicalURL} + "#webpage"},
-                  "author": {"@id": "https://www.wedreamofcoffee.com" + "/#/schema/person/1"},
+                  "@id": "${meta.siteUrl}" + ${meta.canonicalURL} + "#faq-block",
+                  "isPartOf": {"@id": "${meta.siteUrl}" + ${meta.canonicalURL} + "#webpage"},
+                  "author": {"@id": "${meta.siteUrl}" + "/#/schema/person/1"},
                   "mainEntity": [{
                     "@type": "Question",
                     "name": "Why get a coffee subscription?",
@@ -217,11 +218,11 @@ const CoffeeSubscriptionBoxes = ({ posts }) => {
                 },
                 {
                   "@type":"Person",
-                  "@id": "https://www.wedreamofcoffee.com" + "/#/schema/person/1",
+                  "@id": "${meta.siteUrl}" + "/#/schema/person/1",
                   "name": "Hong Le",
                   "image": {
                     "@type":"ImageObject",
-                    "@id": "https://www.wedreamofcoffee.com" + "/#personlogo",
+                    "@id": "${meta.siteUrl}" + "/#personlogo",
                     "inLanguage": "en-US",
                     "url": "https://secure.gravatar.com/avatar/1d83533e299c379140f9fcc2cb0015cb?s=96&d=mm&r=g",
                     "contentUrl": "https://secure.gravatar.com/avatar/1d83533e299c379140f9fcc2cb0015cb?s=96&d=mm&r=g",
@@ -229,11 +230,11 @@ const CoffeeSubscriptionBoxes = ({ posts }) => {
                     },
                   "description": "Hong Le is the creative marketing manager at WeDreamOfCoffee. She loves building coffee applications that excite you",
                   "sameAs":[
-                    "https://www.wedreamofcoffee.com",
+                    "${meta.siteUrl}",
                     'https://www.facebook.com/hongle/',
                     'https://twitter.com/hongle',
                     'https://www.pinterest.com/hongle/',],
-                    "url": "https://www.wedreamofcoffee.com" + "/#about-us/team/hong-le/"
+                    "url": "${meta.siteUrl}" + "/#about-us/team/hong-le/"
                 }
               ]},
               }`,
