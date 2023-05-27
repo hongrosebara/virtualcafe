@@ -107,7 +107,7 @@ const CoffeeSubscriptionBoxes = ({ posts }) => {
                   "foundingDate": "2018-05-02",
                   "numberOfEmployees": 5,
                   "slogan": "Unveiling the Essence of Coffee: Roasters, Festivals, Subscriptions, and More!",
-                  "description": ${meta.siteDescription},
+                  "description": "${meta.siteDescription}",
                   "legalName": "We Dream Of Coffee",
                   'address': {
                     '@type': "PostalAddress",
@@ -137,8 +137,8 @@ const CoffeeSubscriptionBoxes = ({ posts }) => {
                   "@type": "ImageObject",
                   "@id": "${meta.canonicalURL}/#primaryimage",
                   "inLanguage": "en-US",
-                  "url": ${meta.siteUrl}/${meta.openGraphURL}
-                  "contentUrl": ${meta.siteUrl}/${meta.openGraphURL}
+                  "url": "${meta.siteUrl}/${meta.openGraphURL}",
+                  "contentUrl": "${meta.siteUrl}/${meta.openGraphURL}",
                   "width": 1200,
                   "height": 627
                 },
@@ -146,7 +146,7 @@ const CoffeeSubscriptionBoxes = ({ posts }) => {
                   "@type": "WebPage",
                   "@id": "${meta.canonicalURL}/#webpage",
                   "url": "${meta.canonicalURL},
-                  "name": ${meta.title},
+                  "name": "${meta.title}",
                   "isPartOf": {"@id": "${meta.siteUrl}/#website"},
                   "primaryImageOfPage": {"@id": "${meta.canonicalURL}/#primaryimage"},
                   "datePublished": ${meta.datePublished},
@@ -179,16 +179,16 @@ const CoffeeSubscriptionBoxes = ({ posts }) => {
                   "@id": "${meta.canonicalURL}/#article",
                   "isPartOf": {"@id": "${meta.canonicalURL}/#webpage"}, 
                   "author": {"@id": "${meta.siteUrl}/#/schema/person/1"},
-                  "headline": ${meta.headline},
-                  "datePublished": ${meta.datePublished},
-                  "dateModified": ${meta.dateModified},
+                  "headline": "${meta.headline}",
+                  "datePublished": "${meta.datePublished}",
+                  "dateModified": "${meta.dateModified}",
                   "mainEntityOfPage": {"@id": "${meta.canonicalURL}/#webpage"},
                   "wordCount": 1000,
                   "commentCount": 6,
                   "publisher": {"@id": "${meta.siteUrl}/#organization"},
                   "image": {"@id": "${meta.canonicalURL}/#primaryimage"},
-                  "thumbnailUrl": ${meta.siteUrl}/${meta.openGraphURL}
-                  "keywords": ${meta.keywords},
+                  "thumbnailUrl": "${meta.siteUrl}/${meta.openGraphURL}",
+                  "keywords": "${meta.keywords}",
                   "inLanguage": "en-US",
                   "potentialAction": [{
                     "@type": "CommentAction",
