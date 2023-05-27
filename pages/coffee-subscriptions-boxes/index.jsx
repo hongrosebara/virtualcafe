@@ -145,7 +145,7 @@ const CoffeeSubscriptionBoxes = ({ posts }) => {
                 {
                   "@type": "WebPage",
                   "@id": "${meta.canonicalURL}/#webpage",
-                  "url": "${meta.canonicalURL},
+                  "url": "${meta.canonicalURL}",
                   "name": "${meta.title}",
                   "isPartOf": {"@id": "${meta.siteUrl}/#website"},
                   "primaryImageOfPage": {"@id": "${meta.canonicalURL}/#primaryimage"},
