@@ -172,7 +172,7 @@ const CoffeeSubscriptionBoxes = ({ posts }) => {
                     "position": 2,
                     "name": "Coffee Subscription Boxes",
                     "item": "${meta.canonicalURL}"
-                  },]
+                  }]
                 },
                 {
                   "@type": "Article",
