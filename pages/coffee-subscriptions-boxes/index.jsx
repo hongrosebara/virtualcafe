@@ -230,7 +230,7 @@ const CoffeeSubscriptionBoxes = ({ posts }) => {
                       "@type": "Answer",
                       "text": "<p>Expensive coffee often represents higher quality and superior flavor profiles. Specialty coffee beans are carefully sourced, meticulously roasted, and crafted to bring out the unique characteristics of each origin. These coffees tend to offer complex flavor profiles, distinct tasting notes, and exceptional taste experiences that coffee lovers appreciate and are willing to pay for.</p>"
                     }
-                  }, ]
+                  }]
                 },
                 {
                   "@type":"Person",
