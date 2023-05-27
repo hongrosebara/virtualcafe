@@ -206,8 +206,6 @@ const CoffeeRoasterDirectory = (props) => {
                   "datePublished": "${meta.datePublished}",
                   "dateModified": "${meta.dateModified}",
                   "mainEntityOfPage": {"@id": "${meta.canonicalURL}/#webpage"},
-                  "wordCount": 1000,
-                  "commentCount": 6,
                   "publisher": {"@id": "${meta.siteUrl}/#organization"},
                   "image": {"@id": "${meta.canonicalURL}/#primaryimage"},
                   "thumbnailUrl": "${meta.siteUrl}/${meta.openGraphURL}",
