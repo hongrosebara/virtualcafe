@@ -149,14 +149,14 @@ const CoffeeSubscriptionBoxes = ({ posts }) => {
                   "name": "${meta.title}",
                   "isPartOf": {"@id": "${meta.siteUrl}/#website"},
                   "primaryImageOfPage": {"@id": "${meta.canonicalURL}/#primaryimage"},
-                  "datePublished": ${meta.datePublished},
-                  "dateModified": ${meta.dateModified},
-                  "description": ${meta.description},
+                  "datePublished": "${meta.datePublished}",
+                  "dateModified": "${meta.dateModified}",
+                  "description": "${meta.description}",
                   "breadcrumb": {"@id": "${meta.canonicalURL}/#breadcrumb"},
                   "inLanguage": "en-US",
                   "potentialAction":[{
                     "@type": "ReadAction",
-                    "target": ["${meta.canonicalURL}]}]
+                    "target": ["${meta.canonicalURL}"]}]
                 },
                 {
                   "@type": "BreadcrumbList",
@@ -171,7 +171,7 @@ const CoffeeSubscriptionBoxes = ({ posts }) => {
                     "@type": "ListItem",
                     "position": 2,
                     "name": "Coffee Subscription Boxes",
-                    "item": "${meta.canonicalURL}
+                    "item": "${meta.canonicalURL}"
                   },]
                 },
                 {
