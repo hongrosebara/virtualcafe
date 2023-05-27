@@ -65,7 +65,7 @@ const CoffeeSubscriptionBoxes = ({ posts }) => {
               "@graph":
               [{
                   "@type": "Organization",
-                  "@id": "${meta.siteUrl}" + "/#organization",
+                  "@id": "${meta.siteUrl}/#organization",
                   "name": "We Dream Of Coffee",
                   "url": "${meta.siteUrl}",
                   "sameAs":[
@@ -74,7 +74,7 @@ const CoffeeSubscriptionBoxes = ({ posts }) => {
                     'https://www.pinterest.com/WeDreamOfCoffee/'],
                   "logo": {
                     "@type": "ImageObject",
-                    "@id": "${meta.siteUrl}" + "/#logo",
+                    "@id": "${meta.siteUrl}/#logo",
                     "inLanguage": "en-US",
                     "url": this.logo,
                     "contentUrl": this.logo,
@@ -82,12 +82,12 @@ const CoffeeSubscriptionBoxes = ({ posts }) => {
                     "height": 500,
                     "caption": "WeDreamOfCoffee"
                     },
-                  "image": {"@id": "${meta.siteUrl}" + "/#logo"},
+                  "image": {"@id": "${meta.siteUrl}/#logo"},
                   "founder": {
                     "@type": "Person",
                     "name": "Hong Le",
                     "url": "${meta.siteUrl}" + "#about-us",
-                    "sameAs": "${meta.siteUrl}" + "/about-us"},
+                    "sameAs": "${meta.siteUrl}/about-us"},
                   "foundingDate": "2018-05-02",
                   "numberOfEmployees": 5,
                   "slogan": "Unveiling the Essence of Coffee: Roasters, Festivals, Subscriptions, and More!",
@@ -102,20 +102,20 @@ const CoffeeSubscriptionBoxes = ({ posts }) => {
                 },
                 {
                   "@type": "WebSite",
-                  "@id": "${meta.siteUrl}" + "/#website",
+                  "@id": "${meta.siteUrl}/#website",
                   "url": "${meta.siteUrl}",
                   "name": "WeDreamOfCoffee",
                   "description": "Unveiling the Essence of Coffee: Roasters, Festivals, Subscriptions, and More!",
                   "publisher":{
-                    "@id": "${meta.siteUrl}" + "/#organization"},
+                    "@id": "${meta.siteUrl}/#organization"},
                     "potentialAction":[{
                       "@type":"SearchAction",
                       "target":{
                         "@type": "EntryPoint",
-                        "urlTemplate": "${meta.siteUrl}" + "/?s={search_term_string}"},
+                        "urlTemplate": "${meta.siteUrl}/?s={search_term_string}"},
                       "query-input": "required name=search_term_string"}],
                     "inLanguage": "en-US",
-                    "copyrightHolder": {"@id": "${meta.siteUrl}" + "/#organization"}
+                    "copyrightHolder": {"@id": "${meta.siteUrl}/#organization"}
                 },
                 {
                   "@type": "ImageObject",
@@ -131,7 +131,7 @@ const CoffeeSubscriptionBoxes = ({ posts }) => {
                   "@id": "${meta.siteUrl}" + ${meta.canonicalURL} + "#webpage",
                   "url": "${meta.siteUrl}" + ${meta.canonicalURL},
                   "name": ${meta.title},
-                  "isPartOf": {"@id": "${meta.siteUrl}" + "/#website"},
+                  "isPartOf": {"@id": "${meta.siteUrl}/#website"},
                   "primaryImageOfPage": {"@id": "${meta.siteUrl}" + ${meta.canonicalURL} + "#primaryimage"},
                   "datePublished": "2017-08-19T12:00:37+00:00",
                   "dateModified": ${new Date().toLocaleString()},
@@ -162,7 +162,7 @@ const CoffeeSubscriptionBoxes = ({ posts }) => {
                   "@type": "Article",
                   "@id": "${meta.siteUrl}" + ${meta.canonicalURL} + "#article",
                   "isPartOf": {"@id": "${meta.siteUrl}" + ${meta.canonicalURL} + "#webpage"}, 
-                  "author": {"@id": "${meta.siteUrl}" + "/#/schema/person/1"},
+                  "author": {"@id": "${meta.siteUrl}/#/schema/person/1"},
                   "headline": ${meta.headline},
                   "datePublished": "2020-08-19T12:00:37+00:00",
                   "dateModified": new Date().toLocaleString(),
@@ -185,7 +185,7 @@ const CoffeeSubscriptionBoxes = ({ posts }) => {
                   "@type": "FAQPage",
                   "@id": "${meta.siteUrl}" + ${meta.canonicalURL} + "#faq-block",
                   "isPartOf": {"@id": "${meta.siteUrl}" + ${meta.canonicalURL} + "#webpage"},
-                  "author": {"@id": "${meta.siteUrl}" + "/#/schema/person/1"},
+                  "author": {"@id": "${meta.siteUrl}/#/schema/person/1"},
                   "mainEntity": [{
                     "@type": "Question",
                     "name": "Why get a coffee subscription?",
@@ -218,11 +218,11 @@ const CoffeeSubscriptionBoxes = ({ posts }) => {
                 },
                 {
                   "@type":"Person",
-                  "@id": "${meta.siteUrl}" + "/#/schema/person/1",
+                  "@id": "${meta.siteUrl}/#/schema/person/1",
                   "name": "Hong Le",
                   "image": {
                     "@type":"ImageObject",
-                    "@id": "${meta.siteUrl}" + "/#personlogo",
+                    "@id": "${meta.siteUrl}/#personlogo",
                     "inLanguage": "en-US",
                     "url": "https://secure.gravatar.com/avatar/1d83533e299c379140f9fcc2cb0015cb?s=96&d=mm&r=g",
                     "contentUrl": "https://secure.gravatar.com/avatar/1d83533e299c379140f9fcc2cb0015cb?s=96&d=mm&r=g",
@@ -234,7 +234,7 @@ const CoffeeSubscriptionBoxes = ({ posts }) => {
                     'https://www.facebook.com/hongle/',
                     'https://twitter.com/hongle',
                     'https://www.pinterest.com/hongle/',],
-                    "url": "${meta.siteUrl}" + "/#about-us/team/hong-le/"
+                    "url": "${meta.siteUrl}/#about-us/team/hong-le/"
                 }
               ]},
               }`,
