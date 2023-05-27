@@ -9,6 +9,7 @@ import { Box } from "@/components/coffee";
 import { getListOfCoffeeSubscriptionBoxPhotos } from "@/lib/coffee-roaster";
 import { useRouter } from "next/router";
 import { SEO } from "@/components/common";
+import { Container, Breadcrumb, Author } from "@/components/ui";
 
 export async function getStaticProps() {
   // Get photos from Unsplash
@@ -36,7 +37,6 @@ export async function getStaticProps() {
 
 const CoffeeSubscriptionBoxes = ({ posts }) => {
   const { asPath } = useRouter();
-  console.log(asPath);
 
   const meta = {
     title: "Top 10 Best Coffee Subscription Boxes You Have To Try",
@@ -45,6 +45,7 @@ const CoffeeSubscriptionBoxes = ({ posts }) => {
     siteLogoUrl: "seo/wdoc logo.png",
     siteDescription:
       "Explore the world of coffee on our comprehensive website. Discover local coffee roasters, stay updated on coffee festival events, explore a variety of coffee subscription boxes, indulge in a virtual cafe experience, and satisfy your coffee curiosities with our chatGPT feature. Immerse yourself in the rich and diverse coffee culture. Start your coffee adventure with us today!",
+    author: "Hong Le",
     canonicalURL: "www.wedreamofcoffee.com" + asPath,
     keywords: [
       "coffee subscription",
@@ -216,14 +217,8 @@ const CoffeeSubscriptionBoxes = ({ posts }) => {
                       "@type": "Answer",
                       "text": "A coffee subscription service is a convenient and personalized way to have freshly roasted coffee delivered to your doorstep on a recurring basis. It typically involves signing up for a subscription plan with a coffee provider or roaster, who will then curate and send you a selection of coffees based on your preferences."
                     }
-                  }, {
-                    "@type": "Question",
-                    "name": "How Can You Find Creative Gifts for Artists in Your Life?",
-                    "acceptedAnswer": {
-                      "@type": "Answer",
-                      "text": "<p>Here are some of our favorite <a href='/33-perfect-gifts-artists-love-paint-draw'>creative gifts for artists</a> to get the creative juices going: <br>Paint- by-numbers kits are a classic gift for artists who enjoy creating their own masterpieces. These kits come with everything you need to paint a picture, including paints, brushes, canvases, easels, frames, and more. Some kits include step-by-step instructions to help guide you through the process, while others offer blank canvas options so you can let your creativity run wild.</p>"
-                    }
-                  }, {
+                  },
+                  {
                     "@type": "Question",
                     "name": "Why do people pay for expensive coffee?",
                     "acceptedAnswer": {
@@ -258,13 +253,20 @@ const CoffeeSubscriptionBoxes = ({ posts }) => {
         ></script>
       </SEO>
 
-      <section className="content-wrapper">
-        <h1 className="primary-heading">Coffee Subscription Boxes</h1>
-        <div className="my-3 text-center">
-          Elevate your coffee experience with our selection of carefully curated
-          coffee subscription boxes.
-        </div>
-        <div className="my-5 md:my-20 flex flex-col items-start justify-start gap-4">
+      <Breadcrumb 
+        previousPage=""
+        previousPageLink="/"
+        currentPage={meta.headline}
+      />
+
+      <Container
+        heading={meta.headline}
+        description="Elevate your coffee experience with our selection of carefully curated
+        coffee subscription boxes."
+        author={meta.author}
+        date={meta.datePublished}
+      >
+        <div className="my-10 md:my-20 flex flex-col items-start justify-start gap-10">
           {posts &&
             posts.map((post, index) => (
               <Box
@@ -275,7 +277,9 @@ const CoffeeSubscriptionBoxes = ({ posts }) => {
               />
             ))}
         </div>
-      </section>
+
+        <Author />
+      </Container>
     </>
   );
 };

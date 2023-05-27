@@ -1,44 +1,216 @@
 import { Layout } from "@/components/common";
 import s from "./About.module.scss";
-import { NextSeo } from "next-seo";
+import { SEO } from "@/components/common";
+import { useRouter } from "next/router";
 
 const About = () => {
+  const { asPath } = useRouter();
+  const meta = {
+    title: "About Page",
+    headline: "About Us",
+    siteUrl: "www.wedreamofcoffee.com",
+    siteLogoUrl: "seo/wdoc logo.png",
+    siteDescription:
+      "Explore the world of coffee on our comprehensive website. Discover local coffee roasters, stay updated on coffee festival events, explore a variety of coffee subscription boxes, indulge in a virtual cafe experience, and satisfy your coffee curiosities with our chatGPT feature. Immerse yourself in the rich and diverse coffee culture. Start your coffee adventure with us today!",
+    author: "Hong Le",
+    canonicalURL: "www.wedreamofcoffee.com" + asPath,
+    keywords: [
+      "we dream of coffee about us page",
+    ],
+    description:
+      "Our website is your ultimate destination for all things coffee. Explore our curated list of coffee roasters, discover upcoming coffee festival events, explore a variety of coffee subscription boxes, connect with coffee enthusiasts through our virtual cafe app, and get all your coffee questions answered with our AI-powered chatbot.",
+    datePublished: "2021-06-21T23:04:13Z",
+    dateModified: new Date().toLocaleString(),
+    openGraphURL: "seo/Open Graph/coffee subscription list app.png",
+    twitterCardURL: "seo/Twitter Card/coffee subscription boxes.png",
+  };
+
   return (
     <>
-      <NextSeo
-        title="Using More of Config"
-        description="This example uses more of the available config options."
-        canonical="https://www.canonical.ie/"
-        openGraph={{
-          url: "https://www.url.ie/a",
-          title: "Open Graph Title",
-          description: "Open Graph Description",
-          images: [
-            {
-              url: "https://www.example.ie/og-image-01.jpg",
-              width: 800,
-              height: 600,
-              alt: "Og Image Alt",
-              type: "image/jpeg",
-            },
-            {
-              url: "https://www.example.ie/og-image-02.jpg",
-              width: 900,
-              height: 800,
-              alt: "Og Image Alt Second",
-              type: "image/jpeg",
-            },
-            { url: "https://www.example.ie/og-image-03.jpg" },
-            { url: "https://www.example.ie/og-image-04.jpg" },
-          ],
-          siteName: "SiteName",
-        }}
-        twitter={{
-          handle: "@handle",
-          site: "@site",
-          cardType: "summary_large_image",
-        }}
-      />
+      <SEO
+        title={`${meta.title} | We Dream Of Coffee`}
+        description={meta.description}
+        canonical={meta.canonicalURL}
+        image={meta.socialImageURL}
+      >
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: `{
+              "@context":"https://schema.org",
+              "@graph":
+              [{
+                  "@type": "Organization",
+                  "@id": "${meta.siteUrl}/#organization",
+                  "name": "We Dream Of Coffee",
+                  "url": "${meta.siteUrl}",
+                  "sameAs":[
+                    "https://www.facebook.com/wedreamofcoffee/",
+                    "https://twitter.com/wedreamofcoffee/",
+                    "https://www.pinterest.com/wedreamofcoffee/"],
+                  "logo": {
+                    "@type": "ImageObject",
+                    "@id": "${meta.siteUrl}/#logo",
+                    "inLanguage": "en-US",
+                    "url": "${meta.siteUrl}/${meta.siteLogoUrl}",
+                    "contentUrl": "${meta.siteUrl}/${meta.siteLogoUrl}",
+                    "width": 500,
+                    "height": 500,
+                    "caption": "WeDreamOfCoffee"
+                    },
+                  "image": {"@id": "${meta.siteUrl}/#logo"},
+                  "founder": {
+                    "@type": "Person",
+                    "name": "Hong Le",
+                    "url": "${meta.siteUrl}/#about-us",
+                    "sameAs": "${meta.siteUrl}/about-us"},
+                  "foundingDate": "2018-05-02",
+                  "numberOfEmployees": 5,
+                  "slogan": "Unveiling the Essence of Coffee: Roasters, Festivals, Subscriptions, and More!",
+                  "description": "${meta.siteDescription}",
+                  "legalName": "We Dream Of Coffee",
+                  "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "South San Francisco", 
+                    "addressRegion": "CA", 
+                    "postalCode": "94080", 
+                    "streetAddress": "940 Mission Rd"}
+                },
+                {
+                  "@type": "WebSite",
+                  "@id": "${meta.siteUrl}/#website",
+                  "url": "${meta.siteUrl}",
+                  "name": "We Dream Of Coffee",
+                  "description": "Unveiling the Essence of Coffee: Roasters, Festivals, Subscriptions, and More!",
+                  "publisher":{
+                    "@id": "${meta.siteUrl}/#organization"},
+                    "potentialAction":[{
+                      "@type":"SearchAction",
+                      "target":{
+                        "@type": "EntryPoint",
+                        "urlTemplate": "${meta.siteUrl}/?s={search_term_string}"},
+                      "query-input": "required name=search_term_string"}],
+                    "inLanguage": "en-US",
+                    "copyrightHolder": {"@id": "${meta.siteUrl}/#organization"}
+                },
+                {
+                  "@type": "ImageObject",
+                  "@id": "${meta.canonicalURL}/#primaryimage",
+                  "inLanguage": "en-US",
+                  "url": "${meta.siteUrl}/${meta.openGraphURL}",
+                  "contentUrl": "${meta.siteUrl}/${meta.openGraphURL}",
+                  "width": 1200,
+                  "height": 627
+                },
+                {
+                  "@type": "WebPage",
+                  "@id": "${meta.canonicalURL}/#webpage",
+                  "url": "${meta.canonicalURL}",
+                  "name": "${meta.title}",
+                  "isPartOf": {"@id": "${meta.siteUrl}/#website"},
+                  "primaryImageOfPage": {"@id": "${meta.canonicalURL}/#primaryimage"},
+                  "datePublished": "${meta.datePublished}",
+                  "dateModified": "${meta.dateModified}",
+                  "description": "${meta.description}",
+                  "breadcrumb": {"@id": "${meta.canonicalURL}/#breadcrumb"},
+                  "inLanguage": "en-US",
+                  "potentialAction":[{
+                    "@type": "ReadAction",
+                    "target": ["${meta.canonicalURL}"]}]
+                },
+                {
+                  "@type": "BreadcrumbList",
+                  "@id": "${meta.canonicalURL}/#breadcrumb",
+                  "itemListElement": [{
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Home",
+                    "item": "${meta.siteUrl}"
+                  },
+                  {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "Coffee Subscription Boxes",
+                    "item": "${meta.canonicalURL}"
+                  }]
+                },
+                {
+                  "@type": "Article",
+                  "@id": "${meta.canonicalURL}/#article",
+                  "isPartOf": {"@id": "${meta.canonicalURL}/#webpage"}, 
+                  "author": {"@id": "${meta.siteUrl}/#/schema/person/1"},
+                  "headline": "${meta.headline}",
+                  "datePublished": "${meta.datePublished}",
+                  "dateModified": "${meta.dateModified}",
+                  "mainEntityOfPage": {"@id": "${meta.canonicalURL}/#webpage"},
+                  "wordCount": 1000,
+                  "commentCount": 6,
+                  "publisher": {"@id": "${meta.siteUrl}/#organization"},
+                  "image": {"@id": "${meta.canonicalURL}/#primaryimage"},
+                  "thumbnailUrl": "${meta.siteUrl}/${meta.openGraphURL}",
+                  "keywords": "${meta.keywords}",
+                  "inLanguage": "en-US",
+                  "potentialAction": [{
+                    "@type": "CommentAction",
+                    "name": "Comment",
+                    "target": ["${meta.canonicalURL}#respond"]}],
+                  "copyrightYear": "2020",
+                  "copyrightHolder": {"@id": "${meta.siteUrl}/#organization"}
+                },
+                {
+                  "@type": "FAQPage",
+                  "@id": "${meta.canonicalURL}/#faq-block",
+                  "isPartOf": {"@id": "${meta.canonicalURL}/#webpage"},
+                  "author": {"@id": "${meta.siteUrl}/#/schema/person/1"},
+                  "mainEntity": [{
+                    "@type": "Question",
+                    "name": "What is the purpose of this website?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "<p>Our website is dedicated to providing a comprehensive platform for coffee enthusiasts. We offer a range of features, including a coffee roaster finder, a page featuring coffee festival events, a collection of coffee subscription boxes, a virtual cafe app, and a chatbot where you can ask any coffee-related questions.</p>"
+                    }
+                  }, {
+                    "@type": "Question",
+                    "name": "Is your website free to use?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Yes, all the features and services on our website are completely free to use. Whether you're finding coffee roasters, exploring coffee festival events, browsing subscription boxes, using the virtual cafe app, or chatting with our AI-powered chatbot, there are no charges involved."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "Can I contribute to your website?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "<p>We appreciate community engagement and welcome contributions. If you know of any outstanding coffee roasters, upcoming coffee festival events, or noteworthy subscription boxes, please feel free to reach out to us. Your recommendations and contributions are valuable to us.</p>"
+                    }
+                  }]
+                },
+                {
+                  "@type":"Person",
+                  "@id": "${meta.siteUrl}/#/schema/person/1",
+                  "name": "Hong Le",
+                  "image": {
+                    "@type":"ImageObject",
+                    "@id": "${meta.siteUrl}/#personlogo",
+                    "inLanguage": "en-US",
+                    "url": "https://secure.gravatar.com/avatar/1d83533e299c379140f9fcc2cb0015cb?s=96&d=mm&r=g",
+                    "contentUrl": "https://secure.gravatar.com/avatar/1d83533e299c379140f9fcc2cb0015cb?s=96&d=mm&r=g",
+                    "caption": "Hong Le"
+                    },
+                  "description": "Hong Le is the creative marketing manager at WeDreamOfCoffee. She loves building coffee applications that bring you value",
+                  "sameAs":[
+                    "${meta.siteUrl}",
+                    "https://www.facebook.com/hongrosele/",
+                    "https://twitter.com/honglerose/",
+                    "https://www.pinterest.com/hongrosele/"],
+                    "url": "${meta.siteUrl}/#about-us/team/hong-le/"
+                }
+              ]},
+              }`,
+          }}
+        ></script>
+      </SEO>
 
       <section>
         <div className="relative flex items-center justify-start">

@@ -45,9 +45,11 @@ picture {
 input,
 button,
 textarea,
-select {
+select,
+a {
   font: inherit;
   outline: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 /* remove animations for people who've turned them off */

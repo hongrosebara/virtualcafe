@@ -18,7 +18,11 @@
 
 .content-wrapper {
   margin: 5rem 0;
-  padding-inline: 20%;
+  padding-inline: calc(12px + 1.5625vw);
+
+  @screen lg {
+    padding-inline: 20%;
+  }
 }
 
 .footer-wrapper {
