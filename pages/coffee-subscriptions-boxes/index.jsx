@@ -249,7 +249,7 @@ const CoffeeSubscriptionBoxes = ({ posts }) => {
                     "${meta.siteUrl}",
                     "https://www.facebook.com/hongrosele/",
                     "https://twitter.com/honglerose/",
-                    "https://www.pinterest.com/hongrosele/",],
+                    "https://www.pinterest.com/hongrosele/"],
                     "url": "${meta.siteUrl}/#about-us/team/hong-le/"
                 }
               ]},
