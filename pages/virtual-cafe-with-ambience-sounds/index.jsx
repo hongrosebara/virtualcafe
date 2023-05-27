@@ -2,12 +2,11 @@ import {
   buildPaths,
   extractFile,
 } from "@/components/utils/getData";
-import Player from "@/components/coffee/virtualCafe/Player/Player";
-import MusicPlayer from "@/components/coffee/virtualCafe/MusicPlayer/MusicPlayer";
+import { Player, MusicPlayer } from "@/components/coffee";
 import SpotifyPlayer from "react-spotify-player";
 import Image from "next/image";
 import { NextSeo, ArticleJsonLd } from "next-seo";
-import { Layout } from "@/components/coffee/VirtualCafe";
+import { Layout } from "@/components/common";
 
 export async function getStaticProps() {
   const cafePath = buildPaths('cafes.json');
@@ -90,7 +89,7 @@ const VirtualCafe = ({ cafes, effects, music }) => {
       />
 
       <section className="section-main grid grid-cols-1 lg:grid-cols-10">
-        <div className="col-span-1 lg:col-span-3 text-xs">
+        <div className="col-span-1 lg:col-span-3 font-serif font-medium">
           <div className="m-3">
             {cafes.map((sound) => (
               <Player key={sound.name} sound={sound} />

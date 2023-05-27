@@ -1,5 +1,5 @@
 import { BsFillPlayCircleFill, BsPauseCircleFill, BsFillVolumeDownFill, BsFillVolumeUpFill } from "react-icons/bs";
-import { useAudio } from "../../../hooks/AudioHook";
+import { useAudio } from "@/components/hooks/AudioHook";
 
 export default function Player({sound}) {
 
@@ -18,11 +18,11 @@ export default function Player({sound}) {
         <audio ref={audioPlayer} src={sound.audio}></audio>
         <div className="flex flex-start items-center">
           <button
-            className="text-2xl text-center px-2"
+            className="text-xl text-center px-2"
             onClick={togglePlayer}>
             { isPlaying ? <BsPauseCircleFill color="var(--color-bg-other)" /> : <BsFillPlayCircleFill />}
           </button>
-          <h3 className="text-base text-left">{sound.name}</h3>
+          <h3 className="text-left">{sound.name}</h3>
         </div>
       <div className="flex m-3 items-center">
         <BsFillVolumeUpFill className="ml-5" />
