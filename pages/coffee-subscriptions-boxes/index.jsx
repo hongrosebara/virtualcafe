@@ -247,9 +247,9 @@ const CoffeeSubscriptionBoxes = ({ posts }) => {
                   "description": "Hong Le is the creative marketing manager at WeDreamOfCoffee. She loves building coffee applications that bring you value",
                   "sameAs":[
                     "${meta.siteUrl}",
-                    'https://www.facebook.com/hongrosele/',
-                    'https://twitter.com/honglerose',
-                    'https://www.pinterest.com/hongrosele/',],
+                    "https://www.facebook.com/hongrosele/",
+                    "https://twitter.com/honglerose/",
+                    "https://www.pinterest.com/hongrosele/",],
                     "url": "${meta.siteUrl}/#about-us/team/hong-le/"
                 }
               ]},
