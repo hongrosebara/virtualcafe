@@ -1,5 +1,5 @@
 import { BsFillPlayCircleFill, BsPauseCircleFill, BsFillVolumeDownFill, BsFillVolumeUpFill } from "react-icons/bs";
-import { useAudio } from "../../hooks/AudioHook";
+import { useAudio } from "../../../hooks/AudioHook";
 
 export default function Player({sound}) {
 

@@ -1,7 +1,7 @@
 import { useEffect, useState,  useRef } from "react";
 import { BsFillPlayCircleFill, BsPauseCircleFill, BsFillVolumeDownFill, BsFillVolumeUpFill } from "react-icons/bs";
 import { BiSkipPrevious, BiSkipNext } from "react-icons/bi";
-import { useAudio } from "../../hooks/AudioHook";
+import { useAudio } from "../../../hooks/AudioHook";
 
 const MusicPlayer = ( music ) => {
   const [songs] = useState(music.music);

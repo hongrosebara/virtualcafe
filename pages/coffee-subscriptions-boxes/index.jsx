@@ -36,16 +36,27 @@ export async function getStaticProps() {
 
 const CoffeeSubscriptionBoxes = ({ posts }) => {
   const { asPath } = useRouter();
-  console.log(asPath)
+  console.log(asPath);
 
   const meta = {
     title: "Top 10 Best Coffee Subscription Boxes You Have To Try",
     headline: "10 Best Coffee Subscription Boxes You Must Try",
     siteUrl: "www.wedreamofcoffee.com",
     siteLogoUrl: "seo/wdoc logo.png",
-    siteDescription: "Explore the world of coffee on our comprehensive website. Discover local coffee roasters, stay updated on coffee festival events, explore a variety of coffee subscription boxes, indulge in a virtual cafe experience, and satisfy your coffee curiosities with our chatGPT feature. Immerse yourself in the rich and diverse coffee culture. Start your coffee adventure with us today!",
+    siteDescription:
+      "Explore the world of coffee on our comprehensive website. Discover local coffee roasters, stay updated on coffee festival events, explore a variety of coffee subscription boxes, indulge in a virtual cafe experience, and satisfy your coffee curiosities with our chatGPT feature. Immerse yourself in the rich and diverse coffee culture. Start your coffee adventure with us today!",
     canonicalURL: "www.wedreamofcoffee.com" + asPath,
-    keywords: ["coffee subscription", "coffee box", "curated coffee", "monthly coffee", "personalized coffee subscription", "best coffee subscription", "top coffee subscription", "unique coffee subscription", "international coffee subscription"],
+    keywords: [
+      "coffee subscription",
+      "coffee box",
+      "curated coffee",
+      "monthly coffee",
+      "personalized coffee subscription",
+      "best coffee subscription",
+      "top coffee subscription",
+      "unique coffee subscription",
+      "international coffee subscription",
+    ],
     description:
       "Explore our curated selection of the top 10 best coffee subscription boxes. Discover a world of exceptional flavors, convenience, and monthly coffee delights delivered to your doorstep.",
     datePublished: "2022-06-21T23:04:13Z",
@@ -74,9 +85,9 @@ const CoffeeSubscriptionBoxes = ({ posts }) => {
                   "name": "We Dream Of Coffee",
                   "url": "${meta.siteUrl}",
                   "sameAs":[
-                    'https://www.facebook.com/wedreamofcoffee/',
-                    'https://twitter.com/wedreamofcoffee',
-                    'https://www.pinterest.com/wedreamofcoffee/'],
+                    "https://www.facebook.com/wedreamofcoffee/",
+                    "https://twitter.com/wedreamofcoffee/",
+                    "https://www.pinterest.com/wedreamofcoffee/"],
                   "logo": {
                     "@type": "ImageObject",
                     "@id": "${meta.siteUrl}/#logo",
@@ -126,8 +137,8 @@ const CoffeeSubscriptionBoxes = ({ posts }) => {
                   "@type": "ImageObject",
                   "@id": "${meta.canonicalURL}/#primaryimage",
                   "inLanguage": "en-US",
-                  "url": ${meta.openGraphURL}
-                  "contentUrl": ${meta.openGraphURL}
+                  "url": ${meta.siteUrl}/${meta.openGraphURL}
+                  "contentUrl": ${meta.siteUrl}/${meta.openGraphURL}
                   "width": 1200,
                   "height": 627
                 },
@@ -176,7 +187,7 @@ const CoffeeSubscriptionBoxes = ({ posts }) => {
                   "commentCount": 6,
                   "publisher": {"@id": "${meta.siteUrl}/#organization"},
                   "image": {"@id": "${meta.canonicalURL}/#primaryimage"},
-                  "thumbnailUrl": ${meta.openGraphURL}
+                  "thumbnailUrl": ${meta.siteUrl}/${meta.openGraphURL}
                   "keywords": ${meta.keywords},
                   "inLanguage": "en-US",
                   "potentialAction": [{
@@ -253,7 +264,7 @@ const CoffeeSubscriptionBoxes = ({ posts }) => {
           Elevate your coffee experience with our selection of carefully curated
           coffee subscription boxes.
         </div>
-        <div className="my-20 flex flex-col items-start justify-start gap-4">
+        <div className="my-5 md:my-20 flex flex-col items-start justify-start gap-4">
           {posts &&
             posts.map((post, index) => (
               <Box
