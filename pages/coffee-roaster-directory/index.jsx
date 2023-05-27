@@ -198,8 +198,10 @@ const CoffeeRoasterDirectory = (props) => {
                 {
                   "@type": "WebApplication",
                   "@id": "${meta.canonicalURL}/#article",
-                  "isPartOf": {"@id": "${meta.canonicalURL}/#webpage"}, 
+                  "isPartOf": {"@id": "${meta.canonicalURL}/#webpage"},
                   "author": {"@id": "${meta.siteUrl}/#/schema/person/1"},
+                  "applicationCategory": "Utility",
+                  "operatingSystem": "Windows, OS X, Android, iPhone",
                   "headline": "${meta.headline}",
                   "datePublished": "${meta.datePublished}",
                   "dateModified": "${meta.dateModified}",
