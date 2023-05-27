@@ -109,12 +109,12 @@ const CoffeeSubscriptionBoxes = ({ posts }) => {
                   "slogan": "Unveiling the Essence of Coffee: Roasters, Festivals, Subscriptions, and More!",
                   "description": "${meta.siteDescription}",
                   "legalName": "We Dream Of Coffee",
-                  'address': {
-                    '@type': "PostalAddress",
-                    'addressLocality': "South San Francisco", 
-                    'addressRegion': "CA", 
-                    'postalCode': '94080', 
-                    'streetAddress': '940 Mission Rd'}
+                  "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "South San Francisco", 
+                    "addressRegion": "CA", 
+                    "postalCode": "94080", 
+                    "streetAddress": "940 Mission Rd"}
                 },
                 {
                   "@type": "WebSite",
