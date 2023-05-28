@@ -289,10 +289,10 @@ const CoffeeRoasterDirectory = (props) => {
         <HowToGuide>
           <div>
             <h3>
-              How does the coffee roaster finder app work
+              How does the coffee roaster finder app work?
             </h3>
             <p>
-              Our coffee roaster finder app utilizes your device's location
+              Our coffee roaster finder app utilizes your device&apos;s location
               services to determine your current location. It then uses that
               information to search for coffee roasters near you. The app
               displays a list of nearby coffee roasters along with relevant
@@ -305,16 +305,16 @@ const CoffeeRoasterDirectory = (props) => {
               app
             </h3>
             <p>
-              To enable location services, go to your device's settings and find
+              To enable location services, go to your device&apos;s settings and find
               the app permissions or location settings. Make sure our coffee
-              roaster finder app has permission to access your device's
+              roaster finder app has permission to access your device&apos;s
               location. This allows the app to accurately identify your location
               and find nearby coffee roasters.
             </p>
           </div>
           <div>
-            <h3>Can I contribute to the app's database by adding new coffee roasters?</h3>
-            <p>If you know of a roaster that is not listed in the app, please contact us to submit a new roaster or suggest an addition. Your contribution is valuable and can help enhance the app's database for the benefit of other users.</p>
+            <h3>Can I contribute to the app&apos;s database by adding new coffee roasters?</h3>
+            <p>If you know of a roaster that is not listed in the app, please contact us to submit a new roaster or suggest an addition. Your contribution is valuable and can help enhance the app&apos;s database for the benefit of other users.</p>
           </div>
         </HowToGuide>
         {/* <p>Discover your coffee roasters</p>

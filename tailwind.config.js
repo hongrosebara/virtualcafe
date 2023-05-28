@@ -66,5 +66,19 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addUtilities }) {
+      addUtilities({
+        '.responsive-text': {
+          '@apply text-xs md:text-sm lg:text-base': {},
+        },
+        '.secondary-heading': {
+          '@apply font-heading font-bold text-center text-2xl': {}
+        },
+        '.tertiary-heading': {
+          '@apply font-serif font-medium text-lg': {}
+        }
+      })
+    }
+  ],
 };
