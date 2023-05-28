@@ -1,4 +1,4 @@
-import { Facebook, Instagram, Twitter } from "@/components/icons";
+import { Facebook, Pinterest, Twitter } from "@/components/icons";
 import s from "./SocialNav.module.scss";
 
 const SocialNav = ({ fillColor }) => {
@@ -6,7 +6,7 @@ const SocialNav = ({ fillColor }) => {
     <div className={s["social-nav"]}>
       <div className="flex items-center justify-end space-x-4 cursor-pointer">
         <Facebook fillColor={`${fillColor}`} />
-        <Instagram fillColor={`${fillColor}`} />
+        <Pinterest fillColor={`${fillColor}`} />
         <Twitter fillColor={`${fillColor}`} />
       </div>
     </div>

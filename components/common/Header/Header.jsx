@@ -8,8 +8,8 @@ export default function Header({}) {
       <div className="flex items-center justify-between">
         <Link href="/">
           <Logo 
-            fillColor="var(--color-primary)"
-            classNames="text-primary"
+            fillColor="var(--color-on-primary-lt)"
+            classNames="text-on-primary"
           />
         </Link>
 

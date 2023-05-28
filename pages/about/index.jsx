@@ -214,11 +214,11 @@ const About = () => {
 
       <section>
         <div className="relative flex items-center justify-start">
-          <div className="w-full h-[40vh] bg-primary-dk bg-[url('https://res.cloudinary.com/dkv6uc5me/image/upload/v1685071001/brigitte-tohm-EAay7Aj4jbc-unsplash_nsvwrw.jpg')] bg-cover bg-center rounded-lg">
+          <div className="w-full h-[40vh] bg-primary-dk bg-[url('https://res.cloudinary.com/dkv6uc5me/image/upload/v1685251573/wdoc_about_us_qntnpv.jpg')] bg-cover bg-center rounded-lg">
             <div className="absolute w-full h-full inset-0 backdrop-brightness-50">
               <div className="absolute p-20 text-on-lt w-full md:w-1/2 top-1/2 -translate-y-1/2">
                 <h1 className="font-heading font-bold text-2xl">About us</h1>
-                <p className="my-3 font-serif font-light">
+                <p className="my-3 font-light">
                   At Wedreamofcoffee, we believe that coffee is more than just a
                   beverage—it&apos;s a source of inspiration, connection, and
                   endless possibilities. Our philosophy revolves around

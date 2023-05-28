@@ -5,3 +5,5 @@ export { default as Container } from "./Container";
 export { default as Breadcrumb } from "./Breadcrumb";
 export { default as Author } from "./Author";
 export { default as HowToGuide } from "./HowToGuide";
+export { default as Features } from "./Features";
+export { default as FeatureItem } from "./FeatureItem";

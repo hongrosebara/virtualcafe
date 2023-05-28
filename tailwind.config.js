@@ -29,6 +29,8 @@ module.exports = {
         'accent-lt': 'var(--color-accent-lt)',
         'accent-dk': 'var(--color-accent-dk)',
         surface: 'var(--color-surface)',
+        'surface-lt': 'var(--color-surface-lt)',
+        'surface-dk': 'var(--color-surface-dk)',
         'on-lt': 'var(--color-on-lt)',
         'on-dk': 'var(--color-on-dk)',
         dark: 'var(--color-dark)'
@@ -47,6 +49,10 @@ module.exports = {
         'accent-dk': 'var(--color-accent-dk)',
         'on-lt': 'var(--color-on-lt)',
         'on-dk': 'var(--color-on-dk)',
+        'on-primary': 'var(--color-on-primary)',
+        'on-primary-lt': 'var(--color-on-primary-lt)',
+        'on-primary-dk': 'var(--color-on-primary-dk)',
+        'on-primary-inverse': 'var(--color-on-primary-inverse)',
         gray: 'var(--color-gray)'
       },
       fontSize: {

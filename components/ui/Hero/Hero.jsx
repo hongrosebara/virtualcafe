@@ -25,7 +25,7 @@ const Hero = () => {
               to awaken your senses and enrich your coffee journey.
             </p>
             <Link href="/ask-anything-about-coffee/">
-              <button className="mt-3 bg-secondary-lt px-10 py-5 rounded-sm text-xl hover:bg-secondary text-on-dk">
+              <button className="mt-3 bg-surface hover:bg-surface-dk px-10 py-5 rounded-md text-xl text-on-primary shadow-sm">
                 Ask Now
               </button>
             </Link>

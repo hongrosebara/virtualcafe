@@ -1,21 +1,19 @@
+import s from "./Container.module.scss";
+
 const Container = (props) => {
-  const { children, heading, description, author } = props;
-  const formatedDate = new Date().toLocaleDateString("en-us", {
-    weekday: "long",
-    year: "numeric",
-    month: "short",
-    day: "numeric",
-  });
+  const { children, heading, description, author, date } = props;
 
   return (
     <section className="content-wrapper">
       <h1 className="primary-heading">{heading}</h1>
-      <div className="my-3 text-center opacity-60">{description}</div>
+      {description && (
+        <div className="my-3 text-center opacity-60">{description}</div>
+      )}
       <div className="my-3 flex items-center justify-center font-light space-x-10">
         {author && <div> Author: {author}</div>}
-        {formatedDate && <div>{formatedDate}</div>}
+        {date && <div>{date}</div>}
       </div>
-      {children}
+      <div className={s["main-content"]}>{children}</div>
     </section>
   );
 };

@@ -1,6 +1,7 @@
 import { Layout, SEO } from "@/components/common";
 import { useRouter } from "next/router";
 import { Container, Breadcrumb } from "@/components/ui";
+import { formattedDate } from "@/components/utils";
 
 const AskChatGPT = () => {
   const { asPath } = useRouter();
@@ -28,7 +29,7 @@ const AskChatGPT = () => {
     description:
       "Coming soon...",
     datePublished: "2023-01-21T23:04:13Z",
-    dateModified: new Date().toLocaleString(),
+    dateModified: formattedDate,
     openGraphURL: "seo/Open Graph/coffee knowledge app.png",
     twitterCardURL: "seo/Twitter Card/coffee knowledge chat bot app.png",
   };
@@ -227,8 +228,6 @@ const AskChatGPT = () => {
       <Container
         heading={meta.headline}
         description="Check back soon."
-        author={meta.author}
-        date={meta.datePublished}
       >
         Check back in 1 week...
       </Container>

@@ -1,16 +1,24 @@
 import Image from "next/image";
 import { SEO } from "@/components/common";
 import { Layout } from "@/components/common";
-import { Hero } from "@/components/ui";
+import { Hero, Features } from "@/components/ui";
 import { useRouter } from "next/router";
+import { buildPaths, extractFile } from "@/components/utils/getData";
 
-const HomePage = () => {
+export async function getStaticProps() {
+  const featuresPath = buildPaths("featureItems.json");
+  const featureItems = extractFile(featuresPath).data;
+  return {
+    props: { featureItems },
+  };
+}
+
+const HomePage = ({ featureItems }) => {
   const { asPath } = useRouter();
 
   const meta = {
     title: "Home",
-    headline:
-      "We Dream Of Coffee Home Page",
+    headline: "We Dream Of Coffee Home Page",
     siteUrl: "www.wedreamofcoffee.com",
     siteLogoUrl: "seo/wdoc logo.png",
     siteDescription:
@@ -23,7 +31,8 @@ const HomePage = () => {
       "virtual cafe app with ambience sounds",
       "coffee recipes",
     ],
-    description: "Discover the World of Coffee: Find Roasters, Festivals, Subscriptions, and More. Explore our website for a curated list of coffee roasters near you, exciting coffee festival events, premium coffee subscription boxes, a virtual cafe app to connect with coffee enthusiasts, and an AI-powered chatbot for all your coffee questions. Start your coffee adventure today!",
+    description:
+      "Discover the World of Coffee: Find Roasters, Festivals, Subscriptions, and More. Explore our website for a curated list of coffee roasters near you, exciting coffee festival events, premium coffee subscription boxes, a virtual cafe app to connect with coffee enthusiasts, and an AI-powered chatbot for all your coffee questions. Start your coffee adventure today!",
     datePublished: "2019-01-21T23:04:13Z",
     dateModified: new Date().toLocaleString(),
     openGraphURL: "seo/Open Graph/home.png",
@@ -202,20 +211,20 @@ const HomePage = () => {
         ></script>
       </SEO>
 
-      <section>
-        <Hero />
-      </section>
+      <Hero />
 
-      <section className="section-wrapper">
+      <Features featureItems={featureItems} />
+
+      <div className="section-wrapper">
         <h1>Coffee Subscription Boxes</h1>
-      </section>
+      </div>
 
-      <section className="mx-auto bg-primary-dk text-white">
+      <div className="mx-auto bg-primary-dk text-white">
         <h1>Find Coffee Roasters Near You</h1>
         <p>
           Embark on a quest to discover the finest coffee roasters in your area.
         </p>
-      </section>
+      </div>
 
       <section className="section-wrapper">
         <h1>Virtual Coffee App</h1>

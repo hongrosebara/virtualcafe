@@ -2,6 +2,6 @@
   @apply hidden md:block uppercase text-sm;
 
   & ul li a {
-    @apply hover:text-gray;
+    @apply hover:text-accent-lt;
   }
 }

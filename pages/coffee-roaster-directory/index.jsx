@@ -8,6 +8,7 @@ import { buildPaths, extractFile } from "@/components/utils/getData";
 import { SEO } from "@/components/common";
 import { useRouter } from "next/router";
 import { Container, Breadcrumb, HowToGuide } from "@/components/ui";
+import { formattedDate } from "@/components/utils";
 
 export async function getStaticProps() {
   const roasters = await fetchRoasters();
@@ -67,7 +68,7 @@ const CoffeeRoasterDirectory = (props) => {
     siteLogoUrl: "seo/wdoc logo.png",
     siteDescription:
       "Explore the world of coffee on our comprehensive website. Discover local coffee roasters, stay updated on coffee festival events, explore a variety of coffee subscription boxes, indulge in a virtual cafe experience, and satisfy your coffee curiosities with our chatGPT feature. Immerse yourself in the rich and diverse coffee culture. Start your coffee adventure with us today!",
-    author: null,
+    author: "Hong Le",
     canonicalURL: "www.wedreamofcoffee.com" + asPath,
     keywords: [
       "coffee roaster finder",
@@ -81,7 +82,7 @@ const CoffeeRoasterDirectory = (props) => {
     description:
       "Discover the best local coffee roasters near you with our comprehensive directory. Support local and enjoy delicious, fresh coffee today!",
     datePublished: "2023-01-21T23:04:13Z",
-    dateModified: new Date().toLocaleString(),
+    dateModified: formattedDate,
     openGraphURL: "seo/Open Graph/coffee roaster finder app.png",
     twitterCardURL: "seo/Twitter Card/coffee roaster finder app.png",
   };
@@ -274,7 +275,6 @@ const CoffeeRoasterDirectory = (props) => {
       <Container
         heading={meta.headline}
         description="Click the button below to find your local coffee roasters"
-        author={meta.author}
       >
         <div className="flex flex-col items-center justify-center">
           <button

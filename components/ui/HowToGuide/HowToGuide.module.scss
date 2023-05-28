@@ -1,5 +1,19 @@
 .content-box {
-  & h3 {
-    @apply tertiary-heading;
+  @apply border-t-2 border-opacity-50 border-primary;
+
+  & h2 {
+    @apply mb-5 mt-10;
+  }
+
+  & div {
+    @apply my-10;
+
+    & h3 {
+      @apply tertiary-heading;
+    }
+
+    & p {
+      @apply my-3;
+    }
   }
 }

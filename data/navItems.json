@@ -29,6 +29,11 @@
       "id": 7,
       "name": "Virtual Cafe",
       "slug": "/virtual-cafe-with-ambience-sounds/"
+    },
+    {
+      "id": 8,
+      "name": "Contact",
+      "slug": "/contact-us/"
     }
   ]
 }

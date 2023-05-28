@@ -1,0 +1,17 @@
+.main-content {
+  & div {
+    @apply my-10;
+
+    & h2 {
+      @apply font-bold text-lg;
+    }
+
+    & p {
+      @apply mb-10;
+    }
+  }
+
+  & p {
+    @apply my-5;
+  }
+}

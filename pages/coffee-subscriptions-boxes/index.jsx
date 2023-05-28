@@ -10,6 +10,7 @@ import { getListOfCoffeeSubscriptionBoxPhotos } from "@/lib/coffee-roaster";
 import { useRouter } from "next/router";
 import { SEO } from "@/components/common";
 import { Container, Breadcrumb, Author } from "@/components/ui";
+import { formattedDate } from "@/components/utils";
 
 export async function getStaticProps() {
   // Get photos from Unsplash
@@ -61,7 +62,7 @@ const CoffeeSubscriptionBoxes = ({ posts }) => {
     description:
       "Explore our curated selection of the top 10 best coffee subscription boxes. Discover a world of exceptional flavors, convenience, and monthly coffee delights delivered to your doorstep.",
     datePublished: "2022-06-21T23:04:13Z",
-    dateModified: new Date().toLocaleString(),
+    dateModified: formattedDate,
     openGraphURL: "seo/Open Graph/coffee subscription list app.png",
     twitterCardURL: "seo/Twitter Card/coffee subscription boxes.png",
   };
@@ -263,8 +264,6 @@ const CoffeeSubscriptionBoxes = ({ posts }) => {
         heading={meta.headline}
         description="Elevate your coffee experience with our selection of carefully curated
         coffee subscription boxes."
-        author={meta.author}
-        date={meta.datePublished}
       >
         <div className="my-10 md:my-20 flex flex-col items-start justify-start gap-10">
           {posts &&
