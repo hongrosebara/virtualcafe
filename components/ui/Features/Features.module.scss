@@ -1,0 +1,9 @@
+.feature-content {
+  & div:nth-child(even) {
+    @apply md:flex-row-reverse;
+  }
+
+  & div:nth-child(odd) {
+    @apply md:flex-row;
+  }
+}

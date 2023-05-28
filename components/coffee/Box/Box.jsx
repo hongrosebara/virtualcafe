@@ -22,7 +22,7 @@ const Box = ({ box, imgUrl, index }) => {
           {index}. {box.title}</h2>
         <p>{box.excerpt}</p>
         <Link href={box.link} target="_blank" rel="nofollow">
-          <button className="mt-10 rounded-sm uppercase text-sm bg-primary-dk text-on-lt hover:bg-primary px-7 py-3">Check it out</button>
+          <button className="rounded-sm uppercase text-sm bg-primary-dk text-on-lt hover:bg-primary px-7 py-3">Check it out</button>
         </Link>
       </div>
     </div>

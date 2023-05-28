@@ -37,7 +37,7 @@ module.exports = withPWA({
     ]
   },
   images: {
-    domains: ["images.unsplash.com"],
+    domains: ["images.unsplash.com", "res.cloudinary.com"],
   },
   redirects: async () => {
     return [

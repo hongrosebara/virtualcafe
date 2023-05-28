@@ -214,29 +214,6 @@ const HomePage = ({ featureItems }) => {
       <Hero />
 
       <Features featureItems={featureItems} />
-
-      <div className="section-wrapper">
-        <h1>Coffee Subscription Boxes</h1>
-      </div>
-
-      <div className="mx-auto bg-primary-dk text-white">
-        <h1>Find Coffee Roasters Near You</h1>
-        <p>
-          Embark on a quest to discover the finest coffee roasters in your area.
-        </p>
-      </div>
-
-      <section className="section-wrapper">
-        <h1>Virtual Coffee App</h1>
-      </section>
-
-      <section className="mx-auto bg-primary-dk text-white">
-        <h1>Virtual Coffee App</h1>
-        <p>
-          Experience the ambiance of a bustling cafe right from the comfort of
-          your own home with our innovative virtual cafe app.
-        </p>
-      </section>
     </>
   );
 };

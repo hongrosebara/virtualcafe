@@ -1,13 +1,13 @@
 import Image from "next/image";
 import { FeatureItem } from "@/components/ui";
 import { useState } from "react";
+import s from "./Features.module.scss";
 
 const Features = ({ featureItems }) => {
   const [items] = useState(featureItems);
-  console.log('items',items)
 
   return (
-    <section>
+    <section className={s["feature-content"]}>
       {items &&
         items.map((item) => (
           <FeatureItem
@@ -19,7 +19,6 @@ const Features = ({ featureItems }) => {
             cta={item.cta}
             slug={item.slug}
           >
-            <h1>Coffee Subscription Boxes</h1>
           </FeatureItem>
         ))}
     </section>

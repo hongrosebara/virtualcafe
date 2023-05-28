@@ -2,7 +2,7 @@
   "data": [
     {
       "id": 1,
-      "heading": "Top Coffee Subscription Boxes",
+      "heading": "Explore Our Curated List of Coffee Subscription Boxes",
       "subheading": "Explore Our Curated List of Coffee Subscription Boxes",
       "imgUrl": "https://res.cloudinary.com/dkv6uc5me/image/upload/v1685258413/subscription_box_example_wsesk0.jpg",
       "description": "Experience the Joy of Fresh Coffee: Browse Our Selection of Top Coffee Subscription Boxes",
@@ -23,8 +23,8 @@
       "heading": "Bring the Cafe Experience Home",
       "subheading": "Recharge Your Soul with a Virtual Coffee Retreat",
       "imgUrl": "https://res.cloudinary.com/dkv6uc5me/image/upload/v1685258422/cafe_with_nice_ambience_tiahit.jpg",
-      "description": "Transport Yourself to a Relaxing Coffee Oasis: Experience the Serenity of Our Virtual Cafe App",
-      "cta": "Check out the Virtual Cafe",
+      "description": "Experience the ambiance of a bustling cafe right from the comfort of your own home with our innovative virtual cafe app.",
+      "cta": "Check it out",
       "slug": "/virtual-cafe-with-ambience-sounds/"
     }
   ]

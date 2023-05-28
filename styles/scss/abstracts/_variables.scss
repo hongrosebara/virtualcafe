@@ -18,8 +18,8 @@ $color-quinary: #2e3940;
 :root {
   // COLOR VARIABLES
   // Primary color - tonal 800 - #3c3a1e
-  --color-1: 36, 30%;
-  --1: 18%;
+  --color-1: 85, 100%;
+  --1: 21%;
   --color-primary: hsl(var(--color-1), var(--1));
   --color-primary-lt: hsl(var(--color-1), calc(var(--1) + 10%));
   --color-primary-dk: hsl(var(--color-1), calc(var(--1) - 10%));
@@ -125,14 +125,13 @@ $color-quinary: #2e3940;
   @include respond(md) {
     /* Padding */
     --pd-container: 4rem 10rem;
-    --pd-section: 15rem 5rem;
     --pd-wrapper: 0 8rem;
     --gap-unit-100: 10rem;
     --gap-unit-150: 10rem;
   }
 
   @include respond(lg) {
-    --pd-section: 14rem 8rem;
+    --pd-section: 5rem 8rem;
     --pd-footer: 3rem 8rem;
     --base-font-size: 18px;
     --fs-time: 12.5rem;

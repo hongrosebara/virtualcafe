@@ -7,7 +7,7 @@ const Container = (props) => {
     <section className="content-wrapper">
       <h1 className="primary-heading">{heading}</h1>
       {description && (
-        <div className="my-3 text-center opacity-60">{description}</div>
+        <div className="my-3 text-center font-medium text-accent-dk opacity-60">{description}</div>
       )}
       <div className="my-3 flex items-center justify-center font-light space-x-10">
         {author && <div> Author: {author}</div>}

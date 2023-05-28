@@ -1,8 +1,8 @@
 .content-box {
   @apply border-t-2 border-opacity-50 border-primary;
 
-  & h2 {
-    @apply mb-5 mt-10;
+  & .how-to__heading {
+    @apply font-bold font-heading text-center text-2xl mb-5 mt-10;
   }
 
   & div {

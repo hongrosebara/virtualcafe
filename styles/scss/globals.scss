@@ -10,7 +10,7 @@
 @layer utilities {
   /* Headings */
   .primary-heading {
-    @apply font-heading font-bold;
+    @apply font-heading text-primary font-bold;
     font-size: 4rem;
     text-align: center;
   }
