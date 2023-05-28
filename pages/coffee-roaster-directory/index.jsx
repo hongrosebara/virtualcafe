@@ -7,7 +7,7 @@ import { Layout } from "@/components/common";
 import { buildPaths, extractFile } from "@/components/utils/getData";
 import { SEO } from "@/components/common";
 import { useRouter } from "next/router";
-import { Container, Breadcrumb } from "@/components/ui";
+import { Container, Breadcrumb, HowToGuide } from "@/components/ui";
 
 export async function getStaticProps() {
   const roasters = await fetchRoasters();
@@ -67,7 +67,7 @@ const CoffeeRoasterDirectory = (props) => {
     siteLogoUrl: "seo/wdoc logo.png",
     siteDescription:
       "Explore the world of coffee on our comprehensive website. Discover local coffee roasters, stay updated on coffee festival events, explore a variety of coffee subscription boxes, indulge in a virtual cafe experience, and satisfy your coffee curiosities with our chatGPT feature. Immerse yourself in the rich and diverse coffee culture. Start your coffee adventure with us today!",
-    author: "Hong Le",
+    author: null,
     canonicalURL: "www.wedreamofcoffee.com" + asPath,
     keywords: [
       "coffee roaster finder",
@@ -273,15 +273,50 @@ const CoffeeRoasterDirectory = (props) => {
 
       <Container
         heading={meta.headline}
-        description="Elevate your coffee experience with our selection of carefully curated
-        coffee subscription boxes."
+        description="Click the button below to find your local coffee roasters"
         author={meta.author}
-        date={meta.datePublished}
       >
-        <button className="bg-primary-light" onClick={handleGeolocation}>
-          {isFindingLocation ? "Locating ..." : "View roasters nearby"}
-        </button>
-        {locationErrorMsg ?? <p>Something went wrong: {locationErrorMsg}</p>}
+        <div className="flex flex-col items-center justify-center">
+          <button
+            className="bg-primary text-on-lt uppercase py-10 px-20 rounded-md my-10"
+            onClick={handleGeolocation}
+          >
+            {isFindingLocation ? "Locating ..." : "View roasters nearby"}
+          </button>
+          {locationErrorMsg ?? <p>Something went wrong: {locationErrorMsg}</p>}
+        </div>
+
+        <HowToGuide>
+          <div>
+            <h3>
+              How does the coffee roaster finder app work
+            </h3>
+            <p>
+              Our coffee roaster finder app utilizes your device's location
+              services to determine your current location. It then uses that
+              information to search for coffee roasters near you. The app
+              displays a list of nearby coffee roasters along with relevant
+              details such as address, contact information, and user reviews.
+            </p>
+          </div>
+          <div>
+            <h3>
+              How can I enable location services for the coffee roaster finder
+              app
+            </h3>
+            <p>
+              To enable location services, go to your device's settings and find
+              the app permissions or location settings. Make sure our coffee
+              roaster finder app has permission to access your device's
+              location. This allows the app to accurately identify your location
+              and find nearby coffee roasters.
+            </p>
+          </div>
+          <div>
+            <h3>Can I contribute to the app's database by adding new coffee roasters?</h3>
+            <p>If you know of a roaster that is not listed in the app, please contact us to submit a new roaster or suggest an addition. Your contribution is valuable and can help enhance the app's database for the benefit of other users.</p>
+          </div>
+        </HowToGuide>
         {/* <p>Discover your coffee roasters</p>
         <div className="flex items-center justify-between space-x-4">
           {roasters.length > 0 &&

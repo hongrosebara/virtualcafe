@@ -7,7 +7,10 @@ export default function Header({}) {
     <header className="w-full text-base py-8 shadow-sm">
       <div className="flex items-center justify-between">
         <Link href="/">
-          <Logo />
+          <Logo 
+            fillColor="var(--color-primary)"
+            classNames="text-primary"
+          />
         </Link>
 
         <div className="flex items-center justify-end space-x-8">

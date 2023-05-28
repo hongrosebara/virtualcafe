@@ -12,8 +12,8 @@ const Container = (props) => {
       <h1 className="primary-heading">{heading}</h1>
       <div className="my-3 text-center opacity-60">{description}</div>
       <div className="my-3 flex items-center justify-center font-light space-x-10">
-        <div>Author: {author}</div>
-        <div>Date: {formatedDate}</div>
+        {author && <div> Author: {author}</div>}
+        {formatedDate && <div>{formatedDate}</div>}
       </div>
       {children}
     </section>

@@ -1,11 +1,28 @@
-@import 'abstracts/mixin';
-@import 'abstracts/variables';
+@import "abstracts/mixin";
+@import "abstracts/variables";
 
-@import 'base/base';
-@import 'base/typography';
-@import 'base/utilities';
+@import "base/base";
+@import "base/typography";
+@import "base/utilities";
 
-@import 'components/musicPlayer';
+@import "components/musicPlayer";
+
+@layer utilities {
+  /* Headings */
+  .primary-heading {
+    @apply font-heading font-bold;
+    font-size: 4rem;
+    text-align: center;
+  }
+
+  .secondary-heading {
+    @apply font-heading font-bold text-center text-2xl;
+  }
+
+  .tertiary-heading {
+    @apply font-serif font-medium text-lg;
+  }
+}
 
 @tailwind base;
 @tailwind components;
