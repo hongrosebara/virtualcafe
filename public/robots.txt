@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: www.wedreamofcoffee.com
+
+# Sitemaps
+Sitemap: www.wedreamofcoffee.com/sitemap.xml

@@ -42,7 +42,7 @@ const MusicPlayer = ( music ) => {
   }, [audioPlayer?.current?.loadedmetadata, audioPlayer?.current?.readyState])
 
   return (
-    <div className="section-music-player my-6 p-6 rounded-lg bg-secondary text-beige text-base">
+    <div className="section-music-player my-6 p-6 rounded-lg bg-primary text-on-primary-inverse text-base">
       <h3>{songs[currentSongIndex].name}</h3>
       <audio ref={audioPlayer} src={songs[currentSongIndex].audio}></audio>
       

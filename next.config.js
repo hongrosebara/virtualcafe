@@ -5,7 +5,7 @@ const withPWA = require("next-pwa")({
   // scope: '/app',
   // sw: 'service-worker.js',
   //...
-})
+});
 
 const redirects = {
   async redirects() {
@@ -16,17 +16,17 @@ const redirects = {
         destination: "/",
         permanent: true,
       },
-    ]
+    ];
   },
-}
+};
 
 module.exports = withPWA({
   // next.js config
   webpack5: true,
   webpack: (config) => {
-    config.resolve.fallback = { fs: false }
+    config.resolve.fallback = { fs: false };
 
-    return config
+    return config;
   },
   async rewrites() {
     return [
@@ -34,7 +34,7 @@ module.exports = withPWA({
         source: "/sitemap.xml",
         destination: "/api/sitemap",
       },
-    ]
+    ];
   },
   images: {
     domains: ["images.unsplash.com", "res.cloudinary.com"],
@@ -142,6 +142,6 @@ module.exports = withPWA({
       //   destination: '/',
       //   permanent: true,
       // },
-    ]
+    ];
   },
-})
+});

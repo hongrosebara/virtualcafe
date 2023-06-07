@@ -9,7 +9,7 @@
   height: 5px;
   margin-bottom: 1.6rem;
   position: relative;
-  background-color: var(--progress-bar);
+  background-color: var(--color-on-primary-inverse);
   cursor: pointer;
 
   /* chrome and safari */
@@ -80,7 +80,7 @@
   width: 100%;
   height: 2px;
   position: relative;
-  background-color: var(--volume-music);
+  background-color: var(--color-on-primary-inverse);
   cursor: pointer;
 
   /* chrome and safari */
