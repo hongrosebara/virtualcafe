@@ -282,6 +282,7 @@ const CoffeeSubscriptionBoxes = ({ posts }) => {
     </>
   );
 };
+
 export default CoffeeSubscriptionBoxes;
 
 CoffeeSubscriptionBoxes.Layout = Layout;

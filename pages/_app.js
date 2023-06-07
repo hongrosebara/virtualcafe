@@ -1,6 +1,7 @@
 import "@/styles/scss/globals.scss";
 import { ThemeProvider } from "next-themes";
 import RoasterProvider from "context/Roaster";
+import Script from "next/script";
 
 const Noop = ({ children }) => <>{children}</>;
 
