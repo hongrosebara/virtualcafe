@@ -7,3 +7,4 @@ Host: www.wedreamofcoffee.com
 
 # Sitemaps
 Sitemap: www.wedreamofcoffee.com/sitemap.xml
+Sitemap: https://wedreamofcoffee.com/server-sitemap.xml

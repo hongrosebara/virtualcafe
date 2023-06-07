@@ -1,23 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-<url><loc>www.wedreamofcoffee.com</loc><lastmod>2023-05-31T16:38:59.809Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>www.wedreamofcoffee.com/about</loc><lastmod>2023-05-31T16:38:59.810Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>www.wedreamofcoffee.com/chat-bot-ask-anything-about-coffee</loc><lastmod>2023-05-31T16:38:59.810Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>www.wedreamofcoffee.com/coffee-roaster-directory</loc><lastmod>2023-05-31T16:38:59.810Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>www.wedreamofcoffee.com/coffee-roaster-directory/famous</loc><lastmod>2023-05-31T16:38:59.810Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>www.wedreamofcoffee.com/coffee-subscriptions-boxes</loc><lastmod>2023-05-31T16:38:59.810Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>www.wedreamofcoffee.com/contact-us</loc><lastmod>2023-05-31T16:38:59.810Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>www.wedreamofcoffee.com/fallback</loc><lastmod>2023-05-31T16:38:59.810Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>www.wedreamofcoffee.com/privacy</loc><lastmod>2023-05-31T16:38:59.810Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>www.wedreamofcoffee.com/terms-and-condition</loc><lastmod>2023-05-31T16:38:59.810Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>www.wedreamofcoffee.com/virtual-cafe-with-ambience-sounds</loc><lastmod>2023-05-31T16:38:59.810Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>www.wedreamofcoffee.com/coffee-roaster-directory/famous/0</loc><lastmod>2023-05-31T16:38:59.810Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>www.wedreamofcoffee.com/coffee-roaster-directory/famous/1</loc><lastmod>2023-05-31T16:38:59.810Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>www.wedreamofcoffee.com/coffee-roaster-directory/famous/300</loc><lastmod>2023-05-31T16:38:59.810Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>www.wedreamofcoffee.com/coffee-roaster-directory/590d4a5e1108ba582673bec7</loc><lastmod>2023-05-31T16:38:59.810Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>www.wedreamofcoffee.com/coffee-roaster-directory/5b4ad8ba6adbf5002c194600</loc><lastmod>2023-05-31T16:38:59.810Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>www.wedreamofcoffee.com/coffee-roaster-directory/4da853c24df0af29b70aa963</loc><lastmod>2023-05-31T16:38:59.810Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>www.wedreamofcoffee.com/coffee-roaster-directory/5c5161f7f427de002cd2eed3</loc><lastmod>2023-05-31T16:38:59.810Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>www.wedreamofcoffee.com/coffee-roaster-directory/59bb3fa6b8fd9d1d0a4db506</loc><lastmod>2023-05-31T16:38:59.810Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>www.wedreamofcoffee.com/coffee-roaster-directory/55afbe7c498e2802771f8a6c</loc><lastmod>2023-05-31T16:38:59.810Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>www.wedreamofcoffee.com/coffee-roaster-directory</loc><lastmod>2023-06-07T11:31:56.905Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>www.wedreamofcoffee.com/additional-page</loc><lastmod>2023-06-07T11:31:56.905Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
 </urlset>
