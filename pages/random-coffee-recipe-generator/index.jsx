@@ -5,21 +5,22 @@ import {
 } from "@/components/utils/getData";
 import { Layout } from "@/components/common";
 import matter from "gray-matter";
-import { BoxList } from "@/components/coffee";
+import { RecipeList } from "@/components/coffee";
 import { getListOfCoffeeSubscriptionBoxPhotos } from "@/lib/coffee-roaster";
 import { useRouter } from "next/router";
 import { SEO } from "@/components/common";
 import { Container, Breadcrumb, Author } from "@/components/ui";
 import { formattedDate } from "@/components/utils";
+import { SITE_SEO } from "seo-config";
 
 export async function getStaticProps() {
   // Get photos from Unsplash
   const photos = await getListOfCoffeeSubscriptionBoxPhotos();
   // Generate markdown posts
-  const postPath = buildPathsForMarkdown("posts", "coffee-subscription-boxes");
-  const posts = extractFolder(postPath).map((post, index) => {
-    const slug = post.replace(".md", "");
-    const content = markdownWithMeta(postPath, post);
+  const recipePath = buildPathsForMarkdown("recipes", "random");
+  const recipes = extractFolder(recipePath).map((recipe, index) => {
+    const slug = recipe.replace(".md", "");
+    const content = markdownWithMeta(recipePath, recipe);
     const { data: frontmatter } = matter(content);
 
     return {
@@ -31,17 +32,17 @@ export async function getStaticProps() {
 
   return {
     props: {
-      posts,
+      recipes,
     },
   };
 }
 
-const CoffeeSubscriptionBoxes = ({ posts }) => {
+const RandomRecipeGenerator = ({ recipes }) => {
   const { asPath } = useRouter();
-
+  console.log(SITE_SEO)
   const meta = {
-    title: "Top 10 Best Coffee Subscription Boxes You Have To Try",
-    headline: "10 Best Coffee Subscription Boxes You Must Try",
+    title: "Check out our best coffee recipes",
+    headline: "Fuel Your Coffee Adventure: Unleash the Unexpected with our Random Coffee Generator App",
     siteUrl: "www.wedreamofcoffee.com",
     siteLogoUrl: "seo/wdoc logo.png",
     siteDescription:
@@ -83,29 +84,29 @@ const CoffeeSubscriptionBoxes = ({ posts }) => {
               "@graph":
               [{
                   "@type": "Organization",
-                  "@id": "${meta.siteUrl}/#organization",
+                  "@id": "${SITE_SEO.siteUrl}/#organization",
                   "name": "We Dream Of Coffee",
-                  "url": "${meta.siteUrl}",
+                  "url": "${SITE_SEO.siteUrl}",
                   "sameAs":[
                     "https://www.facebook.com/wedreamofcoffee/",
                     "https://twitter.com/wedreamofcoffee/",
                     "https://www.pinterest.com/wedreamofcoffee/"],
                   "logo": {
                     "@type": "ImageObject",
-                    "@id": "${meta.siteUrl}/#logo",
+                    "@id": "${SITE_SEO.siteUrl}/#logo",
                     "inLanguage": "en-US",
-                    "url": "${meta.siteUrl}/${meta.siteLogoUrl}",
-                    "contentUrl": "${meta.siteUrl}/${meta.siteLogoUrl}",
+                    "url": "${SITE_SEO.siteUrl}/${meta.siteLogoUrl}",
+                    "contentUrl": "${SITE_SEO.siteUrl}/${meta.siteLogoUrl}",
                     "width": 500,
                     "height": 500,
                     "caption": "WeDreamOfCoffee"
                     },
-                  "image": {"@id": "${meta.siteUrl}/#logo"},
+                  "image": {"@id": "${SITE_SEO.siteUrl}/#logo"},
                   "founder": {
                     "@type": "Person",
                     "name": "Hong Le",
-                    "url": "${meta.siteUrl}/#about-us",
-                    "sameAs": "${meta.siteUrl}/about-us"},
+                    "url": "${SITE_SEO.siteUrl}/#about-us",
+                    "sameAs": "${SITE_SEO.siteUrl}/about-us"},
                   "foundingDate": "2018-05-02",
                   "numberOfEmployees": 5,
                   "slogan": "Unveiling the Essence of Coffee: Roasters, Festivals, Subscriptions, and More!",
@@ -120,27 +121,27 @@ const CoffeeSubscriptionBoxes = ({ posts }) => {
                 },
                 {
                   "@type": "WebSite",
-                  "@id": "${meta.siteUrl}/#website",
-                  "url": "${meta.siteUrl}",
+                  "@id": "${SITE_SEO.siteUrl}/#website",
+                  "url": "${SITE_SEO.siteUrl}",
                   "name": "We Dream Of Coffee",
                   "description": "Unveiling the Essence of Coffee: Roasters, Festivals, Subscriptions, and More!",
                   "publisher":{
-                    "@id": "${meta.siteUrl}/#organization"},
+                    "@id": "${SITE_SEO.siteUrl}/#organization"},
                     "potentialAction":[{
                       "@type":"SearchAction",
                       "target":{
                         "@type": "EntryPoint",
-                        "urlTemplate": "${meta.siteUrl}/?s={search_term_string}"},
+                        "urlTemplate": "${SITE_SEO.siteUrl}/?s={search_term_string}"},
                       "query-input": "required name=search_term_string"}],
                     "inLanguage": "en-US",
-                    "copyrightHolder": {"@id": "${meta.siteUrl}/#organization"}
+                    "copyrightHolder": {"@id": "${SITE_SEO.siteUrl}/#organization"}
                 },
                 {
                   "@type": "ImageObject",
                   "@id": "${meta.canonicalURL}/#primaryimage",
                   "inLanguage": "en-US",
-                  "url": "${meta.siteUrl}/${meta.openGraphURL}",
-                  "contentUrl": "${meta.siteUrl}/${meta.openGraphURL}",
+                  "url": "${SITE_SEO.siteUrl}/${meta.openGraphURL}",
+                  "contentUrl": "${SITE_SEO.siteUrl}/${meta.openGraphURL}",
                   "width": 1200,
                   "height": 627
                 },
@@ -149,7 +150,7 @@ const CoffeeSubscriptionBoxes = ({ posts }) => {
                   "@id": "${meta.canonicalURL}/#webpage",
                   "url": "${meta.canonicalURL}",
                   "name": "${meta.title}",
-                  "isPartOf": {"@id": "${meta.siteUrl}/#website"},
+                  "isPartOf": {"@id": "${SITE_SEO.siteUrl}/#website"},
                   "primaryImageOfPage": {"@id": "${meta.canonicalURL}/#primaryimage"},
                   "datePublished": "${meta.datePublished}",
                   "dateModified": "${meta.dateModified}",
@@ -167,7 +168,7 @@ const CoffeeSubscriptionBoxes = ({ posts }) => {
                     "@type": "ListItem",
                     "position": 1,
                     "name": "Home",
-                    "item": "${meta.siteUrl}"
+                    "item": "${SITE_SEO.siteUrl}"
                   },
                   {
                     "@type": "ListItem",
@@ -180,16 +181,16 @@ const CoffeeSubscriptionBoxes = ({ posts }) => {
                   "@type": "Article",
                   "@id": "${meta.canonicalURL}/#article",
                   "isPartOf": {"@id": "${meta.canonicalURL}/#webpage"}, 
-                  "author": {"@id": "${meta.siteUrl}/#/schema/person/1"},
+                  "author": {"@id": "${SITE_SEO.siteUrl}/#/schema/person/1"},
                   "headline": "${meta.headline}",
                   "datePublished": "${meta.datePublished}",
                   "dateModified": "${meta.dateModified}",
                   "mainEntityOfPage": {"@id": "${meta.canonicalURL}/#webpage"},
                   "wordCount": 1000,
                   "commentCount": 6,
-                  "publisher": {"@id": "${meta.siteUrl}/#organization"},
+                  "publisher": {"@id": "${SITE_SEO.siteUrl}/#organization"},
                   "image": {"@id": "${meta.canonicalURL}/#primaryimage"},
-                  "thumbnailUrl": "${meta.siteUrl}/${meta.openGraphURL}",
+                  "thumbnailUrl": "${SITE_SEO.siteUrl}/${meta.openGraphURL}",
                   "keywords": "${meta.keywords}",
                   "inLanguage": "en-US",
                   "potentialAction": [{
@@ -197,13 +198,13 @@ const CoffeeSubscriptionBoxes = ({ posts }) => {
                     "name": "Comment",
                     "target": ["${meta.canonicalURL}#respond"]}],
                   "copyrightYear": "2020",
-                  "copyrightHolder": {"@id": "${meta.siteUrl}/#organization"}
+                  "copyrightHolder": {"@id": "${SITE_SEO.siteUrl}/#organization"}
                 },
                 {
                   "@type": "FAQPage",
                   "@id": "${meta.canonicalURL}/#faq-block",
                   "isPartOf": {"@id": "${meta.canonicalURL}/#webpage"},
-                  "author": {"@id": "${meta.siteUrl}/#/schema/person/1"},
+                  "author": {"@id": "${SITE_SEO.siteUrl}/#/schema/person/1"},
                   "mainEntity": [{
                     "@type": "Question",
                     "name": "Why get a coffee subscription?",
@@ -230,11 +231,11 @@ const CoffeeSubscriptionBoxes = ({ posts }) => {
                 },
                 {
                   "@type":"Person",
-                  "@id": "${meta.siteUrl}/#/schema/person/1",
+                  "@id": "${SITE_SEO.siteUrl}/#/schema/person/1",
                   "name": "Hong Le",
                   "image": {
                     "@type":"ImageObject",
-                    "@id": "${meta.siteUrl}/#personlogo",
+                    "@id": "${SITE_SEO.siteUrl}/#personlogo",
                     "inLanguage": "en-US",
                     "url": "https://secure.gravatar.com/avatar/1d83533e299c379140f9fcc2cb0015cb?s=96&d=mm&r=g",
                     "contentUrl": "https://secure.gravatar.com/avatar/1d83533e299c379140f9fcc2cb0015cb?s=96&d=mm&r=g",
@@ -242,11 +243,11 @@ const CoffeeSubscriptionBoxes = ({ posts }) => {
                     },
                   "description": "Hong Le is the creative marketing manager at WeDreamOfCoffee. She loves building coffee applications that bring you value",
                   "sameAs":[
-                    "${meta.siteUrl}",
+                    "${SITE_SEO.siteUrl}",
                     "https://www.facebook.com/hongrosele/",
                     "https://twitter.com/honglerose/",
                     "https://www.pinterest.com/hongrosele/"],
-                    "url": "${meta.siteUrl}/#about-us/team/hong-le/"
+                    "url": "${SITE_SEO.siteUrl}/#about-us/team/hong-le/"
                 }
               ]},
               }`,
@@ -265,7 +266,7 @@ const CoffeeSubscriptionBoxes = ({ posts }) => {
         description="Elevate your coffee experience with our selection of carefully curated
         coffee subscription boxes."
       >
-        <BoxList boxes={posts} />
+        <RecipeList recipes={recipes} />
 
         <Author />
       </Container>
@@ -273,6 +274,6 @@ const CoffeeSubscriptionBoxes = ({ posts }) => {
   );
 };
 
-export default CoffeeSubscriptionBoxes;
+export default RandomRecipeGenerator;
 
-CoffeeSubscriptionBoxes.Layout = Layout;
+RandomRecipeGenerator.Layout = Layout;

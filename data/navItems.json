@@ -16,6 +16,11 @@
       "slug": "/chat-bot-ask-anything-about-coffee/"
     },
     {
+      "id": 4,
+      "name": "Random Recipe",
+      "slug": "/random-coffee-recipe-generator/"
+    },
+    {
       "id": 5,
       "name": "Coffee Roasters",
       "slug": "/coffee-roaster-directory/"

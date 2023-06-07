@@ -12,13 +12,13 @@ export function extractFile(filePath) {
   return data;
 }
 
-// For Posts
+// For Posts & Recipes
 export const markdownWithMeta = (folder, post) => {
   return fs.readFileSync(path.join(folder, post), "utf-8");
 };
 
-export const buildPathsForPosts = (folder) => {
-  return path.join("posts", folder);
+export const buildPathsForMarkdown = (parentFolder, folder) => {
+  return path.join(parentFolder, folder);
 };
 
 export function extractFolder(folderPath) {
