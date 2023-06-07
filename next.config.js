@@ -37,7 +37,7 @@ module.exports = withPWA({
     ];
   },
   images: {
-    domains: ["images.unsplash.com", "res.cloudinary.com"],
+    domains: ["images.unsplash.com", "res.cloudinary.com", "api.foursquare.com"],
   },
   redirects: async () => {
     return [
@@ -137,11 +137,11 @@ module.exports = withPWA({
         destination: "/",
         permanent: true,
       },
-      // {
-      //   source: '/wp-content/uploads/2017/04/saaw.png?x56718',
-      //   destination: '/',
-      //   permanent: true,
-      // },
+      {
+        source: '/wp-content/uploads/2017/04/saaw.png?x56718',
+        destination: '/',
+        permanent: true,
+      },
     ];
   },
 });
