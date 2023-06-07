@@ -1,10 +1,10 @@
 ---
 title: 'Vietnamese Iced Coffee - Cafe Sua Da'
 date: 'June 5 2022'
-excerpt: 'Atlas Coffee Club introduces coffee drinkers to the best coffee around the world. Labeled by some as the best coffee club of the month, this coffee club offers subscribers a new coffee every month. Who knows what you’ll get next? Take their world tour of coffee in the comfort of your home, no plane fare included.'
+excerpt: 'Indulge in the Richness of Vietnamese Café Sua Da: Experience the Perfect Balance of Strong Coffee and Creamy Sweetness...'
 link: 'https://atlascoffeeclub.com/collections/coffee-subscription-service'
 cover_image: '/assets/home/desktop/image-hero-coffeepress.jpg'
-category: 'vietnamese'
+category: 'iced'
 author: 'Olivia Gilliant'
 author_image: '/assets/home/desktop/image-hero-coffeepress.jpg'
 ---

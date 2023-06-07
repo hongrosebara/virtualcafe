@@ -1,46 +1,59 @@
+import fs from "fs";
+import path from "path";
 import {
   markdownWithMeta,
   buildPathsForMarkdown,
   extractFolder,
 } from "@/components/utils/getData";
 import matter from "gray-matter";
-import { RecipeList } from "@/components/coffee";
-import { getListOfCoffeeSubscriptionBoxPhotos } from "@/lib/coffee-roaster";
+import Link from "next/link";
 import { useRouter } from "next/router";
 import { SEO, Layout } from "@/components/common";
-import { Container, Breadcrumb, Author } from "@/components/ui";
-import { formattedDate, sortByDate } from "@/components/utils";
+import { RecipePageDetail } from "@/components/coffee";
+import { Breadcrumb, Container, Author } from "@/components/ui";
 import { SITE_SEO } from "seo-config";
+import { formattedDate } from "@/components/utils";
+import Image from "next/image";
 
-export async function getStaticProps() {
-  // Get photos from Unsplash
-  const photos = await getListOfCoffeeSubscriptionBoxPhotos();
-  // Generate markdown posts
+export async function getStaticProps({ params: { slug } }) {
   const recipePath = buildPathsForMarkdown("recipes", "random");
-  const recipes = extractFolder(recipePath).map((recipe, index) => {
-    const slug = recipe.replace(".md", "");
-    const content = markdownWithMeta(recipePath, recipe);
-    const { data: frontmatter } = matter(content);
-
-    return {
-      slug,
-      frontmatter,
-      imgUrl: photos.length > 0 ? photos[index] : null,
-    };
-  });
+  const recipe = markdownWithMeta(recipePath, slug + ".md");
+  const { data: frontmatter, content } = matter(recipe);
 
   return {
     props: {
-      recipes: recipes.sort(sortByDate).slice(0, 6),
+      slug,
+      frontmatter,
+      content,
     },
   };
 }
 
-const RandomRecipeGenerator = ({ recipes }) => {
+export async function getStaticPaths() {
+  const recipePath = buildPathsForMarkdown("recipes", "random");
+  const recipes = extractFolder(recipePath);
+
+  const paths = recipes.map((recipe) => ({
+    params: {
+      slug: recipe.replace(".md", ""),
+    },
+  }));
+
+  return {
+    paths,
+    fallback: false,
+  };
+}
+
+const RecipePage = ({
+  frontmatter: { title, author, excerpt, cover_image },
+  slug,
+  content,
+}) => {
   const { asPath } = useRouter();
 
   const meta = {
-    title: "Check out our best coffee recipes",
+    title: title,
     headline:
       "Fuel Your Coffee Adventure: Unleash the Unexpected with our Random Coffee Generator App",
     author: "Hong Le",
@@ -250,25 +263,18 @@ const RandomRecipeGenerator = ({ recipes }) => {
           }}
         ></script>
       </SEO>
-
       <Breadcrumb
         previousPage=""
         previousPageLink="/"
         currentPage={meta.headline}
       />
-
-      <Container 
-        heading={meta.headline} 
-        description={meta.description}
-      >
-        <RecipeList recipes={recipes} />
-
-        <Author />
+      <Container heading={meta.title} description={meta.description}>
+        <RecipePageDetail imgUrl={cover_image} excerpt={excerpt} />
       </Container>
     </>
   );
 };
 
-export default RandomRecipeGenerator;
+export default RecipePage;
 
-RandomRecipeGenerator.Layout = Layout;
+RecipePage.Layout = Layout;

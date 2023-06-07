@@ -8,3 +8,7 @@ export const formattedDate = new Date().toLocaleDateString("en-us", {
   month: "short",
   day: "numeric",
 });
+
+export const sortByDate = (a, b) => {
+  return new Date(b.frontmatter.date) - new Date(a.frontmatter.date);
+};

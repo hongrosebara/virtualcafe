@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://wedreamofcoffee.com/chat-bot-ask-anything-about-coffee/</loc>
+    <loc>https://wedreamofcoffee.com/about/</loc>
   </url>
 
   <url>
-    <loc>https://wedreamofcoffee.com/about/</loc>
+    <loc>https://wedreamofcoffee.com/chat-bot-ask-anything-about-coffee/</loc>
   </url>
 
   <url>
@@ -17,6 +17,10 @@
   </url>
 
   <url>
+    <loc>https://wedreamofcoffee.com/coffee-subscriptions-boxes/</loc>
+  </url>
+
+  <url>
     <loc>https://wedreamofcoffee.com/contact-us/</loc>
   </url>
 
@@ -25,7 +29,13 @@
   </url>
 
   <url>
-    <loc>https://wedreamofcoffee.com/coffee-subscriptions-boxes/</loc>
+    <loc
+      >https://wedreamofcoffee.com/random-coffee-recipe-generator/[slug].jsx</loc
+    >
+  </url>
+
+  <url>
+    <loc>https://wedreamofcoffee.com/random-coffee-recipe-generator/</loc>
   </url>
 
   <url>
