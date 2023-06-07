@@ -1,5 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<sitemap><loc>www.wedreamofcoffee.com/sitemap-0.xml</loc></sitemap>
-<sitemap><loc>https://wedreamofcoffee.com/server-sitemap.xml</loc></sitemap>
-</sitemapindex>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://wedreamofcoffee.com/chat-bot-ask-anything-about-coffee/</loc>
+  </url>
+
+  <url>
+    <loc>https://wedreamofcoffee.com/about/</loc>
+  </url>
+
+  <url>
+    <loc>https://wedreamofcoffee.com/coffee-roaster-directory/[slug].jsx</loc>
+  </url>
+
+  <url>
+    <loc>https://wedreamofcoffee.com/coffee-roaster-directory/</loc>
+  </url>
+
+  <url>
+    <loc>https://wedreamofcoffee.com/contact-us/</loc>
+  </url>
+
+  <url>
+    <loc>https://wedreamofcoffee.com/privacy/</loc>
+  </url>
+
+  <url>
+    <loc>https://wedreamofcoffee.com/coffee-subscriptions-boxes/</loc>
+  </url>
+
+  <url>
+    <loc>https://wedreamofcoffee.com/terms-and-condition/</loc>
+  </url>
+
+  <url>
+    <loc>https://wedreamofcoffee.com/virtual-cafe-with-ambience-sounds/</loc>
+  </url>
+</urlset>

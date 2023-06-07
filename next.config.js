@@ -28,14 +28,6 @@ module.exports = withPWA({
 
     return config;
   },
-  async rewrites() {
-    return [
-      {
-        source: '/sitemap.xml',
-        destination: '/api/sitemap',
-      },
-    ]
-  },
   images: {
     domains: ["images.unsplash.com", "res.cloudinary.com", "https://api.foursquare.com"],
   },
