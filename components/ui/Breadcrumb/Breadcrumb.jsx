@@ -14,17 +14,19 @@ const Breadcrumb = (props) => {
           </div>
         </div>
       </Link>
-      {previousPage ?? (
-        <div className="flex items-center justify-center">
+      {previousPage && (
+        <div className="flex items-center justify-center text-gray ml-2">
           <DoubleRightArrow />
           <Link href={previousPageLink}>{previousPage}</Link>
         </div>
       )}
 
-      <div className="flex items-center justify-center text-gray ml-2">
-        <DoubleRightArrow />
-        <div className="ml-2">{currentPage}</div>
-      </div>
+      {currentPage && (
+        <div className="flex items-center justify-center text-gray ml-2">
+          <DoubleRightArrow />
+          <div className="ml-2">{currentPage}</div>
+        </div>
+      )}
     </section>
   );
 };

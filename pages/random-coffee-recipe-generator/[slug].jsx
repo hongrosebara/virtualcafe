@@ -5,7 +5,7 @@ import {
 } from "@/components/utils/getData";
 import matter from "gray-matter";
 import { useRouter } from "next/router";
-import { SEO, RecipeLayout } from "@/components/common";
+import { SEO, Layout } from "@/components/common";
 import { RecipePageDetail } from "@/components/coffee";
 import { Breadcrumb, RecipeContainer, Author } from "@/components/ui";
 import { SITE_SEO } from "seo-config";
@@ -42,7 +42,7 @@ export async function getStaticPaths() {
 }
 
 const RecipePage = ({
-  frontmatter: { title, draft, author, excerpt, cover_image },
+  frontmatter: { title, subtitle, intro, equipments, ingredients, coffee_types, author, excerpt, cover_image },
   slug,
   content,
 }) => {
@@ -51,7 +51,7 @@ const RecipePage = ({
   const meta = {
     title: title,
     headline:
-      "Fuel Your Coffee Adventure: Unleash the Unexpected with our Random Coffee Generator App",
+      "Vietnamese Coffee Cafe Sua Da",
     author: "Hong Le",
     canonicalURL: "www.wedreamofcoffee.com" + asPath,
     keywords: [
@@ -259,8 +259,8 @@ const RecipePage = ({
         ></script>
       </SEO>
       <Breadcrumb
-        previousPage=""
-        previousPageLink="/"
+        previousPage="Random Coffee Generator"
+        previousPageLink="/random-coffee-recipe-generator/"
         currentPage={meta.headline}
       />
       <RecipeContainer 
@@ -268,9 +268,15 @@ const RecipePage = ({
         description={meta.description}
       >
         <RecipePageDetail 
-          imgUrl={cover_image} 
-          excerpt={excerpt} 
-          content={content} />
+          imgUrl={cover_image}
+          subtitle={subtitle}
+          intro={intro}
+          coffee_types={coffee_types}
+          equipments={equipments}
+          ingredients={ingredients}
+          excerpt={excerpt}
+          content={content} 
+        />
       </RecipeContainer>
     </>
   );
@@ -278,4 +284,4 @@ const RecipePage = ({
 
 export default RecipePage;
 
-RecipePage.Layout = RecipeLayout;
+RecipePage.Layout = Layout;

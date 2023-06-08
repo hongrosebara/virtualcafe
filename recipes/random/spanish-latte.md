@@ -1,28 +1,21 @@
 ---
 title: 'How to Make a Spanish Latte'
+subtitle: 'How to Make Café con Leche'
+intro: 'Coffee is such a versatile drink that it can be prepared in numerous different ways. It’s easy to learn how to make a **Spanish latte**, which is a thick, creamy drink from Spain and, in this article, we will be explaining what it is, and the easy steps you can take to make one yourself.
+
+Making Café con Leche is easy, as it is basically a combination of coffee and milk. You don’t need any special equipment, but will need the usual items like an espresso maker. You will also need:'
 date: 'March 5 2022'
 excerpt: "Embark on a Fiery Adventure with Spanish Coffee: Ignite Your Senses with the Intense Flavors and Aromas of Spain's Beloved Beverage..."
 link: 'https://atlascoffeeclub.com/collections/coffee-subscription-service'
-draft: false
+draft: true
+ingredients: ['A good quality fresh coffee such as a French roast. You will want one that makes a strong and dark coffee and that has been ground finely', 'Nice tasting water as this is a main constituent in the drink. If the water from your tap isn’t that nice you should use bottled or filtered water.', 'Milk. Any type is good to use. In Spain they tend to use whole milk, but 2% milk makes for a great Spanish latte.']
+coffee_types: ['ground robusta', 'coarse']
+equipments: ['vietnamese coffee filter']
 cover_image: '/assets/home/desktop/image-hero-coffeepress.jpg'
 category: 'iced'
 author: 'Olivia Gilliant'
 author_image: '/assets/home/desktop/image-hero-coffeepress.jpg'
 ---
-
-
-## How to Make Café con Leche
-
-Coffee is such a versatile drink that it can be prepared in numerous different ways. It’s easy to learn how to make a **Spanish latte**, which is a thick, creamy drink from Spain and, in this article, we will be explaining what it is, and the easy steps you can take to make one yourself.
-
-Making Café con Leche is easy, as it is basically a combination of coffee and milk. You don’t need any special equipment, but will need the usual items like an espresso maker. You will also need:
-
-
-### Ingredients
-
-- A good quality fresh coffee such as a French roast. You will want one that makes a strong and dark coffee and that has been ground finely.
-- Nice tasting water as this is a main constituent in the drink. If the water from your tap isn’t that nice you should use bottled or filtered water.
-- Milk. Any type is good to use. In Spain they tend to use whole milk, but 2% milk makes for a great Spanish latte.
 
 Once you have the ingredients, you are ready to start making your coffee. It basically comes in two parts that are mixed together at the end.
 

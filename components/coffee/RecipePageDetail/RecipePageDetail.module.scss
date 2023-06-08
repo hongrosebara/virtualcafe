@@ -1,5 +1,5 @@
 .recipe-content {
-  @apply grid grid-cols-1 lg:grid-cols-3 gap-16;
+  @apply relative grid grid-cols-1 lg:grid-cols-3 gap-16;
   & h2 {
     margin-bottom: 1rem;
   }
