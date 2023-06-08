@@ -13,7 +13,7 @@ const Recipe = ({ recipe, slug, imgUrl, index }) => {
         alt={`${recipe.category}${index}`}
       />
       <Link href={`/random-coffee-recipe-generator/${slug}`}>
-        <h2 className="text-xl cursor-pointer">{recipe.title}</h2>
+        <h3 className="text-xl cursor-pointer">{recipe.title}</h3>
       </Link>
       <CategoryLabel>{recipe.category}</CategoryLabel>
       <div className="font-light">{recipe.excerpt}</div>

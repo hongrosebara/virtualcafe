@@ -1,19 +1,15 @@
-import fs from "fs";
-import path from "path";
 import {
   markdownWithMeta,
   buildPathsForMarkdown,
   extractFolder,
 } from "@/components/utils/getData";
 import matter from "gray-matter";
-import Link from "next/link";
 import { useRouter } from "next/router";
-import { SEO, Layout } from "@/components/common";
+import { SEO, RecipeLayout } from "@/components/common";
 import { RecipePageDetail } from "@/components/coffee";
-import { Breadcrumb, Container, Author } from "@/components/ui";
+import { Breadcrumb, RecipeContainer, Author } from "@/components/ui";
 import { SITE_SEO } from "seo-config";
 import { formattedDate } from "@/components/utils";
-import Image from "next/image";
 
 export async function getStaticProps({ params: { slug } }) {
   const recipePath = buildPathsForMarkdown("recipes", "random");
@@ -46,7 +42,7 @@ export async function getStaticPaths() {
 }
 
 const RecipePage = ({
-  frontmatter: { title, author, excerpt, cover_image },
+  frontmatter: { title, draft, author, excerpt, cover_image },
   slug,
   content,
 }) => {
@@ -69,8 +65,7 @@ const RecipePage = ({
       "unique coffee subscription",
       "international coffee subscription",
     ],
-    description:
-      "Explore our curated selection of the top 10 best coffee subscription boxes. Discover a world of exceptional flavors, convenience, and monthly coffee delights delivered to your doorstep.",
+    description: excerpt,
     datePublished: "2022-06-21T23:04:13Z",
     dateModified: formattedDate,
     openGraphURL: "seo/Open Graph/coffee subscription list app.png",
@@ -268,13 +263,19 @@ const RecipePage = ({
         previousPageLink="/"
         currentPage={meta.headline}
       />
-      <Container heading={meta.title} description={meta.description}>
-        <RecipePageDetail imgUrl={cover_image} excerpt={excerpt} />
-      </Container>
+      <RecipeContainer 
+        heading={meta.title} 
+        description={meta.description}
+      >
+        <RecipePageDetail 
+          imgUrl={cover_image} 
+          excerpt={excerpt} 
+          content={content} />
+      </RecipeContainer>
     </>
   );
 };
 
 export default RecipePage;
 
-RecipePage.Layout = Layout;
+RecipePage.Layout = RecipeLayout;

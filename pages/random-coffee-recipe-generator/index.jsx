@@ -261,6 +261,8 @@ const RandomRecipeGenerator = ({ recipes }) => {
         heading={meta.headline} 
         description={meta.description}
       >
+
+        <h2>All Recipes</h2>
         <RecipeList recipes={recipes} />
 
         <Author />

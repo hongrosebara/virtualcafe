@@ -3,51 +3,52 @@ title: 'Vietnamese Iced Coffee - Cafe Sua Da'
 date: 'June 5 2022'
 excerpt: 'Indulge in the Richness of Vietnamese Café Sua Da: Experience the Perfect Balance of Strong Coffee and Creamy Sweetness...'
 link: 'https://atlascoffeeclub.com/collections/coffee-subscription-service'
+draft: true
 cover_image: '/assets/home/desktop/image-hero-coffeepress.jpg'
 category: 'iced'
 author: 'Olivia Gilliant'
 author_image: '/assets/home/desktop/image-hero-coffeepress.jpg'
 ---
 
-# Nulloque gemitus post
+## How To Make Vietnamese Coffee
 
-## Temptasse dignum nascendi supplevit et proles
+This traditional Vietnamese Iced Coffee delights with its **Robust Flavor** and **Smooth Texture**. Sip slowly and let the refreshing ice mingle with the bold brew, creating a harmonious blend of energizing goodness. Discover the **Authentic Taste of Vietnam** in every chilled sip of **Café Sua Da**.
 
-Lorem markdownum ignes; ait inpune aliquisque temperat opus, candentia. Siqua
-aut perstet lumina inpune, inmeritam inmensae dilecta qui saxum, tractu.
-Percipit induitur incanduit **verba per**, deus vallis? Quodque damnatus si vel
-submisit pectora pendens texit ales scopulum quos. Commisit dei qui, sua suos
-imitamine fessa cornibus me credens enim, omne ac!
 
-    widget_keyboard_shareware(podcast.bar(mp(3), -2));
-    proxyDomainFloppy -= favicon(web + cd_friend);
-    visualKofficeEncryption(1);
-    secondary_parallel = javaScriptSpooling.shortcutPeoplewareCybercrime(
-            alignment.crop(capacity_platform.scareware(eHdtv,
-            superscalar_whois), system, python), algorithm_edutainment - 2);
+### Ingredients
 
-## Numquam iustis ab magni odisse mea rima
+- 2 tablespoons of coarsely ground Vietnamese coffee
+- 2 tablespoons of sweetened condensed milk
+- Ice cubes
+- Hot water
 
-Celebres poterit dixit famulus. Est ipsa festaque odere, tuli Iuno; staret plus
-tenebat prima. Hunc sic brevis vestes en puniceum Thyesteis **fronte mirabile**
-protinus exierat mille **oscula**. Comis ruit flumina, sit nurus oscula numeros,
-bellaque.
+### Instructions
 
-- Fugientia venabula hostes demit
-- Arcum mane infantem infestus curru
-- Artisque ventos in an enim fixumque garrula
-- Videbar colle
-- Capillos cum transit quoque
+#### Step 1.
 
-## In dolens iactor in fuerant quodque increpuit
+Start by brewing the Vietnamese coffee. Place the coffee grounds in a Vietnamese coffee filter (also known as a phin) and set it on top of a cup or glass.
 
-Tendebat et graves, quibus nepotum alimenta tantum, vultus amores *maior*, est
-tempora discedere et Numam? Consolenturne loca [trahunt](http://www.oro.org/).
+#### Step 2.
 
-> Pete movit simillimus penetravit perosus, non *parentur* vota virgo cervos
-> ambage, auferor, tuam sum. Habenis senis [Bacchi
-> Eurotas](http://threiciuscolat.io/ipse), adhibent curvamine Troezen.
+Slowly pour hot water into the coffee filter, filling it to the top. Allow the coffee to drip through the filter and into the cup. This process may take a few minutes.
 
-Eam sub regnabat inmotas; qui usurus illius praecipitata quem optastis si
-harpen. Aera **colebat ille**, semianimem per, iter, conditor. Quaeque mors
-laticemque digna. Patientia vehit bracchia mens Theseus, in sit viro balatus.
+#### Step 3.
+
+While the coffee is brewing, prepare a separate glass with ice cubes.
+
+#### Step 4.
+
+Once the coffee has finished dripping, stir in the sweetened condensed milk until well combined.
+
+#### Step 5.
+
+Pour the coffee mixture over the ice cubes in the glass, allowing the ice to cool the coffee and create a refreshing iced beverage.
+
+#### Step 6.
+
+Stir the coffee and condensed milk mixture with the ice cubes, ensuring that it is well chilled.
+
+#### Step 7.
+Serve immediately and enjoy the delightful Vietnamese Café Sua Da!
+
+Note: Adjust the amount of coffee and sweetened condensed milk according to your taste preferences. Some variations include adding additional sugar or using evaporated milk instead of condensed milk. Feel free to customize the recipe to suit your liking.

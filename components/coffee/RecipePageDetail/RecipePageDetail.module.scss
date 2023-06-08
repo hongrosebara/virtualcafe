@@ -1,0 +1,22 @@
+.recipe-content {
+  @apply grid grid-cols-1 lg:grid-cols-3 gap-16;
+  & h2 {
+    margin-bottom: 1rem;
+  }
+
+  & h3 {
+    color: var(--color-primary-lt);
+    margin: 1rem 0;
+    font-size: 2rem;
+  }
+
+  & ul {
+    margin: 1rem 0;
+    list-style-type: disc;
+    padding-left: 3rem;
+    
+    & li {
+      font-weight: 400;
+    }
+  }
+}

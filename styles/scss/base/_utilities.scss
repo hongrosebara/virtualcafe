@@ -31,6 +31,15 @@
   padding: var(--pd-footer);
 }
 
+.recipe-wrapper {
+  margin: 5rem 0;
+  padding-inline: calc(12px + 1.5625vw);
+
+  @screen lg {
+    padding-inline: 3%;
+  }
+}
+
 
 
 /* Burger Menu */

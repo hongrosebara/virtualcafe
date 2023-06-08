@@ -1,18 +1,15 @@
 .main-content {
+  @apply flex justify-start items-center;
   & div {
     @apply my-10;
 
-    & h3 {
+    & h2 {
       @apply font-bold text-lg text-primary;
     }
 
     & p {
       @apply mb-10;
     }
-  }
-
-  & h2 {
-    @apply font-bold text-xl text-primary;
   }
 
   & p {
