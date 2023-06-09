@@ -1,5 +1,5 @@
 ---
-title: 'Vietnamese Iced Coffee - Cafe Sua Da'
+title: 'Vietnamese Cafe Sua Da'
 subtitle: 'How To Make Vietnamese Coffee'
 intro: 'This traditional Vietnamese Iced Coffee delights with its **Robust Flavor** and **Smooth Texture**. Sip slowly and let the refreshing ice mingle with the bold brew, creating a harmonious blend of energizing goodness. Discover the **Authentic Taste of Vietnam** in every chilled sip of **Café Sua Da**.'
 date: 'June 5 2022'
@@ -9,7 +9,7 @@ draft: true
 ingredients: ['2 tablespoons of coarsely ground Vietnamese coffee', '2 tablespoons of sweetened condensed milk', 'Ice cubes', 'Hot water']
 coffee_types: ['ground robusta', 'coarse']
 equipments: ['vietnamese coffee filter']
-cover_image: '/assets/home/desktop/image-hero-coffeepress.jpg'
+cover_image: 'https://res.cloudinary.com/dkv6uc5me/image/upload/v1686309937/vietnamese_caphe_sua_da_gsbdyt.jpg'
 category: 'iced'
 author: 'Olivia Gilliant'
 author_image: '/assets/home/desktop/image-hero-coffeepress.jpg'

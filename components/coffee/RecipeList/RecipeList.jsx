@@ -11,7 +11,7 @@ const RecipeList = ({ recipes }) => {
                 key={index}
                 index={index + 1}
                 slug={recipe.slug}
-                imgUrl={recipe.imgUrl}
+                imgUrl={recipe.frontmatter.cover_image}
                 recipe={recipe.frontmatter}
               />
             )

@@ -11,7 +11,7 @@ draft: true
 ingredients: ['A good quality fresh coffee such as a French roast. You will want one that makes a strong and dark coffee and that has been ground finely', 'Nice tasting water as this is a main constituent in the drink. If the water from your tap isn’t that nice you should use bottled or filtered water.', 'Milk. Any type is good to use. In Spain they tend to use whole milk, but 2% milk makes for a great Spanish latte.']
 coffee_types: ['ground robusta', 'coarse']
 equipments: ['vietnamese coffee filter']
-cover_image: '/assets/home/desktop/image-hero-coffeepress.jpg'
+cover_image: 'https://res.cloudinary.com/dkv6uc5me/image/upload/v1686309937/spanish_latte_qgbxh8.jpg'
 category: 'iced'
 author: 'Olivia Gilliant'
 author_image: '/assets/home/desktop/image-hero-coffeepress.jpg'

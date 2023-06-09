@@ -7,7 +7,7 @@ const CategoryLabel = ({ children }) => {
   };
 
   return (
-    <div className={`bg-${colorKey[children]}`}>
+    <div className={`flex justify-start py-4 text-on-primary bg-${colorKey[children]}`}>
       <Link href={`/recipes/category/${children.toLowerCase()}`}>
         {children}
       </Link>
