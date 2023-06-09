@@ -213,7 +213,10 @@ const HomePage = ({ featureItems }) => {
 
       <Hero />
 
-      <FeatureItemList featureItems={featureItems} />
+      <FeatureItemList 
+        heading="Featured Apps" 
+        featureItems={featureItems} 
+      />
     </>
   );
 };

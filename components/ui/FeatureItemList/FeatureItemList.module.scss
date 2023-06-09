@@ -1,6 +1,14 @@
 .feature-content {
+  @apply my-40;
+
+  & h2 {
+    @apply font-heading text-center text-2xl;
+  }
+}
+
+.content-box {
   & div:nth-child(even) {
-    @apply md:flex-row-reverse;
+    @apply md:flex-row-reverse bg-surface;
   }
 
   & div:nth-child(odd) {

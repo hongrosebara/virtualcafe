@@ -1,6 +1,6 @@
 .text-box {
-
-  & h2 {
+  @apply block;
+  & h3 {
     @apply text-primary font-heading font-bold text-xl;
   }
 }

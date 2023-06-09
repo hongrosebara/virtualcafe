@@ -8,7 +8,7 @@ import { RecipeList } from "@/components/coffee";
 import { getListOfCoffeeSubscriptionBoxPhotos } from "@/lib/coffee-roaster";
 import { useRouter } from "next/router";
 import { SEO, Layout } from "@/components/common";
-import { Container, Breadcrumb, Author } from "@/components/ui";
+import { Container, Breadcrumb, TopBar } from "@/components/ui";
 import { formattedDate, sortByDate } from "@/components/utils";
 import { SITE_SEO } from "seo-config";
 
@@ -58,7 +58,7 @@ const RandomRecipeGenerator = ({ recipes }) => {
     ],
     description:
       "Get inspired and surprise your palate with delightful and unexpected combinations. Let the Random Coffee Recipe Generator take you on a flavor adventure!",
-    datePublished: "2022-06-21T23:04:13Z",
+    datePublished: "June 21 2022",
     dateModified: formattedDate,
     openGraphURL: "seo/Open Graph/coffee subscription list app.png",
     twitterCardURL: "seo/Twitter Card/coffee subscription boxes.png",
@@ -260,13 +260,14 @@ const RandomRecipeGenerator = ({ recipes }) => {
       <Container 
         heading={meta.headline} 
         description={meta.description}
+        topBar={true}
+        author={meta.author}
+        date={meta.date}
+        readTime={2}
       >
+ 
 
-        <RecipeList
-          heading="All Recipes" 
-          recipes={recipes} />
-
-        <Author />
+        <RecipeList heading="All Recipes" recipes={recipes} />
       </Container>
     </>
   );

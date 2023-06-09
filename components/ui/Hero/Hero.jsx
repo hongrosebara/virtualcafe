@@ -19,7 +19,7 @@ const Hero = () => {
             <h1 className="font-heading font-bold">
               Ask Us Anything About Coffee.
             </h1>
-            <p className="font-light text-sm lg:text-lg pr-30 py-10">
+            <p className="font-light text-base lg:text-lg pr-30 py-10">
               We are your ultimate destination for all things coffee, offering a
               curated collection of resources and interactive features designed
               to awaken your senses and enrich your coffee journey.

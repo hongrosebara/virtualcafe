@@ -9,7 +9,7 @@ import { BoxList } from "@/components/coffee";
 import { getListOfCoffeeSubscriptionBoxPhotos } from "@/lib/coffee-roaster";
 import { useRouter } from "next/router";
 import { SEO } from "@/components/common";
-import { Container, Breadcrumb, Author } from "@/components/ui";
+import { Container, Breadcrumb, TopBar, Author } from "@/components/ui";
 import { formattedDate } from "@/components/utils";
 
 export async function getStaticProps() {
@@ -61,7 +61,7 @@ const CoffeeSubscriptionBoxes = ({ posts }) => {
     ],
     description:
       "Explore our curated selection of the top 10 best coffee subscription boxes. Discover a world of exceptional flavors, convenience, and monthly coffee delights delivered to your doorstep.",
-    datePublished: "2022-06-21T23:04:13Z",
+    datePublished: "Oct 22 2022",
     dateModified: formattedDate,
     openGraphURL: "seo/Open Graph/coffee subscription list app.png",
     twitterCardURL: "seo/Twitter Card/coffee subscription boxes.png",
@@ -265,9 +265,12 @@ const CoffeeSubscriptionBoxes = ({ posts }) => {
         description="Elevate your coffee experience with our selection of carefully curated
         coffee subscription boxes."
       >
+        <TopBar
+          author={meta.author}
+          date={meta.datePublished}
+          readTime="3"
+        />
         <BoxList boxes={posts} />
-
-        <Author />
       </Container>
     </>
   );

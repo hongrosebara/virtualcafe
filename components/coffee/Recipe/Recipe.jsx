@@ -17,9 +17,9 @@ const Recipe = ({ recipe, slug, imgUrl, index }) => {
       /> */}
       <div className="px-10 py-5">
         <Link href={`/random-coffee-recipe-generator/${slug}`}>
-          <h3 className="text-xl cursor-pointer">{recipe.title}</h3>
+          <h3 className="mt-5 text-xl cursor-pointer">{recipe.title}</h3>
         </Link>
-        <div className="font-light">{recipe.excerpt.slice(0, 100)}...</div>
+        <div className="my-10 font-light">{recipe.excerpt.slice(0, 100)}...</div>
         <Link href={`/random-coffee-recipe-generator/${slug}`}>
           <button className="px-5 py-3 bg-primary-dk hover:bg-primary rounded-md text-on-primary-inverse cursor-pointer">
             Read more
