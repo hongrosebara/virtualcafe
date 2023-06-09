@@ -7,8 +7,8 @@ const Author = ({ date, author, readTime }) => {
       <div className="flex flex-col space-y-2 tracking-wider font-light font-round">
         <h5>{author}</h5>
         <div className="flex items-center justify-center">
-          Published <span class="dot"></span> {readTime} mins read
-          <span class="dot"></span> {date}
+          Published <span className="dot"></span> {readTime} mins read
+          <span className="dot"></span> {date}
         </div>
       </div>
     </div>
