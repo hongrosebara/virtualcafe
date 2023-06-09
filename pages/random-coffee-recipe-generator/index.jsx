@@ -57,7 +57,7 @@ const RandomRecipeGenerator = ({ recipes }) => {
       "international coffee subscription",
     ],
     description:
-      "Explore our curated selection of the top 10 best coffee subscription boxes. Discover a world of exceptional flavors, convenience, and monthly coffee delights delivered to your doorstep.",
+      "Get inspired and surprise your palate with delightful and unexpected combinations. Let the Random Coffee Recipe Generator take you on a flavor adventure!",
     datePublished: "2022-06-21T23:04:13Z",
     dateModified: formattedDate,
     openGraphURL: "seo/Open Graph/coffee subscription list app.png",
@@ -262,8 +262,9 @@ const RandomRecipeGenerator = ({ recipes }) => {
         description={meta.description}
       >
 
-        <h2>All Recipes</h2>
-        <RecipeList recipes={recipes} />
+        <RecipeList
+          heading="All Recipes" 
+          recipes={recipes} />
 
         <Author />
       </Container>

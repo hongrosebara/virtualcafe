@@ -1,9 +1,9 @@
 import Image from "next/image";
 import { FeatureItem } from "@/components/ui";
 import { useState } from "react";
-import s from "./Features.module.scss";
+import s from "./FeatureItemList.module.scss";
 
-const Features = ({ featureItems }) => {
+const FeatureItemList = ({ featureItems }) => {
   const [items] = useState(featureItems);
 
   return (
@@ -24,4 +24,4 @@ const Features = ({ featureItems }) => {
     </section>
   );
 };
-export default Features;
+export default FeatureItemList;

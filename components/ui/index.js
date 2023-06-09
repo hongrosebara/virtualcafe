@@ -6,5 +6,5 @@ export { default as RecipeContainer } from "./RecipeContainer";
 export { default as Breadcrumb } from "./Breadcrumb";
 export { default as Author } from "./Author";
 export { default as HowToGuide } from "./HowToGuide";
-export { default as Features } from "./Features";
+export { default as FeatureItemList } from "./FeatureItemList";
 export { default as FeatureItem } from "./FeatureItem";

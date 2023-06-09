@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { SEO } from "@/components/common";
 import { Layout } from "@/components/common";
-import { Hero, Features } from "@/components/ui";
+import { Hero, FeatureItemList } from "@/components/ui";
 import { useRouter } from "next/router";
 import { buildPaths, extractFile } from "@/components/utils/getData";
 
@@ -213,7 +213,7 @@ const HomePage = ({ featureItems }) => {
 
       <Hero />
 
-      <Features featureItems={featureItems} />
+      <FeatureItemList featureItems={featureItems} />
     </>
   );
 };

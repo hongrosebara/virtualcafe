@@ -7,14 +7,18 @@ const FeatureItem = (props) => {
     props;
 
   return (
-    <div className="md:px-40 py-20 mx-auto max-w-8xl flex flex-col items-center justify-between md:gap-20">
-      <Image
+    <div className="md:px-40 py-20 mx-auto max-w-8xl flex flex-col items-center justify-between md:gap-40 my-20">
+        <div
+        style={{ "--image-url": `url(${imgUrl})` }}
+        className={`w-full h-[50vh] bg-primary-dk bg-[image:var(--image-url)] bg-cover bg-center rounded-lg`}
+      ></div>
+      {/* <Image
         src={imgUrl}
-        width={500}
-        height={300}
+        width={440}
+        height={500}
         alt={heading}
         className="rounded-md"
-      />
+      /> */}
 
       <div className={s["text-box"]}>
         <h2 className="mt-10 md:mt-0">{heading}</h2>
